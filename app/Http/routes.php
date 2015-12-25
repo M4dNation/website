@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/register',  ['as' => 'signup', 'uses' => 'Controller@signup']);
+Route::get('/login',  ['as' => 'login', 'uses' => 'Controller@login']);
+Route::get('/logout',  ['as' => 'logout', 'uses' => 'Controller@logout']);
+Route::get('/lostpassword',  ['as' => 'lostpassword', 'uses' => 'Controller@lostpassword']);
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,7 +31,20 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+Route::group(['prefix' => 'dashboard', 'middleware' => ['web']], function ()
+{
+  Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+});
 
-Route::group(['middleware' => ['web']], function () {
-    //
+Route::group(['prefix' => 'forum', 'middleware' => ['web']], function()
+{
+  Route::get('/',  ['as' => 'forum', 'uses' => 'ForumController@index']);
+  Route::get('/{category}', ['as' => 'category', 'uses' => 'ForumController@getThreads']);
+  Route::get('/{category}/{thread}', ['as' => 'category.thread', 'uses' => 'ForumController@getThread']);
+
+});
+
+Route::group(['prefix' => 'docs', 'middleware' => ['web']], function()
+{
+  Route::get('/',  ['as' => 'docs', 'uses' => 'DocsController@index']);
 });
