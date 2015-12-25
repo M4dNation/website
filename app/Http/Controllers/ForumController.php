@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Repositories\CategoryRepository;
+use App\Repositories\ThreadRepository;
+use App\Repositories\PostRepository;
+
 class ForumController extends Controller
 {
     public function index()
@@ -22,7 +26,7 @@ class ForumController extends Controller
 
     public function getThreads($category)
     {
-      
+
     }
 
 }
