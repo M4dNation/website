@@ -1,27 +1,29 @@
-## Laravel PHP Framework
+# M4dNation Developers Website
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## ABOUT
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+M4dNation Developers Website is the official website for M4dNation Company.
+https://yggdrasil.io
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## AUTHORS
 
-## Official Documentation
+M4dNation Developers Website is maintained by M4dNation Co.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Contributors are : M4dNation teammates and others.
 
-## Contributing
+Copyright © 2015-2016 M4dNation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## LICENCE
 
-## Security Vulnerabilities
+[2015] - [2016] M4dNation
+All Rights Reserved.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+NOTICE:  All information contained herein is, and remains
+the property of M4dNation and its suppliers,
+if any.  The intellectual and technical concepts contained
+herein are proprietary to M4dNation
+and its suppliers and may be covered by France and Foreign Patents,
+patents in process, and are protected by trade secret or copyright law.
+Dissemination of this information or reproduction of this material
+is strictly forbidden unless prior written permission is obtained
+from M4dNation.
