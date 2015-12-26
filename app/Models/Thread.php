@@ -8,5 +8,16 @@ class Thread extends Model
 {
     protected $table = 'threads';
 
-    protected $timestamps = false;
+    public $timestamps = false;
+
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+
+    public function post()
+    {
+        return $this->hasMany('App\Models\Post');
+    }
 }

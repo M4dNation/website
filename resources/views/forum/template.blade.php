@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>@yield('titre')</title>
+    <title>@yield('title')</title>
 <body>
-	@yield('contenu')
+	@yield('content')
 </body>
 </html>

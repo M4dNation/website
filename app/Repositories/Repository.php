@@ -5,11 +5,21 @@ namespace App\Repositories;
 abstract class Repository
 {
 
-  protected $model;
+    protected $model;
 
-  public function paginate($n)
+    public function __construct(Model $model)
+    {
+        $this->model = model;
+    }
+
+    public function all()
+    {
+        return $this->model->all();
+    }
+
+    public function paginate($n)
 	{
-		return $this->model->paginate($n);
+        return $this->model->paginate($n);
 	}
 
 	public function store(Array $inputs)
