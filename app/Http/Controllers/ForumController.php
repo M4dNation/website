@@ -31,15 +31,44 @@ class ForumController extends Controller
         return view('forum/index', compact('categories'));
     }
 
+    public function getThreads($category)
+    {
+
+    }
+
     public function getThread($category, $thread)
     {
 
     }
 
-
-    public function getThreads($category)
+    public function newAnswer($category, $thread)
     {
 
+    }
+
+    public function updateThread($category, $thread)
+    {
+
+    }
+
+    public function deleteThread($category, $thread)
+    {
+
+    }
+
+    public function vote($category, $thread, $post)
+    {
+
+    }
+
+    public function updatePost($category, $thread, $post)
+    {
+
+    }
+
+    public function deletePost($category, $thread, $post)
+    {
+        
     }
 
 }

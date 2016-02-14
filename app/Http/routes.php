@@ -11,26 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('/register',  ['as' => 'signup', 'uses' => 'HomeController@register']);
+Route::get('/login',  ['as' => 'login', 'uses' => 'HomeController@login']);
+Route::get('/logout',  ['as' => 'logout', 'uses' => 'HomeController@logout']);
+Route::post('/lostpassword',  ['as' => 'lostpassword', 'uses' => 'HomeController@lostpassword']);
+Route::get('/user' , ['as' => 'profile', 'uses' => 'HomeController@profile']);
+Route::post('/user', ['as' => 'profile.new', 'uses' => 'HomeController@newProfile']);
+Route::put('/user', ['as' => 'profile.update', 'uses' => 'HomeController@updateProfile']);
+Route::delete('/user', ['as' => 'profile.delete', 'uses' => 'HomeController@deleteProfile']);
 
-Route::get('/register',  ['as' => 'signup', 'uses' => 'Controller@signup']);
-Route::get('/login',  ['as' => 'login', 'uses' => 'Controller@login']);
-Route::get('/logout',  ['as' => 'logout', 'uses' => 'Controller@logout']);
-Route::get('/lostpassword',  ['as' => 'lostpassword', 'uses' => 'Controller@lostpassword']);
 
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
 Route::group(['prefix' => 'dashboard', 'middleware' => ['web']], function ()
 {
   Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
@@ -41,7 +32,11 @@ Route::group(['prefix' => 'forum', 'middleware' => ['web']], function()
   Route::get('/',  ['as' => 'forum', 'uses' => 'ForumController@index']);
   Route::get('/{category}', ['as' => 'category', 'uses' => 'ForumController@getThreads']);
   Route::get('/{category}/{thread}', ['as' => 'category.thread', 'uses' => 'ForumController@getThread']);
-
+  Route::post('/{category}/{thread}', ['as' => 'category.thread.post', 'uses' => 'ForumController@newPost']);
+  Route::put('/{category}/{thread}', ['as' => 'category.thread.update', 'uses' => 'ForumController@updateThread']);
+  Route::delete('/{category}/{thread}', ['as' => 'category.thread.delete', 'uses' => 'ForumController@deleteThread']);
+  Route::post('/{category}/{thread}/{post}', ['as' => 'category.thread.post.vote', 'uses' => 'ForumController@vote']);
+  Route::put('/{category}/{thread}/{post}', ['as' => 'category.thread.post.update', 'uses' => 'ForumController@updatePost']);
 });
 
 Route::group(['prefix' => 'docs', 'middleware' => ['web']], function()
