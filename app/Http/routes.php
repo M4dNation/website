@@ -21,8 +21,6 @@ Route::post('/user', ['as' => 'profile.new', 'uses' => 'HomeController@newProfil
 Route::put('/user', ['as' => 'profile.update', 'uses' => 'HomeController@updateProfile']);
 Route::delete('/user', ['as' => 'profile.delete', 'uses' => 'HomeController@deleteProfile']);
 
-
-
 Route::group(['prefix' => 'dashboard', 'middleware' => ['web']], function ()
 {
   Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
