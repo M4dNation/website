@@ -10,4 +10,5 @@
 		@include('website.blog')
 		@include('website.contact')
 	</div>
+	@include('website.footer')
 @stop

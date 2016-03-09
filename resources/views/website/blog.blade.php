@@ -1,3 +1,4 @@
+<div class="row">
 <section id="blog" class="mrg-t-50">		
 	<div class="col-lg-6 col-md-6">
 		<h1>Blog</h1>
