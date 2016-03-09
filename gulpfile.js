@@ -15,13 +15,25 @@ elixir(function(mix)
 {
     mix.styles(
     [
-    	'bootstrap.min.css'
+    	'bootstrap.min.css',
+    	'utils.min.css',
     ], 'public/css/main.css');
+
+    mix.styles(
+    [
+    	'website.css'
+    ], 'public/css/website/main.css');
 
  	mix.scripts(
  	[
+ 		'jquery.min.js',
  		'bootstrap.min.js'
  	], 'public/js/main.js');
 
- 	mix.version(['public/css/main.css','public/js/main.js']);
+ 	mix.copy(
+   'resources/assets/css/fonts',
+   'public/build/fonts'
+    );
+
+ 	mix.version(['public/css/main.css','public/css/website/main.css','public/js/main.js']);
 });
