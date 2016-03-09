@@ -8,5 +8,6 @@
 <body>
 	@yield('content')
 	<script src="{{ asset(elixir('js/main.js')) }}"></script>
+	<script src="{{ asset(elixir('js/website/main.js')) }}"></script>
 </body>
 </html>

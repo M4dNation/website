@@ -30,10 +30,15 @@ elixir(function(mix)
  		'bootstrap.min.js'
  	], 'public/js/main.js');
 
+	mix.scripts(
+ 	[
+ 		'website.js',
+ 	], 'public/js/website/main.js');
+
  	mix.copy(
    'resources/assets/css/fonts',
    'public/build/fonts'
     );
 
- 	mix.version(['public/css/main.css','public/css/website/main.css','public/js/main.js']);
+ 	mix.version(['public/css/main.css','public/css/website/main.css','public/js/main.js', 'public/js/website/main.js']);
 });

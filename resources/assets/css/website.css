@@ -8,3 +8,12 @@ html, body, section
 	height:100%;
 }
 
+.facebookContainer, .twitterContainer, .contactContainer{
+	display : none;
+}
+
+.activeSocial
+{
+	display:block;
+}
+

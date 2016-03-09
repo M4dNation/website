@@ -1,0 +1,1 @@
+{"version":3,"sources":["website.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA","file":"main.js","sourcesContent":["function showSocial(element)\r\n{\r\n\t$('.activeSocial').toggleClass('activeSocial');\r\n\t$(element).toggleClass('activeSocial');\r\n}"],"sourceRoot":"/source/"}
