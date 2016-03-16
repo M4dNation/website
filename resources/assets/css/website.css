@@ -1,6 +1,7 @@
 p
 {
 	text-align:justify;
+	font-size: 1.3em
 }
 
 .facebookContainer, .twitterContainer, .contactContainer
@@ -22,4 +23,21 @@ footer
 .logo img
 {
 	height:50px;
+}
+
+.progress
+{
+	height:30px;
+}
+
+.progress p 
+{
+	font-size: 1.5em;
+	margin-top: 5px;
+	text-align: center;
+}
+
+section img
+{
+	max-width:100%;
 }

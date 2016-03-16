@@ -12,13 +12,16 @@
           </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse menuHeader">
-          <ul class="nav navbar-nav">
-            <li data-menuanchor="slideshow" class="hidden"><a href="#slideshow">Slideshow</a></li>
-				<li data-menuanchor="home"><a href="#home">Home</a></li>
+       	 	<ul class="nav navbar-nav navbar-right">
+				<li><a href="">Login</a></li>
+			</ul>
+          	<ul class="nav navbar-nav navbar-right">
+            	<li data-menuanchor="slideshow" class="hidden"><a href="#slideshow">Slideshow</a></li>
+				<li data-menuanchor="home"><a href="#home">Company</a></li>
 				<li data-menuanchor="project"><a href="#project">Yggdrasil</a></li>
 				<li data-menuanchor="team"><a href="#team">Team</a></li>
-				<li data-menuanchor="blog"><a href="#blog">Blog/Social</a></li>	
-  	        </ul>
+				<li data-menuanchor="blog"><a href="#blog">Blog/Contact</a></li>	
+  	        </ul>			
         </div>
     </div>
 </nav>
