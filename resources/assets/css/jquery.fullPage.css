@@ -211,30 +211,3 @@ html.fp-enabled,
 .fp-auto-height .fp-tableCell{
     height: auto !important;
 }
-p
-{
-	text-align:justify;
-}
-
-.facebookContainer, .twitterContainer, .contactContainer
-{
-	display : none;
-}
-
-.activeSocial
-{
-	display:block;
-}
-
-footer
-{
-	position: absolute;
-	bottom: 0;
-}
-
-.logo img
-{
-	height:50px;
-}
-
-/*# sourceMappingURL=main.css.map */

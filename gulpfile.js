@@ -21,7 +21,8 @@ elixir(function(mix)
 
     mix.styles(
     [
-    	'website.css'
+    	'jquery.fullPage.css',
+        'website.css'
     ], 'public/css/website/main.css');
 
  	mix.scripts(
@@ -33,6 +34,7 @@ elixir(function(mix)
 	mix.scripts(
  	[
  		'website.js',
+        'jquery.fullPage.min.js'
  	], 'public/js/website/main.js');
 
  	mix.copy(

@@ -1,6 +1,6 @@
-<section id="team" class="mrg-t-50">	
+<section id="team" class="section">	
+	<div class="container">
 	<h1>L'équipe</h1>
-	<div class="container-fluid">
 		<div class="row text-center">
 			<div class="col-lg-4">
 				<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">

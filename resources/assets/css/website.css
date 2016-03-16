@@ -3,12 +3,8 @@ p
 	text-align:justify;
 }
 
-html, body, section
+.facebookContainer, .twitterContainer, .contactContainer
 {
-	height:100%;
-}
-
-.facebookContainer, .twitterContainer, .contactContainer{
 	display : none;
 }
 
@@ -17,3 +13,13 @@ html, body, section
 	display:block;
 }
 
+footer
+{
+	position: absolute;
+	bottom: 0;
+}
+
+.logo img
+{
+	height:50px;
+}

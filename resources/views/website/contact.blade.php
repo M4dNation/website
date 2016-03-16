@@ -1,4 +1,4 @@
-<section id="contact">		
+	
 	<div class="col-lg-6 col-md-6">
 		<h1>Contact</h1>
 		<div class="row text-center">
@@ -36,5 +36,7 @@
 			</div>
 		</div>
 	</div>
+	</div>
+	@include('website.footer')
 </section>
-</div>
+
