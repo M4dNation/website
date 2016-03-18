@@ -1,7 +1,7 @@
 p
 {
 	text-align:justify;
-	font-size: 1.3em
+	font-size: 1.3em;
 }
 
 .facebookContainer, .twitterContainer, .contactContainer
@@ -40,4 +40,24 @@ footer
 section img
 {
 	max-width:100%;
+}
+
+.cf_img {
+  position:relative;
+  width:150px;
+  height:150px;
+  margin:0 auto;
+}
+
+.cf_img img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cf_img img.down_team:hover {
+  opacity:0;
 }

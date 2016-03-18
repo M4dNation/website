@@ -1,10 +1,10 @@
 <section id="project" class="section">	
 	<div class="container">
 		<h1>Yggdrasill</h1>
-		<div class="row mrg-t-50">
+		<div class="row">
 			<div class="col-lg-6 col-md-6 text-center">
 			<img src="../resources/assets/image/yggdrasill.png" alt="">
-			<div class="mrg-t-50">
+			<div>
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">				
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">				
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">
@@ -25,7 +25,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="row mrg-t-50">
+		<div class="row">
 			<div class="col-lg-6 text-center">
 				<div class="progress">
 					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
