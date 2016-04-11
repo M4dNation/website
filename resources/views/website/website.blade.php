@@ -1,5 +1,9 @@
 @extends('website.template')
 
+@section('title')
+	M4dNation
+@stop
+
 @section('content')
 	@include('website.header')	
 	<div id="fullpage">		

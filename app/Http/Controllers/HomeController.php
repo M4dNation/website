@@ -9,48 +9,19 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
+
     public function index()
     {
     	return view('website/website');
     }
 
-    public function register()
+    public function showLogin()
     {
-
+        return view('auth/login');
     }
 
-    public function login()
+    public function doLogin()
     {
 
-    }
-
-    public function logout()
-    {
-
-    }
-
-    public function lostpassword()
-    {
-
-    }
-
-    public function profile()
-    {
-    	return view('welcome');
-    }
-
-    public function newProfile()
-    {
-
-    }
-
-    public function updateProfile()
-    {
-
-    }
-
-    public function deleteProfile()
-    {
-    	
     }
 }

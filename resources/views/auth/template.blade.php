@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ asset(elixir('css/main.css')) }}">
-    <link rel="stylesheet" href="{{ asset(elixir('css/website/main.css')) }}">
     <title>@yield('title')</title>
 <body>
 	@yield('content')
 	<script src="{{ asset(elixir('js/main.js')) }}"></script>
-	<script src="{{ asset(elixir('js/website/main.js')) }}"></script>
 </body>
 </html>
