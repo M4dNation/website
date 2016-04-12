@@ -4,7 +4,6 @@
 	M4dNation
 @stop
 
-{{ dd($last_article->images)}}
 @section('content')
 	@include('website.header')			
 	@include('website.slideshow')		

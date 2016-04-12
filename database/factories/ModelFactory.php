@@ -22,7 +22,9 @@ $factory->define(App\Models\Image::class, function(Faker\Generator $faker)
 	[
 		'name' 		=> 'fake_image_' . str_random(10),
 		'format' 	=> 'image/jpeg',
-		'path'		=> '/path/to/image'
+		'path'		=> '/path/to/image',
+		'created_at' => Carbon\Carbon::now(),
+		'updated_at' => Carbon\Carbon::now(),
 	];
 });
 
@@ -41,7 +43,9 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker)
 		'password' 			=> bcrypt(str_random(10)),
 		'quote'				=> str_random(255),
 		'm4dnation_role' 	=> 1,
-		'remember_token' 	=> str_random(10)
+		'remember_token' 	=> str_random(10),
+		'created_at' 		=> Carbon\Carbon::now(),
+		'updated_at' 		=> Carbon\Carbon::now(),
 	];
 });
 
@@ -55,7 +59,9 @@ $factory->define(App\Models\Category::class, function (Faker\Generator $faker)
 	return
 	[
 		'parent_id' 	=> null,
-		'name' 			=> str_random(20)
+		'name' 			=> str_random(20),
+		'created_at' => Carbon\Carbon::now(),
+		'updated_at' => Carbon\Carbon::now(),
 	];
 });
 
@@ -72,7 +78,9 @@ $factory->define(App\Models\Thread::class, function(Faker\Generator $faker)
 		'category_id' => 1,
 		'last_post_id' => null,
 		'state' => 0,
-		'title' => str_random(50)
+		'title' => str_random(50),
+		'created_at' => Carbon\Carbon::now(),
+		'updated_at' => Carbon\Carbon::now(),
 	];
 });
 
@@ -87,7 +95,9 @@ $factory->define(App\Models\Post::class, function(Faker\Generator $faker)
 	[
 		'user_id' => 1,
 		'thread_id' => 1,
-		'content' => str_random(255)
+		'content' => str_random(255),
+		'created_at' => Carbon\Carbon::now(),
+		'updated_at' => Carbon\Carbon::now(),
 	];
 });
 
@@ -117,6 +127,8 @@ $factory->define(App\Models\Article::class, function (Faker\Generator $faker)
 		'user_id' 	=> 1,
 		'title' 	=> str_random(50),
 		'content'	=> str_random(500),
+		'created_at' => Carbon\Carbon::now(),
+		'updated_at' => Carbon\Carbon::now(),
 	];
 });
 
@@ -146,7 +158,9 @@ $factory->define(App\Models\Guide::class, function(Faker\Generator $faker)
 		'user_id' 		=> 1,
 		'title' 		=> str_random(50),
 		'state'			=> 0,
-		'visibility' 	=> 1
+		'visibility' 	=> 1,
+		'created_at' => Carbon\Carbon::now(),
+		'updated_at' => Carbon\Carbon::now(),
 	];
 });
 
@@ -164,7 +178,9 @@ $factory->define(App\Models\Tutorial::class, function(Faker\Generator $faker)
 		'title' 	=> str_random(50),
 		'content'	=> str_random(500),
 		'state'			=> 0,
-		'visibility' 	=> 1
+		'visibility' 	=> 1,
+		'created_at' => Carbon\Carbon::now(),
+		'updated_at' => Carbon\Carbon::now(),
 	];
 });
 

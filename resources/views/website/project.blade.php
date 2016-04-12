@@ -4,11 +4,13 @@
 		<div class="row">
 			<div class="col-lg-6 col-md-6 text-center">
 				<img src="../resources/assets/image/homepage/yggdrasill.png" alt="">
+				<!--
 				<div>
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">				
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">				
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">
 				</div>
+				-->
 			</div>
 			<div class="col-lg-6 col-md-6">
 				<p>

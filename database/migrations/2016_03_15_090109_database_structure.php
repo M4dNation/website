@@ -25,7 +25,7 @@ class DatabaseStructure extends Migration
         });
 
         // User table
-        Schema::create('user', function(Blueprint $table)
+        Schema::create('users', function(Blueprint $table)
         {
             $table->increments('id');
             $table->integer('image_id')->unsigned()->default(0);
@@ -95,7 +95,7 @@ class DatabaseStructure extends Migration
 
             $table->foreign('user_id')
                 ->references('id')
-                ->on('user')
+                ->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -120,7 +120,7 @@ class DatabaseStructure extends Migration
 
             $table->foreign('user_id')
                 ->references('id')
-                ->on('user')
+                ->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -139,7 +139,7 @@ class DatabaseStructure extends Migration
 
             $table->foreign('user_id')
                 ->references('id')
-                ->on('user')
+                ->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -163,7 +163,7 @@ class DatabaseStructure extends Migration
 
             $table->foreign('user_id')
                 ->references('id')
-                ->on('user')
+                ->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -201,7 +201,7 @@ class DatabaseStructure extends Migration
 
             $table->foreign('user_id')
                 ->references('id')
-                ->on('user')
+                ->on('users')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
         });
@@ -222,7 +222,7 @@ class DatabaseStructure extends Migration
 
             $table->foreign('user_id')
                 ->references('id')
-                ->on('user')
+                ->on('users')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
 
@@ -261,7 +261,7 @@ class DatabaseStructure extends Migration
     public function down()
     {
         Schema::drop('image');
-        Schema::drop('user');
+        Schema::drop('users');
         Schema::drop('password_resets');
         Schema::drop('categorie');
         Schema::drop('thread');
