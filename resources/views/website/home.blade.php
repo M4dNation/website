@@ -3,7 +3,7 @@
 		<h1>M4dNation</h1>
 		<div class="row">	
 			<div class="col-lg-6 col-md-6 text-center">
-			<img class="img-responsive center-block pdg-b-10" src="../resources/assets/image/logoM4dNation.png" alt="">
+			<img class="img-responsive center-block pdg-b-10" src="../resources/assets/image/common/logoM4dNation.png" alt="">
 				<div>	
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">				
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">				

@@ -3,13 +3,13 @@
 		<h1>Yggdrasill</h1>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 text-center">
-			<img src="../resources/assets/image/yggdrasill.png" alt="">
-			<div>
+				<img src="../resources/assets/image/homepage/yggdrasill.png" alt="">
+				<div>
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">				
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">				
 					<img src="http://lorempicsum.com/futurama/150/150/4" alt="">
+				</div>
 			</div>
-		</div>
 			<div class="col-lg-6 col-md-6">
 				<p>
 					Yggdrasil est une plateforme de crowdsourcing à destinations des joueurs et des studios de développement afin de leur permettre de donner vie à de nouveaux jeux plus proches de vos envies.
@@ -27,12 +27,6 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-6 text-center">
-				<div class="progress">
-					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-						<p>100%</p>
-					</div>
-
-				</div>
 			</div>
 			<div class="col-lg-6 text-center">
 				<a class="btn btn-lg btn-success">Kickstarter</a>

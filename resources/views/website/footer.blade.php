@@ -1,4 +1,4 @@
-<footer>
+<footer class="mrg-t-50">
 	<div class="container text-center">
 		<div class="row">
 			<div class="col-lg-3">

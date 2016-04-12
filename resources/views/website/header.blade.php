@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="logo">
-          	<a href="#"><img src="../resources/assets/image/logoM4dNation.png" /></a>
+          	<a href="#"><img src="../resources/assets/image/common/logoM4dNation.png" /></a>
           </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse menuHeader">

@@ -1,11 +1,12 @@
-
 <section id="blog" class="section">
 <div class="container">			
 	<div class="col-lg-6 col-md-6">
-		<h1>Blog</h1>
+		<h1 class="text-center">Blog</h1>
+		<h2 class="text-center">{{$last_article->title}}</h2>
 		<div class="text-center">
 			<img class="mrg-b-20" src="http://lorempicsum.com/futurama/200/200/4" alt="">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae cursus lacus, nec malesuada ante. Vestibulum blandit libero est, vitae convallis purus tristique ac. Nullam porttitor aliquam maximus. In hac habitasse platea dictumst. Praesent eleifend nec velit eget finibus. Suspendisse in nibh ut est ullamcorper elementum in eu sapien. Duis ac tincidunt augue. Praesent convallis scelerisque volutpat. Proin commodo leo vel lacinia elementum. Donec non condimentum orci, eu sagittis velit. Vivamus id volutpat augue. Suspendisse id porta nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+			<p class="text-center">
+			{{ substr($last_article->content, 0 , 255) . "..."}}
 			</p>
 			<a class="btn btn-lg btn-primary" href="#">En savoir plus</a>
 		</div>

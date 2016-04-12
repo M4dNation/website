@@ -1,6 +1,5 @@
-	
 	<div class="col-lg-6 col-md-6">
-		<h1>Contact</h1>
+		<h1 class="text-center">Contact</h1>
 		<div class="row text-center">
 			<div class="col-lg-4">
 				<a onclick = "showSocial('.facebookContainer')" href="#contact">Facebook</a>
@@ -37,6 +36,5 @@
 		</div>
 	</div>
 	</div>
-	@include('website.footer')
 </section>
 
