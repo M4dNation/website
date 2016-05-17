@@ -1,5 +1,10 @@
 /* Common CSS */
 
+.logo img
+{
+	height:50px;
+}
+
 .section
 {
 	margin-top: 50px !important;
@@ -16,6 +21,17 @@ p
 	font-size: 1.3em;
 }
 
+/* Section Company */
+
+
+/* Section Yggdrasill */
+
+/* Section Team */
+
+/* Section Blog */
+
+/* Section Contact */
+
 .facebookContainer, .twitterContainer, .contactContainer
 {
 	display : none;
@@ -24,9 +40,4 @@ p
 .activeSocial
 {
 	display:block;
-}
-
-.logo img
-{
-	height:50px;
 }
