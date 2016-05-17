@@ -4,6 +4,17 @@ p
 	font-size: 1.3em;
 }
 
+.header-container
+{
+	height:105px;
+}
+
+body
+{
+	background-color: #000;
+}
+
+
 .facebookContainer, .twitterContainer, .contactContainer
 {
 	display : none;

@@ -18,6 +18,7 @@ elixir(function(mix)
     [
     	'lib/bootstrap.min.css',
     	'lib/utils.min.css',
+        'lib/font-awesome.min.css'
     ], 'public/css/lib/libraries.css');
 
     // Lib Javascript
@@ -31,7 +32,7 @@ elixir(function(mix)
     mix.styles(
     [
     	'lib/jquery.fullPage.css',
-        'homepage/homepage.css'
+        'homepage/homepage.css',
     ], 'public/css/homepage/homepage.css');
 
  	// Homepage Javascript
@@ -44,7 +45,7 @@ elixir(function(mix)
 
  	mix.copy(
    'resources/assets/css/lib/fonts',
-   'public/build/fonts'
+   'public/build/css/fonts'
     );
 
  	mix.version(

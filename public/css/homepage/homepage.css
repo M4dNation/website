@@ -213,21 +213,27 @@ html.fp-enabled,
 }
 /* Common CSS */
 
+
+html, body
+{
+	height:100%;
+}
+
 .section
 {
-	margin-top: 50px !important;
+	height:90%;
 }
+
+.body-container
+{
+	margin-top: 105px !important;
+	height: 100%;
+}
+
 
 section img
 {
 	max-width:100%;
-}
-
-/* Section Company */
-
-.home .container
-{
-	height:100%;
 }
 
 p
@@ -235,6 +241,83 @@ p
 	text-align:justify;
 	font-size: 1.3em;
 }
+
+h1
+{
+	color:#ffa300;
+}
+
+/* Section Header */
+
+.header-container, .header-container .logo img, .header-container .nav li 
+{
+	height:105px;
+}
+
+.header-container
+{
+	background-color: #fff;
+}
+
+.header-container .nav
+{
+	margin:auto;
+}
+
+.header-container .nav-item
+{
+	border-right : 1px solid #ffa300;
+	text-transform: uppercase;
+	padding-top: 25px;
+	font-weight: bold;
+}
+
+.header-container .nav-item:hover
+{
+	background-color: #ffa300;
+}
+
+.header-container .nav .nav-item:hover a
+{
+	color:#fff;
+}
+
+.header-container .navbar-social
+{
+	list-style: none;
+	padding:40px 0px 0px 5px;
+}
+
+.header-container .navbar-social li 
+{
+	display : inline-block;
+	border:none;
+	width:20px;
+	font-size: 16px;
+}
+
+.header-container .navbar-social li a
+{
+	color:#777;
+}
+
+.header-container .navbar-social li:hover a
+{
+	color:#ffa300;
+}
+
+
+
+/* Section Company */
+
+
+/* Section Yggdrasill */
+
+/* Section Team */
+
+/* Section Blog */
+
+/* Section Contact */
 
 .facebookContainer, .twitterContainer, .contactContainer
 {
@@ -244,11 +327,6 @@ p
 .activeSocial
 {
 	display:block;
-}
-
-.logo img
-{
-	height:50px;
 }
 
 /*# sourceMappingURL=homepage.css.map */
