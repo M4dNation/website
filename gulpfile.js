@@ -13,34 +13,45 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix)
 {
+	// Lib CSS
     mix.styles(
     [
-    	'bootstrap.min.css',
-    	'utils.min.css',
-    ], 'public/css/main.css');
+    	'lib/bootstrap.min.css',
+    	'lib/utils.min.css',
+    ], 'public/css/lib/libraries.css');
 
-    mix.styles(
-    [
-    	'jquery.fullPage.css',
-        'website.css'
-    ], 'public/css/website/main.css');
-
+    // Lib Javascript
  	mix.scripts(
  	[
- 		'jquery.min.js',
- 		'bootstrap.min.js'
- 	], 'public/js/main.js');
+ 		'lib/jquery.min.js',
+ 		'lib/bootstrap.min.js'
+ 	], 'public/js/lib/libraries.js');
 
+    // Homepage CSS
+    mix.styles(
+    [
+    	'lib/jquery.fullPage.css',
+        'homepage/homepage.css'
+    ], 'public/css/homepage/homepage.css');
+
+ 	// Homepage Javascript
 	mix.scripts(
  	[
- 		'website.js',
-        'jquery.fullPage.min.js'
- 	], 'public/js/website/main.js');
+ 		'homepage/homepage.js',
+        'lib/jquery.fullPage.min.js'
+ 	], 'public/js/homepage/homepage.js');
+
 
  	mix.copy(
-   'resources/assets/css/fonts',
+   'resources/assets/css/lib/fonts',
    'public/build/fonts'
     );
 
- 	mix.version(['public/css/main.css','public/css/website/main.css','public/js/main.js', 'public/js/website/main.js']);
+ 	mix.version(
+ 	[
+ 		'public/css/lib/libraries.css',
+ 		'public/js/lib/libraries.js',
+ 		'public/css/homepage/homepage.css',
+ 		'public/js/homepage/homepage.js'
+ 	]);
 });

@@ -6,51 +6,26 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Repositories\ArticleRepository;
 
 class HomeController extends Controller
 {
+    protected $articleRepository;
+
+    public function __construct(ArticleRepository $articleRepository)
+    {
+        $this->articleRepository = $articleRepository;
+    }
+
     public function index()
     {
-    	return view('website/website');
+        $last_article = $this->articleRepository->lastArticle();
+
+    	return view('website/website', compact('last_article'));
     }
 
-    public function register()
+    public function sendContactEmail()
     {
 
-    }
-
-    public function login()
-    {
-
-    }
-
-    public function logout()
-    {
-
-    }
-
-    public function lostpassword()
-    {
-
-    }
-
-    public function profile()
-    {
-    	return view('welcome');
-    }
-
-    public function newProfile()
-    {
-
-    }
-
-    public function updateProfile()
-    {
-
-    }
-
-    public function deleteProfile()
-    {
-    	
     }
 }
