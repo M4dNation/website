@@ -20,13 +20,13 @@
         <li class="nav-item"><a  href="#contact">Contact</a></li> 
         <li>
           <ul class="navbar-social">
-            <li>
+            <li id="facebook">
                 <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
             </li>
-            <li>
+            <li id="twitter">
                 <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             </li>
-            <li>
+            <li id="reddit">
                 <a href="#"><i class="fa fa-reddit-square" aria-hidden="true"></i></a>
             </li>
           </ul>

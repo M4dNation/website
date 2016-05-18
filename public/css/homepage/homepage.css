@@ -219,14 +219,21 @@ html, body
 	height:100%;
 }
 
+.btn-primary
+{
+	background-color: #ffa330;
+}
+
 .section
 {
 	display:flex;
 	align-items: center;
-	height:100%;
+	min-height:100%;
 	border-bottom: 	1px solid  #989898;
-	box-shadow: 	0px 15px 30px #989898 ;
 	flex:1;
+	background-image: url("../../image/common/171702.jpg");
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.35) inset;
+	background-repeat: repeat;	
 }
 
 
@@ -244,6 +251,7 @@ p
 {
 	text-align:justify;
 	font-size: 1.3em;
+	font-family: "Segoe ui"
 }
 
 h1
@@ -251,7 +259,7 @@ h1
 	color:#ffa300;
 	border-bottom : solid 1px #ffa300;
 	padding: 0px 20px 15px 10px;
-	display:inline-block;
+	display:none;
 }
 
 h1::before 
@@ -275,12 +283,12 @@ a
 
 .header-container, .header-container .logo img, .header-container .nav li 
 {
-	height:105px;
+	height:80px;
 }
 
 .header-container
 {
-	background-color: #fff;
+	background-color: #ffa300;
 }
 
 .header-container .nav
@@ -292,24 +300,30 @@ a
 {
 	border-right : 1px solid #ffa300;
 	text-transform: uppercase;
-	padding-top: 25px;
+	padding-top: 15px;
 	font-weight: bold;
+	font-family: "Segoe Ui";
 }
 
 .header-container .nav-item:hover
 {
-	background-color: #ffa300;
+	background-color: #fff;
+}
+
+.header-container .nav .nav-item a
+{
+	color:#fff;
 }
 
 .header-container .nav .nav-item:hover a
 {
-	color:#fff;
+	color:#ffa300;
 }
 
 .header-container .navbar-social
 {
 	list-style: none;
-	padding:40px 0px 0px 5px;
+	padding:30px 0px 0px 5px;
 }
 
 .header-container .navbar-social li 
@@ -320,22 +334,37 @@ a
 	font-size: 16px;
 }
 
+
 .header-container .navbar-social li a
 {
-	color:#777;
+	color:#fff;
 }
 
-.header-container .navbar-social li:hover a
+
+.header-container .navbar-social #facebook:hover a
 {
-	color:#ffa300;
+	color:#3B5998;
 }
 
+.header-container .navbar-social #twitter:hover a
+{
+	color:#00ACED;
+}
 
+.header-container .navbar-social #reddit:hover a
+{
+	color:#5F99CF;
+}
 
 /* Section Company */
-
+#home
+{
+	margin-top: 80px;
+}
 
 /* Section Yggdrasill */
+
+
 
 .btn-yggdrasill
 {
@@ -376,17 +405,23 @@ a
 	color:#fff;
 	width:100%;
 	padding: 10px 0px;
+	-webkit-transition:  0.2s ease-out; /* Safari */
+    transition: 0.2s ease-out;
 }
 
 #team .team-item
 {
 	padding:30px 30px;
 	flex:1;
+	-webkit-transition:  0.2s ease-out; /* Safari */
+    transition: 0.2s ease-out;
 }
 
 #team .team-item:hover
 {
 	background-color: #ffa300;
+	-webkit-transition:  0.2s ease-in; /* Safari */
+    transition: 0.2s ease-in;
 }
 
 #team .team-item:hover h2
@@ -398,6 +433,8 @@ a
 {
 	background-color: #fff;
 	color:#ffa300;
+	-webkit-transition:  0.2s ease-in; /* Safari */
+    transition: 0.2s ease-in;
 }
 
 
@@ -430,24 +467,29 @@ a
 footer
 {
 	background-color:#ffa300;
+	background-image: none;
 }
 
 footer .container
 {
 	min-height:50px;
-		display: flex;
-	align-items: center;
 }
 
+footer .row
+{
+	padding-top: 15px;
+}
 footer a
 {
 	font-size: 	14px;
 	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: "Segoe Ui";
 }
 
 footer a:hover
 {
-	text-decoration: 	none;
-	color:#000;
+	color:#fff;
 }
 /*# sourceMappingURL=homepage.css.map */
