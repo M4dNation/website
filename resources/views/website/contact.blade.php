@@ -3,38 +3,18 @@
 		<div class="col-lg-12 col-md-12">
 			<h1 class="text-center">Contact</h1>
 			<div class="row text-center">
-				<div class="col-lg-4">
-					<a onclick = "showSocial('.facebookContainer')" href="#contact">Facebook</a>
+				<div class="col-lg-4 contact-item">
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FM4dnation-862421867132210%2F&tabs=timeline&width=340&height=256&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="256" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 				</div>
-				<div class="col-lg-4">
-					<a onclick = "showSocial('.twitterContainer')" href="#contact">Twitter</a>
+				<div class="col-lg-4 contact-item">
+					<p>
+					<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/M4dNation" data-lang="en" data-widget-id="732865837221085184">Tweets by @M4dNation</a>
+					<script>
+							!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+					</script>
+					</p>  
 				</div>
-				<div class="col-lg-4">
-					<a onclick = "showSocial('.contactContainer')" href="#contact">Mail</span></a>
-				</div>
-			</div>
-			<div class="row mrg-t-30">
-				<div class="facebookContainer activeSocial">
-					<p>Facebook news : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae cursus lacus, nec malesuada ante. Vestibulum blandit libero est, vitae convallis purus tristique ac. Nullam porttitor aliquam maximus. In hac habitasse platea dictumst. Praesent eleifend nec velit eget finibus. Suspendisse in nibh ut est ullamcorper elementum in eu sapien. Duis ac tincidunt augue. Praesent convallis scelerisque volutpat. Proin commodo leo vel lacinia elementum. Donec non condimentum orci, eu sagittis velit. Vivamus id volutpat augue. Suspendisse id porta nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-					</p>
-				</div>
-				<div class="twitterContainer">
-					<p>Twitter news : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae cursus lacus, nec malesuada ante. Vestibulum blandit libero est, vitae convallis purus tristique ac. Nullam porttitor aliquam maximus. In hac habitasse platea dictumst. Praesent eleifend nec velit eget finibus. Suspendisse in nibh ut est ullamcorper elementum in eu sapien. Duis ac tincidunt augue. Praesent convallis scelerisque volutpat. Proin commodo leo vel lacinia elementum. Donec non condimentum orci, eu sagittis velit. Vivamus id volutpat augue. Suspendisse id porta nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-					</p>       
-				</div>
-				<div class="contactContainer text-center">
-					<div class="form-group">
-						<label for="usr">Mail:</label>
-						<input type="text" class="form-control" id="usr">
-					</div>
-					<div class="form-group">
-						<label for="comment">Comment:</label>
-						<textarea class="form-control" rows="5" id="comment"></textarea>
-					</div>
-					<div class="text-center">
-						<button class="btn btn-lg btn-primary">Send</button>
-					</div>
-				</div>
+			
 			</div>
 		</div>
 	</div>

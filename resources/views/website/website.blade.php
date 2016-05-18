@@ -13,6 +13,7 @@
 		@include('website.team')
 		@include('website.blog')
 		@include('website.contact')
-		@include('website.footer')
-	</div>		
+		@include('website.footer')	
+	</div>	
+		
 @stop

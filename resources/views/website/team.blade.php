@@ -2,55 +2,55 @@
 	<div class="container">
 		<h1>L'équipe</h1>
 		<div class="row text-center">
-			<div class="col-lg-4">
+			<div class="team-item col-lg-4">
 				<div>
-					<img class="img-circle up_team" src="../resources/assets/image/homepage/axel.jpg" />
+					<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />
 				</div>
-				<h2>Axel Vaindal</h2>
+				<h2>Axel <br> Vaindal</h2>
 				<h3>CEO</h3>
 				<p>Model Property Tree inventor, Martial Arts et Video Games addict. I guess that's enough for now on.</p>
 			</div>
-			<div class="col-lg-4">
+			<div class="team-item col-lg-4">
 				<div>
-					<img class="img-circle up_team" src="../resources/assets/image/homepage/remi.jpg" />
+					<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />
 				</div>
-				<h2>Rémi Hau</h2>
+				<h2>Rémi <br> Hau</h2>
 				<h3>Lead Developper</h3>
-				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<p>Interested in new tech, games, politics & economy</p>
 			</div>
-			<div class="col-lg-4">
+			<div class="team-item col-lg-4">
 				<div>
-					<img class="img-circle up_team" src="../resources/assets/image/homepage/nico.jpg" />
+					<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />
 				</div>
-				<h2>Nicolas Valck</h2>
+				<h2>Nicolas<br> Valck</h2>
 				<h3>SysAdmin</h3>
-				<p>J'aime les femmes et la bière mais pas nécessairement dans cet ordre.</p>
+				<p>Airsoft, video games and open software are my things.</p>
 			</div>
 		</div>
 		<div class="row text-center">
-			<div class="col-lg-4">
+			<div class="team-item col-lg-4">
 				<div>
-					<img class="img-circle up_team" src="../resources/assets/image/homepage/gabin.jpg" />
+					<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />
 				</div>
-				<h2>Gabin Raffoux</h2>
+				<h2>Gabin <br> Raffoux</h2>
 				<h3>COO</h3>
-				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<p>aka M4dPanda. The M4dPanda is one hell of a kind, playing all day long video games of all sorts.</p>
 			</div>
-			<div class="col-lg-4">
+			<div class="team-item col-lg-4">
 				<div>
-					<img class="img-circle up_team" src="../resources/assets/image/homepage/max.jpg" />
+					<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />
 				</div>
-				<h2>Maxime Breuil</h2>
+				<h2>Maxime <br>Breuil</h2>
 				<h3>Lead Game Designer</h3>
-				<p>J'aime les enfants... et les animaux. Nécessairemnt dans cet ordre.</p>
+				<p>I just want to play good video games.</p>
 			</div>
-			<div class="col-lg-4">
+			<div class="team-item col-lg-4">
 				<div>
-					<img class="img-circle up_team" src="../resources/assets/image/homepage/alex.jpg" />
+					<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />
 				</div>
-				<h2>Alexandre Beaumont</h2>
+				<h2>Alexandre <br> Beaumont</h2>
 				<h3>Lead Designer</h3>
-				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+				<p>Interrested in Webdesign and video games</p>
 			</div>
 		</div>
 	</div>
