@@ -7,17 +7,17 @@
 			</div>
 			<div class="col-lg-6 col-md-6">
 				<p>
-					M4dNation est une équipe de 6 personnes, rassemblées autour d’une idée, le développement communautaire.
+					<strong>M4dNation</strong> is a team gathered around a simple idea, crowdsourcing.
 				</p>
 				<p>
-					Créée en 2012 par des passionnés, M4dNation étudie le développement et la création dans le milieu vidéoludique. <br>
-					Imprégnée par une forte expérience du jeu vidéo depuis de nombreuses années, M4dNation se donne pour but de simplifier les relations entre les joueurs et les studios de développement pour faire les meilleurs jeux possibles : les vôtres !
+					Created in 2012 by passionate people, <strong>M4dNation</strong> studies games both in a programming and a creative way. <br>
+					Inspired by strong knowledge about video games, <strong>M4dNation</strong> wants to make the relationship between players and studios easier in order to create better games : yours !
 				</p>
 				<p>
-					En 2014, Axel Vaindal et Yoshii Freeman, co-dirigeants du studio, imaginent une plateforme de crowdsourcing à destination de tous les acteurs du monde du jeu vidéo : Yggdrasill.
+					In 2014, <strong>Axel Vaindal and Yoshii Freeman</strong>, co-founders of the studio, imagined a crowdsourcing platform for video games players and developpers : <strong>Yggdrasill</strong>.
 				</p>
 				<p>
-					Grâce à son moteur révolutionnaire, la créativité des studios et vos idées, la création communautaire est à portée de main !
+					Driven by your ideas, and studios' creativity, game crowdsourcing is now a reality !
 				</p>
 			</div>
 		</div>

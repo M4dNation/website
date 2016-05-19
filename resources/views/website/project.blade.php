@@ -7,16 +7,16 @@
 			</div>
 			<div class="col-lg-6 col-md-6">
 				<p>
-					Yggdrasil est une plateforme de crowdsourcing à destination des joueurs et des studios de développement afin de leur permettre de donner vie à de nouveaux jeux plus proches de leurs envies.
+					<strong>Yggdrasill</strong> is a crowdsourcing platform for video games players and developers in order to help them create games closer to their needs.
 				</p>
 				<p>
-					La plateforme utilise un nouveau modèle de représentation en arbre pour permettre à chacun de s'exprimer, de participer et de donner son avis sur les différents éléments du jeu. Elle intègre également de nombreuses fonctionnalités permettant la communication et la création communautaire telles qu’un chat, une visualisation des différents médias qui composent un jeu vidéo et bien d'autres choses encore.
+					<strong>Yggdrasill</strong> is built on the top of a new tree representation model in order to allow everyone to take part, share and discuss his point about every game element. It also incorporates a lot of features for communication and crowdsourcing such as media vizualisation, chat channels and more.
 				</p>
 				<p>
-					Suivez le développement de vos jeux préférés de la toute première idée jusqu'à leur sortie officielle grâce à une roadmap et un blog spécifique à chaque jeu et communiquez en direct avec les développeurs grâce à l'intégration des réseaux sociaux.
+					Follow the production of your favorite games <strong>from the first idea to their official release </strong>with a blog and  a roadmap specifics to each game and stay in touch with the developers thanks to social network integration.
 				</p>
 				<p>
-					Mieux encore, proposez vos propres jeux, et voyez les grandir au sein d'une communauté passionnée et compétente afin de les voir développés par les plus grands acteurs de la scène vidéoludique !
+					Even better, <strong>post your own games</strong> and watch them grow in a skilled and passionate community in order to have them developed by <strong>the greatest video games studios</strong> in the world.
 				</p>
 			</div>
 		</div>
