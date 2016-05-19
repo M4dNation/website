@@ -21,13 +21,13 @@
         <li>
           <ul class="navbar-social">
             <li id="facebook">
-                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a target="_blank" rel="nofollow" href="https://www.facebook.com/M4dnation-862421867132210/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
             </li>
             <li id="twitter">
-                <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a target="_blank" rel="nofollow" href="https://twitter.com/M4dNation"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             </li>
             <li id="reddit">
-                <a href="#"><i class="fa fa-reddit-square" aria-hidden="true"></i></a>
+                <a target="_blank" rel="nofollow" href="#"><i class="fa fa-reddit-square" aria-hidden="true"></i></a>
             </li>
           </ul>
         </li>

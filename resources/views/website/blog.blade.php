@@ -27,7 +27,6 @@
 		</div>
 		<div class="row">			
 			<div class="col-lg-12 col-md-12">
-				<h1>Blog</h1>
 				<div class="article-container">	
 				<div class="row mrg-b-20">	
 						<div class="col-lg-2 text-center">	
@@ -52,7 +51,6 @@
 		</div>
 		<div class="row">			
 			<div class="col-lg-12 col-md-12">
-				<h1>Blog</h1>
 				<div class="article-container">	
 				<div class="row mrg-b-20">	
 						<div class="col-lg-2 text-center">	

@@ -289,6 +289,8 @@ a
 .header-container
 {
 	background-color: #ffa300;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
+	border:none;
 }
 
 .header-container .nav
@@ -341,25 +343,12 @@ a
 }
 
 
-.header-container .navbar-social #facebook:hover a
-{
-	color:#3B5998;
-}
-
-.header-container .navbar-social #twitter:hover a
-{
-	color:#00ACED;
-}
-
-.header-container .navbar-social #reddit:hover a
-{
-	color:#5F99CF;
-}
 
 /* Section Company */
 #home
 {
 	margin-top: 80px;
+	box-shadow: none;
 }
 
 /* Section Yggdrasill */
@@ -368,15 +357,15 @@ a
 
 .btn-yggdrasill
 {
-	background-color: #ffa300;
+	margin-top: 20px;
+	background-color: #77a42c;
 	color:#fff;
 }
 
 .btn-yggdrasill:hover
 {
-	background-color: #fff;
-	border-color:#ffa300;
-	color:#ffa300;
+	background-color: #275a28;
+	color:#fff;
 }
 
 /* Section Team */
@@ -389,7 +378,7 @@ a
 #team img
 {
 	max-width: 100%;
-	max-height:100px;
+	max-height:200px;
 }
 
 #team h2

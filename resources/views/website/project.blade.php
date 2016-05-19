@@ -24,7 +24,7 @@
 			<div class="col-lg-6 text-center">
 			</div>
 			<div class="col-lg-6 text-center">
-				<a class="btn btn-lg btn-yggdrasill">Learn more</a>
+				<a class="btn btn-lg btn-yggdrasill">Discover now !</a>
 			</div>
 		</div>
 	</div>
