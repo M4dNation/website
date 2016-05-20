@@ -381,12 +381,12 @@ a
 	max-height:200px;
 }
 
-#team h2
+#team h3
 {
 	text-transform: uppercase;
 }
 
-#team h3
+#team h4
 {
 	text-transform: uppercase;
 	background-color: #ffa300;
@@ -413,12 +413,12 @@ a
     transition: 0.2s ease-in;
 }
 
-#team .team-item:hover h2
+#team .team-item:hover h3
 {
 	color:#fff;
 }
 
-#team .team-item:hover h3
+#team .team-item:hover h4
 {
 	background-color: #fff;
 	color:#ffa300;

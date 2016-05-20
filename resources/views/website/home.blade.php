@@ -17,7 +17,7 @@
 					In 2014, <strong>Axel Vaindal and Yoshii Freeman</strong>, co-founders of the studio, imagined a crowdsourcing platform for video games players and developpers : <strong>Yggdrasill</strong>.
 				</p>
 				<p>
-					Driven by your ideas, and studios' creativity, game crowdsourcing is now a reality !
+					Driven by your ideas and studios' creativity, game crowdsourcing is now <strong>a reality !</strong>
 				</p>
 			</div>
 		</div>
