@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 use App\Repositories\ArticleRepository;
 
 class HomeController extends Controller
@@ -22,10 +23,5 @@ class HomeController extends Controller
         $last_article = $this->articleRepository->lastArticle();
 
     	return view('website/website', compact('last_article'));
-    }
-
-    public function sendContactEmail()
-    {
-
     }
 }

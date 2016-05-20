@@ -11,8 +11,26 @@
 |
 */
 
-Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
-Route::get('login',  ['as' => 'showLogin', 'uses' => 'HomeController@showLogin']);
-Route::post('login', ['as' => 'doLogin', 'uses' => 'HomeController@doLogin']);
+Route::group(['middleware' => 'web'], function()
+{
+	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+	Route::get('/login', ['uses' => 'Auth\AuthController@showLoginForm']);
+	Route::post('/login', ['uses' => 'Auth\AuthController@login']);
+	Route::get('/logout', ['uses' => 'Auth\AuthController@logout']);
+});
+
+
+Route::group(['prefix' => 'home', 'middleware' => ['web']], function()
+{
+	//Route::get('/jobs', ['as' => 'home.jobs', uses => 'HomeController@jobs']);
+	
+});
+
+
+Route::group(['prefix' => 'dashboard', 'middleware' => ['web', 'auth']], function ()
+{
+	Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+
+});
 
