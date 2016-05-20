@@ -8,8 +8,10 @@
         <span class="icon-bar"></span>
       </button>
       <div class="logo">
-       <a href="#"><img src="../resources/assets/image/common/logo_m4dnation_topbar.png" /></a>
-     </div>
+        <a href="{{ route('home') }}">
+          <img src="../resources/assets/image/common/logo_m4dnation_topbar.png" />
+        </a>
+      </div>
    </div>
     <div id="navbar" class="navbar-collapse collapse menuHeader">
       <ul class="nav navbar-nav navbar-right">

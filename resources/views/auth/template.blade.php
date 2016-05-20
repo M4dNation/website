@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ asset(elixir('css/lib/libraries.css')) }}">
+    <link rel="stylesheet" href="{{ asset(elixir('css/auth/auth.css')) }}">
+    {!! Html::favicon('favicon.ico') !!}
     <title>@yield('title')</title>
 <body>
 	@yield('content')

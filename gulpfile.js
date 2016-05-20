@@ -28,6 +28,12 @@ elixir(function(mix)
  		'lib/bootstrap.min.js'
  	], 'public/js/lib/libraries.js');
 
+    // Auth CSS
+    mix.styles(
+    [
+        'auth/login.css',
+    ], 'public/css/auth/auth.css');
+
     // Homepage CSS
     mix.styles(
     [
@@ -42,6 +48,11 @@ elixir(function(mix)
         'lib/jquery.fullPage.min.js'
  	], 'public/js/homepage/homepage.js');
 
+    // Dashboard CSS
+    mix.styles(
+    [
+        'dashboard/dashboard.css',
+    ], 'public/css/dashboard/dashboard.css')
 
  	mix.copy(
    'resources/assets/css/lib/fonts',
@@ -52,7 +63,9 @@ elixir(function(mix)
  	[
  		'public/css/lib/libraries.css',
  		'public/js/lib/libraries.js',
+        'public/css/auth/auth.css',
  		'public/css/homepage/homepage.css',
- 		'public/js/homepage/homepage.js'
+ 		'public/js/homepage/homepage.js',
+        'public/css/dashboard/dashboard.css',
  	]);
 });

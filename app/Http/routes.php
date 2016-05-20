@@ -24,7 +24,8 @@ Route::group(['middleware' => 'web'], function()
 Route::group(['prefix' => 'home', 'middleware' => ['web']], function()
 {
 	//Route::get('/jobs', ['as' => 'home.jobs', uses => 'HomeController@jobs']);
-	
+	//Route::get('/legal' ['as' => 'home.legal', uses => 'HomeController@legal']);
+	//Route::get('')
 });
 
 
