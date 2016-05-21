@@ -11,7 +11,7 @@
 				<div class="col-lg-4 col-md-4">
 				</div>
 				<div class="col-lg-4 col-md-4">
-					<a href="{{ route('home') }}"><img class="img-responsive center-block" src="../resources/assets/image/common/logoM4dNation.png" alt=""></a>
+					<a href="{{ route('home') }}"><img class="img-responsive center-block" src="{{ asset('images/common/logo.png') }}" alt=""></a>
 				</div>
 				<div class="col-lg-4 col-md-4">
 				</div>

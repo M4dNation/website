@@ -2,12 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ asset(elixir('css/main.css')) }}">
-    <link rel="stylesheet" href="{{ asset(elixir('css/website/main.css')) }}">
-    <title>@yield('titre')</title>
+    {!! Html::style(elixir('css/lib/libraries.css')) !!}
+    {!! Html::favicon('favicon.ico') !!}
+    <title>@yield('title')</title>
 <body>
 	@yield('content')
-	<script src="{{ asset(elixir('js/main.js')) }}"></script>
-	<script src="{{ asset(elixir('js/website/main.js')) }}"></script>
+	{!! Html::script(elixir('js/lib/libraries.js')) !!}
 </body>
 </html>

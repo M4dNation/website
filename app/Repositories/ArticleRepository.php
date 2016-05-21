@@ -43,4 +43,15 @@ class ArticleRepository extends Repository
     {
         return Article::last();
     }
+
+    /**
+     * take
+     * This function is used in order to get the n latest article
+     * @return  {Article}
+     */
+    
+    public function take($n)
+    {
+        return Article::take($n);
+    }
 }

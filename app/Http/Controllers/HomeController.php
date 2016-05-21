@@ -20,8 +20,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        $last_article = $this->articleRepository->lastArticle();
+        $articles = $this->articleRepository->take(3);
 
-    	return view('website/website', compact('last_article'));
+    	return view('website/website', compact('articles'));
     }
 }

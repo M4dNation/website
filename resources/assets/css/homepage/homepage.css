@@ -1,6 +1,5 @@
 /* Common CSS */
 
-
 html, body
 {
 	height:100%;
@@ -18,11 +17,10 @@ html, body
 	min-height:100%;
 	border-bottom: 	1px solid  #989898;
 	flex:1;
-	background-image: url("../../image/common/171702.jpg");
+	background-image: url("../../../images/common/background.jpg");
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35) inset;
 	background-repeat: repeat;	
 }
-
 
 .body-container
 {
@@ -66,7 +64,7 @@ a
 	color:#ffa300;
 }
 
-/* Section Header */
+/* Header */
 
 .header-container, .header-container .logo img, .header-container .nav li 
 {
@@ -123,24 +121,20 @@ a
 	font-size: 16px;
 }
 
-
 .header-container .navbar-social li a
 {
 	color:#fff;
 }
 
-
-
 /* Section Company */
-#home
+
+#company
 {
 	margin-top: 80px;
 	box-shadow: none;
 }
 
 /* Section Yggdrasill */
-
-
 
 .btn-yggdrasill
 {
@@ -151,7 +145,6 @@ a
 
 .btn-yggdrasill:hover
 {
-	background-color: #275a28;
 	color:#fff;
 }
 
@@ -185,6 +178,11 @@ a
     transition: 0.2s ease-out;
 }
 
+.teammate-name
+{
+	margin-top: 30px;
+}
+
 #team .team-item
 {
 	padding:30px 30px;
@@ -213,19 +211,23 @@ a
     transition: 0.2s ease-in;
 }
 
-
-
 /* Section Blog */
 
 .article-container
 {
-		padding:20px;
+	padding:20px;
 }
 
 .article-container img
 {
-	max-width: 	100px;
+	max-width: 300px;
 }
+
+.article-container
+{
+
+}
+
 /* Section Contact */
 
 #contact .row
@@ -255,6 +257,7 @@ footer .row
 {
 	padding-top: 15px;
 }
+
 footer a
 {
 	font-size: 	14px;

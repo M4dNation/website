@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ asset(elixir('css/lib/libraries.css')) }}">
-    <link rel="stylesheet" href="{{ asset(elixir('css/homepage/homepage.css')) }}">
+    {!! Html::style(elixir('css/lib/libraries.css')) !!}
+    {!! Html::style(elixir('css/homepage/homepage.css')) !!}
     {!! Html::favicon('favicon.ico') !!}
     <title>@yield('title')</title>
 <body>
 	@yield('content')
-	<script src="{{ asset(elixir('js/lib/libraries.js')) }}"></script>
-	<script src="{{ asset(elixir('js/homepage/homepage.js')) }}"></script>
+	{!! Html::script(elixir('js/lib/libraries.js')) !!}
 </body>
 </html>

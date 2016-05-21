@@ -3,7 +3,7 @@
 		<h1>Yggdrasill</h1>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 text-center">
-				<img src="../resources/assets/image/homepage/yggdrasill.png" alt="">
+				<img src="{{ asset('images/common/yggdrasill.png') }}" alt="">
 			</div>
 			<div class="col-lg-6 col-md-6">
 				<p>

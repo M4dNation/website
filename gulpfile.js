@@ -21,13 +21,6 @@ elixir(function(mix)
         'lib/font-awesome.min.css'
     ], 'public/css/lib/libraries.css');
 
-    // Lib Javascript
- 	mix.scripts(
- 	[
- 		'lib/jquery.min.js',
- 		'lib/bootstrap.min.js'
- 	], 'public/js/lib/libraries.js');
-
     // Auth CSS
     mix.styles(
     [
@@ -37,16 +30,8 @@ elixir(function(mix)
     // Homepage CSS
     mix.styles(
     [
-    	'lib/jquery.fullPage.css',
         'homepage/homepage.css',
     ], 'public/css/homepage/homepage.css');
-
- 	// Homepage Javascript
-	mix.scripts(
- 	[
- 		'homepage/homepage.js',
-        'lib/jquery.fullPage.min.js'
- 	], 'public/js/homepage/homepage.js');
 
     // Dashboard CSS
     mix.styles(
@@ -54,18 +39,33 @@ elixir(function(mix)
         'dashboard/dashboard.css',
     ], 'public/css/dashboard/dashboard.css')
 
+    // Lib Javascript
+ 	mix.scripts(
+ 	[
+ 		'lib/jquery.min.js',
+ 		'lib/bootstrap.min.js'
+ 	], 'public/js/lib/libraries.js');
+
+    
+    // Copying fonts to public
  	mix.copy(
-   'resources/assets/css/lib/fonts',
-   'public/build/css/fonts'
+        'resources/assets/css/lib/fonts',
+        'public/build/css/fonts'
+    );
+
+    // Copying image to public
+    
+    mix.copy(
+        'resources/assets/images',
+        'public/images'
     );
 
  	mix.version(
  	[
  		'public/css/lib/libraries.css',
- 		'public/js/lib/libraries.js',
         'public/css/auth/auth.css',
  		'public/css/homepage/homepage.css',
- 		'public/js/homepage/homepage.js',
         'public/css/dashboard/dashboard.css',
+        'public/js/lib/libraries.js',
  	]);
 });

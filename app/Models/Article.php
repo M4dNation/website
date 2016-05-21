@@ -45,4 +45,15 @@ class Article extends Model
     {
     	return Article::orderBy('created_at', 'desc')->first();
     }
+
+    /**
+    * take
+    * This function is used in order to get the n latest article. 
+    * @return {Article}
+    */
+   
+    public static function take($n)
+    {
+        return Article::orderBy('created_at', 'desc')->take($n)->get();
+    }
 }

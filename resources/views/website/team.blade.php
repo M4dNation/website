@@ -5,9 +5,9 @@
 			<div class="team-item col-lg-4">
 				<div class="row">	
 					<div class="col-lg-6">
-						<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />				
+						<img class="img-circle" src="{{ asset('images/homepage/axel.jpg') }}" />				
 					</div>
-					<div class="col-lg-6">	
+					<div class="col-lg-6 teammate-name">	
 						<h3>Axel <br> Vaindal</h3>
 					</div>
 				</div>
@@ -17,21 +17,21 @@
 			<div class="team-item col-lg-4">
 				<div class="row">	
 					<div class="col-lg-6">
-						<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />				
+						<img class="img-circle" src="{{ asset('images/homepage/remi.jpg') }}" />				
 					</div>
-					<div class="col-lg-6">	
+					<div class="col-lg-6 teammate-name">	
 						<h3>Rémi <br> Hau</h3>
 					</div>
 				</div>
 				<h4>Lead Developper</h4>
-				<p>Coming from Java to Javascript. <br>Interested in new tech, video games, politics & economy. </p>
+				<p>Coming from Java to Javascript. <br>Interested in new tech, video games, politics and economy. </p>
 			</div>
 			<div class="team-item col-lg-4">
 				<div class="row">	
 					<div class="col-lg-6">
-						<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />				
+						<img class="img-circle" src="{{ asset('images/homepage/nico.jpg') }}" />				
 					</div>
-					<div class="col-lg-6">	
+					<div class="col-lg-6 teammate-name">	
 						<h3>Nicolas <br> Valck</h3>
 					</div>
 				</div>
@@ -43,9 +43,9 @@
 			<div class="team-item col-lg-4">
 				<div class="row">	
 					<div class="col-lg-6">
-						<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />				
+						<img class="img-circle" src="{{ asset('images/homepage/gabin.jpg') }}" />
 					</div>
-					<div class="col-lg-6">	
+					<div class="col-lg-6 teammate-name">	
 						<h3>Gabin <br> Raffoux</h3>
 					</div>
 				</div>
@@ -55,9 +55,9 @@
 			<div class="team-item col-lg-4">
 				<div class="row">	
 					<div class="col-lg-6">
-						<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />				
+						<img class="img-circle" src="{{ asset('images/homepage/max.jpg') }}" />				
 					</div>
-					<div class="col-lg-6">	
+					<div class="col-lg-6 teammate-name">	
 						<h3>Maxime <br>Breuil</h3>
 					</div>
 				</div>			
@@ -67,14 +67,14 @@
 			<div class="team-item col-lg-4">
 				<div class="row">	
 					<div class="col-lg-6">
-						<img class="img-circle up_team" src="../resources/assets/image/common/logoM4dNation.png" />				
+						<img class="img-circle" src="{{ asset('images/homepage/alex.jpg') }}" />				
 					</div>
-					<div class="col-lg-6">	
+					<div class="col-lg-6 teammate-name">	
 						<h3>Alexandre <br>Beaumont</h3>
 					</div>
 				</div>
 				<h4>Webdesigner</h4>
-				<p>Designer by day and players by night. Sometimes the other way. </br> Interested in Webdesign and video games.</p>
+				<p>Designer by day and player by night. </br> Interested in Webdesign and video games.</p>
 			</div>
 		</div>
 	</div>

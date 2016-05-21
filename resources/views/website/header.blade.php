@@ -9,13 +9,13 @@
       </button>
       <div class="logo">
         <a href="{{ route('home') }}">
-          <img src="../resources/assets/image/common/logo_m4dnation_topbar.png" />
+          <img src="{{ asset('images/common/logo_title.png') }}" />
         </a>
       </div>
    </div>
     <div id="navbar" class="navbar-collapse collapse menuHeader">
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item"><a  href="#home">M4dNation</a></li>
+        <li class="nav-item"><a  href="#company">M4dNation</a></li>
         <li class="nav-item"><a  href="#project">Yggdrasill</a></li>
         <li class="nav-item"><a  href="#team">Team</a></li>
         <li class="nav-item"><a  href="#blog">Blog</a></li>	

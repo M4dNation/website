@@ -9,7 +9,7 @@
 		    </button>
 		    <div class="logo">
         		<a href="{{ route('home') }}">
-          			<img src="../resources/assets/image/common/logo_m4dnation_topbar.png" />
+          			<img src="{{ asset('images/common/logo_title.png') }}" />
         		</a>
       		</div>
 		</div>

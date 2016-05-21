@@ -1,9 +1,9 @@
-<section id="home" class="section">	
+<section id="company" class="section">	
 	<div class="container">
 		<h1>M4dNation</h1>
 		<div class="row">	
 			<div class="col-lg-6 col-md-6 text-center">
-				<img class="img-responsive center-block pdg-b-10" src="../resources/assets/image/common/logoM4dNation.png" alt="">
+				<img class="img-responsive center-block pdg-b-10" src="{{ asset('images/common/logo.png') }}" alt="">
 			</div>
 			<div class="col-lg-6 col-md-6">
 				<p>
@@ -14,7 +14,7 @@
 					Inspired by strong knowledge about video games, <strong>M4dNation</strong> wants to make the relationship between players and studios easier in order to create better games : yours !
 				</p>
 				<p>
-					In 2014, <strong>Axel Vaindal and Yoshii Freeman</strong>, co-founders of the studio, imagined a crowdsourcing platform for video games players and developpers : <strong>Yggdrasill</strong>.
+					In 2014, <strong>Axel Vaindal and Gabin Raffoux</strong>, co-founders of the studio, imagined a crowdsourcing platform for video games players and developpers : <strong>Yggdrasill</strong>.
 				</p>
 				<p>
 					Driven by your ideas and studios' creativity, game crowdsourcing is now <strong>a reality !</strong>

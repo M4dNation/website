@@ -1,7 +1,7 @@
 @extends('blog.template')
 
 @section('content')
-	@include('website.header')	
+	@include('blog.header')	
 	<div class="container">
 		<div class="row">
 			<div class="title-container">
@@ -26,7 +26,5 @@
 				</div>
 			</div>
 		</div>
-	</div>		
-		
-	
+	</div>	
 @stop
