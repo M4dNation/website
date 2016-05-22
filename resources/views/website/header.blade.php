@@ -19,7 +19,6 @@
         <li class="nav-item"><a  href="#project">Yggdrasill</a></li>
         <li class="nav-item"><a  href="#team">Team</a></li>
         <li class="nav-item"><a  href="#blog">Blog</a></li>	
-        <li class="nav-item"><a  href="#contact">Contact</a></li> 
         <li>
           <ul class="navbar-social">
             <li id="facebook">

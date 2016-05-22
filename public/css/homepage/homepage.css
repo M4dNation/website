@@ -36,7 +36,12 @@ p
 {
 	text-align:justify;
 	font-size: 1.3em;
-	font-family: "Segoe ui"
+	font-family: "Segoe ui";
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family: "Segoe ui";
 }
 
 h1
@@ -181,6 +186,13 @@ a
 .teammate-name
 {
 	margin-top: 30px;
+	
+}
+
+.teammate-name h3
+{
+	font-weight: bold;
+	font-family: "Segoe ui";
 }
 
 #team .team-item
@@ -190,6 +202,13 @@ a
 	-webkit-transition:  0.2s ease-out; /* Safari */
     transition: 0.2s ease-out;
 }
+
+#team .team-item a
+{
+	color: black;
+	text-decoration: none;
+}
+
 
 #team .team-item:hover
 {
@@ -213,6 +232,16 @@ a
 
 /* Section Blog */
 
+.article-link, .article-link:visited, .article-link:active, .article-link:focus
+{
+	color: black;
+}
+
+.article-link:hover
+{
+	color: #ffa300;
+}
+
 .article-container
 {
 	padding:20px;
@@ -220,12 +249,22 @@ a
 
 .article-container img
 {
-	max-width: 300px;
+	max-width: 200px;
 }
 
-.article-container
+.article-container h2
 {
+	font-weight: bold;
+	margin-bottom: 0px;
+}
 
+.article-container h3
+{
+	padding: 0px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 0.9em;
+	font-style: italic;
 }
 
 /* Section Contact */

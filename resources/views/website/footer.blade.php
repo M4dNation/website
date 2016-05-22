@@ -1,17 +1,14 @@
 <footer>
 	<div class="container text-center">
 		<div class="row">
-			<div class="col-lg-3">
-				<a href="#">Press</a>
+			<div class="col-lg-4">
+				<a href="mailto:contact@m4dnation.io">Contact</a>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-4">
+				<a href="mailto:press@m4dnation.io">Press</a>
+			</div>
+			<div class="col-lg-4">
 				<a href="#">Jobs</a>
-			</div>
-			<div class="col-lg-3">
-				<a href="#">Legal</a>
-			</div>
-			<div class="col-lg-3">
-				<a href="#">About</a>
 			</div>
 		</div>
 	</div>

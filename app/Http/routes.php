@@ -15,23 +15,20 @@
 Route::group(['middleware' => 'web'], function()
 {
 	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+
 	Route::get('/login', ['uses' => 'Auth\AuthController@showLoginForm']);
 	Route::post('/login', ['uses' => 'Auth\AuthController@login']);
 	Route::get('/logout', ['uses' => 'Auth\AuthController@logout']);
+
+	Route::get('/jobs', ['as' => 'home.jobs', 'uses' => 'HomeController@job']);
+	Route::get('/legal' ,['as' => 'home.legal', 'uses' => 'HomeController@legal']);
+
+	Route::group(['prefix' => 'dashboard', 'middleware' => ['web', 'auth']], function ()
+	{
+		Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+	});
 });
 
 
-Route::group(['prefix' => 'home', 'middleware' => ['web']], function()
-{
-	//Route::get('/jobs', ['as' => 'home.jobs', uses => 'HomeController@jobs']);
-	//Route::get('/legal' ['as' => 'home.legal', uses => 'HomeController@legal']);
-	//Route::get('')
-});
 
-
-Route::group(['prefix' => 'dashboard', 'middleware' => ['web', 'auth']], function ()
-{
-	Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
-
-});
 

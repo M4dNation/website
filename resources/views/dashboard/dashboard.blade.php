@@ -5,5 +5,7 @@
 @stop
 
 @section('content')
-	@include('dashboard.header')
+	<div class="body-container">
+		@include('dashboard.header')
+	</div>
 @stop
