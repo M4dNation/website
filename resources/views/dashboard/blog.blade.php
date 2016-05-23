@@ -1,7 +1,7 @@
 @extends('dashboard.template')
 
 @section('title')
-	M4dNation - Dashboard
+	Dashboard
 @stop
 
 @section('content')

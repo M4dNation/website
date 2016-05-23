@@ -1,7 +1,7 @@
 @extends('auth.template')
 
 @section('title')
-	M4dNation - Login
+	Login
 @stop
 
 @section('content')

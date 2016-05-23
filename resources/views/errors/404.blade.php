@@ -1,7 +1,7 @@
 @extends('errors.template')
 
 @section('title')
-	M4dNation - 404 Not Found
+	404 Not Found
 @stop
 
 @section('content')
