@@ -1,6 +1,9 @@
 /vendor
 /node_modules
-/public
+/public/build
+/public/css
+/public/js
+/public/images
 /storage
 .env
 Homestead.yaml
