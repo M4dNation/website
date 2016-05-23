@@ -1,7 +1,8 @@
 {
-  "css/auth/auth.css": "css/auth/auth-d1f578c9bd.css",
+  "css/auth/auth.css": "css/auth/auth-9488fcee98.css",
+  "css/blog/blog.css": "css/blog/blog-731a9dfc0e.css",
   "css/dashboard/dashboard.css": "css/dashboard/dashboard-ff8d31780e.css",
-  "css/errors/errors.css": "css/errors/errors-2effeaad3d.css",
+  "css/errors/errors.css": "css/errors/errors-1853d2672c.css",
   "css/homepage/homepage.css": "css/homepage/homepage-a8296ebd7e.css",
   "css/lib/libraries.css": "css/lib/libraries-5ec2b49784.css",
   "js/lib/libraries.js": "js/lib/libraries-841ee8a393.js"

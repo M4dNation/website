@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     {!! Html::style(elixir('css/lib/libraries.css')) !!}
+    {!! Html::style(elixir('css/blog/blog.css')) !!}
     {!! Html::favicon('favicon.ico') !!}
     <title>@yield('title')</title>
 <body>

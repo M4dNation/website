@@ -54,4 +54,15 @@ class ArticleRepository extends Repository
     {
         return Article::take($n);
     }
+
+    /**
+     * paginate
+     * This function is used to paginate all the articles with $n article by page
+     * @return  {Article}
+     */
+
+     public function paginate($n)
+    {
+        return Article::paginate($n);
+    }
 }

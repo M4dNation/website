@@ -1,0 +1,167 @@
+/* Common CSS */
+
+html, body
+{
+	background-image: url("../../../images/common/background.jpg");
+	background-repeat: repeat;	
+	height:100%;
+}
+
+/* Header */
+
+.header-container, .header-container .logo img, .header-container .nav li 
+{
+	height:80px;
+}
+
+.header-container
+{
+	background-color: #ffa300;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
+	border:none;
+}
+
+.header-container .nav
+{
+	margin:auto;
+}
+
+.header-container .nav-item
+{
+	border-right : 1px solid #ffa300;
+	text-transform: uppercase;
+	padding-top: 15px;
+	font-weight: bold;
+	font-family: "Segoe Ui";
+}
+
+.header-container .nav-item:hover
+{
+	background-color: #fff;
+}
+
+.header-container .nav .nav-item a
+{
+	color:#fff;
+}
+
+.header-container .nav .nav-item:hover a
+{
+	color:#ffa300;
+}
+
+/*Blog css*/
+
+.article-container
+{
+	margin-top: 100px;
+	margin-bottom: 20px;
+	box-shadow: 10px 0px 15px rgba(0,0,0,0.35), -10px 0px 15px rgba(0,0,0,0.35);
+	padding: 0px 0px 0px 0px;
+}
+.article-container .row
+{
+	margin: 0px 0px 0px 0px;
+}
+
+.article-container .title-container
+{
+	color:#fff;
+	background-color: #222222;
+	padding: 10px 25px 10px 25px;
+	position:relative;
+}
+
+.article-container .content-container
+{
+	padding: 10px 30px 10px 30px;
+}
+
+.article-container h1
+{
+	font-family : "Segoe Ui";
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.article-container .date
+{
+	padding: 0px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 1em;
+	font-style: italic;
+}
+
+.article-container p
+{
+	font-family : "Segoe Ui";
+}
+
+.gallery-container
+{
+	display:flex;
+}
+
+.gallery-item
+{
+	flex:1;
+}
+
+.gallery-item img
+{
+	max-width:100%;
+}
+
+.top-link
+{
+	color:#fff;
+	font-size: 0.8em;
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+
+.top-link:hover
+{
+	color:#fff;
+	text-decoration:none;
+}
+
+.navigation-link
+{
+	position:relative;
+	height:50px;
+	
+}
+
+.navigation-link a
+{
+	position : absolute;
+	text-transform: uppercase;
+	font-weight:bold;
+	color:#fff;
+	background-color: #222222;
+	display:block;
+	height:100%;
+	padding:15px 10px;	
+}
+
+.navigation-link a:hover, .navigation-link a:active, .navigation-link a:focus
+{
+	text-decoration: none;
+	color:#fff;
+}
+
+.navigation-link .previous
+{
+	left:0px;
+}
+
+.navigation-link .next
+{
+	right:0px;
+
+}
+
+

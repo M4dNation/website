@@ -45,6 +45,12 @@ elixir(function(mix)
         'errors/404.css',
     ], 'public/css/errors/errors.css')
 
+    // Blog CSS
+    mix.styles(
+    [
+        'blog/blog.css',
+    ], 'public/css/blog/blog.css')
+
     // Lib Javascript
  	mix.scripts(
  	[
@@ -72,6 +78,7 @@ elixir(function(mix)
  		'public/css/homepage/homepage.css',
         'public/css/dashboard/dashboard.css',
         'public/css/errors/errors.css',
+        'public/css/blog/blog.css',
         'public/js/lib/libraries.js',
  	]);
 });

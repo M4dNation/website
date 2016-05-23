@@ -16,6 +16,8 @@ Route::group(['middleware' => 'web'], function()
 {
 	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
+	Route::get('/blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
+
 	Route::get('/login', ['uses' => 'Auth\AuthController@showLoginForm']);
 	Route::post('/login', ['uses' => 'Auth\AuthController@login']);
 	Route::get('/logout', ['uses' => 'Auth\AuthController@logout']);
