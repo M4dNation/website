@@ -39,6 +39,12 @@ elixir(function(mix)
         'dashboard/dashboard.css',
     ], 'public/css/dashboard/dashboard.css')
 
+     // Errors CSS
+    mix.styles(
+    [
+        'errors/404.css',
+    ], 'public/css/errors/errors.css')
+
     // Lib Javascript
  	mix.scripts(
  	[
@@ -65,6 +71,7 @@ elixir(function(mix)
         'public/css/auth/auth.css',
  		'public/css/homepage/homepage.css',
         'public/css/dashboard/dashboard.css',
+        'public/css/errors/errors.css',
         'public/js/lib/libraries.js',
  	]);
 });

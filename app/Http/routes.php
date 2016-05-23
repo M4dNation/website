@@ -23,9 +23,13 @@ Route::group(['middleware' => 'web'], function()
 	Route::get('/jobs', ['as' => 'home.jobs', 'uses' => 'HomeController@job']);
 	Route::get('/legal' ,['as' => 'home.legal', 'uses' => 'HomeController@legal']);
 
+	Route::get('/jobs', ['as' => 'home.jobs', 'uses' => 'HomeController@job']);
+
 	Route::group(['prefix' => 'dashboard', 'middleware' => ['web', 'auth']], function ()
 	{
 		Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+		Route::get('/blog',  ['as' => 'dashboard.blog', 'uses' => 'DashboardController@blog']);
+		Route::get('/users', ['as' => 'dashboard.users', 'uses' => 'DashboardController@users']);
 	});
 });
 

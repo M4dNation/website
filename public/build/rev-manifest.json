@@ -1,6 +1,7 @@
 {
   "css/auth/auth.css": "css/auth/auth-d1f578c9bd.css",
-  "css/dashboard/dashboard.css": "css/dashboard/dashboard-9d52d966a7.css",
+  "css/dashboard/dashboard.css": "css/dashboard/dashboard-ff8d31780e.css",
+  "css/errors/errors.css": "css/errors/errors-2effeaad3d.css",
   "css/homepage/homepage.css": "css/homepage/homepage-a8296ebd7e.css",
   "css/lib/libraries.css": "css/lib/libraries-5ec2b49784.css",
   "js/lib/libraries.js": "js/lib/libraries-841ee8a393.js"
