@@ -54,7 +54,6 @@ elixir(function(mix)
     );
 
     // Copying image to public
-    
     mix.copy(
         'resources/assets/images',
         'public/images'
