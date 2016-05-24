@@ -5,10 +5,10 @@
 				<h1>Blog</h1>
 				@foreach ($articles as $article)
 				<div class="article-container">	
-					<a href="#" class="article-link">
+					<a href="{{ route('blog.article', $article->id) }}" class="article-link">
 					<div class="row mrg-b-20">	
 						<div class="col-lg-3 text-center">	
-							<img src="http://lorempicsum.com/futurama/200/200/4" alt="">
+							<img src="{{$article->images[0]->path . $article->images[0]->name}}" alt="">
 						</div>
 						<div class="col-lg-9">
 							<h2>{{ $article->title }}</h2>
@@ -22,6 +22,11 @@
 				</div>
 				
 				@endforeach
+				<div class="pull-right">
+					<a class="btn btn-lg btn-default btn-blog" href="{{ route('blog')}}">
+						Read all
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

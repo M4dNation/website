@@ -28,4 +28,17 @@ class BlogController extends Controller
 
     	return view('blog/blog', compact('articles'));
     }
+
+    public function showArticle($id)
+    {
+        $article = $this->articleRepository->byId($id);        
+        $total = count($this->articleRepository->all());
+
+        if ($article === null)
+        {
+            abort('404');
+        }
+
+        return view('blog/article', compact('article', 'total'));
+    }
 }

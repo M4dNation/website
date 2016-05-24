@@ -249,7 +249,8 @@ a
 
 .article-container img
 {
-	max-width: 200px;
+	max-width: 250px;
+	margin-top: 25px;
 }
 
 .article-container h2
@@ -265,6 +266,19 @@ a
 	margin-bottom: 10px;
 	font-size: 0.9em;
 	font-style: italic;
+}
+
+.btn-blog
+{
+	background-color: #222222;
+	color:#fff;
+	margin:30px;
+}
+
+.btn-blog:hover, .btn-blog:focus, .btn-blog:active
+{
+	background-color: #222222;
+	color:#fff;
 }
 
 /* Section Contact */

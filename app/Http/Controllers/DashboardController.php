@@ -46,9 +46,4 @@ class DashboardController extends Controller
 
         return view('dashboard/users', compact('user', 'users'));
     }
-
-    public function saveUser(UserRequest $request)
-    {
-        
-    }
 } 

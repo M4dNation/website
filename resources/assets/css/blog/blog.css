@@ -40,7 +40,7 @@ html, body
 	background-color: #fff;
 }
 
-.header-container .nav .nav-item a
+.header-container .nav .nav-item a, .header-container .nav .nav-item a:focus, .header-container .nav .nav-item a:active, .header-container .nav .nav-item a:visited
 {
 	color:#fff;
 }
@@ -77,6 +77,19 @@ html, body
 	padding: 10px 30px 10px 30px;
 }
 
+.article-container a 
+{
+	color:#fff;
+}
+
+
+.article-container a:hover, .article-container a:focus, .article-container a:active
+{
+	text-decoration: none;
+	color:#fff;
+	outline:none;
+}
+
 .article-container h1
 {
 	font-family : "Segoe Ui";
@@ -111,6 +124,7 @@ html, body
 .gallery-item img
 {
 	max-width:100%;
+	cursor: pointer;
 }
 
 .top-link
@@ -163,5 +177,80 @@ html, body
 	right:0px;
 
 }
+
+
+/*Modal*/
+.modal-dialog
+{
+	width:100%;
+	max-width: 	1100px;
+}
+
+.modal-footer .btn:hover, .modal-footer .btn:focus, .modal-footer .btn:active
+{
+	border-color:#ccc;
+}
+
+.gallery-header
+{
+	background-color: #222222;
+	color: #fff;
+	padding:5px;
+	border-bottom:none;
+}
+
+.gallery-header h1
+{
+	font-family: "Segoe Ui";
+	text-transform:uppercase;
+	margin-bottom: 0px;
+}
+
+.gallery-header h2
+{
+	font-family: "Segoe Ui";
+	font-style: italic;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+
+.gallery-header .close
+{
+	color:#fff;
+	opacity:1;
+}
+
+.modal-body
+{
+	padding: 0px;
+}
+
+.modal-body img
+{
+	max-width:100%;
+
+}
+
+.modal-footer
+{
+	padding:0px;
+	border:none;
+}
+
+.modal-footer .btn, .modal-footer .btn:hover, .modal-footer .btn:focus, .modal-footer .btn:active
+{
+	text-transform: uppercase;
+	font-weight:bold;
+	color:#fff;
+	background-color: #222222;
+	display:block;
+	height:100%;
+	padding:15px 10px;	
+	border:none;
+	width:100px;
+	border-radius:0px;
+}
+
 
 

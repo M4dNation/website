@@ -51,7 +51,12 @@ html, body
 }
 
 
-/* DashBoard Home */
+.logout:hover, .logout:focus, .logout:active
+{
+	color:#fff;
+}
+
+/*DashBoard Home*/
 
 .dashboard-container
 {

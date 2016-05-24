@@ -7,14 +7,11 @@
 @section('content')
 	@include('blog.header')	
 	<div class="container article-container">
-		@foreach ($articles as $article)
 		<div class="row">
 			<div class="title-container">
-				<a href="{{ route('blog.article', $article->id) }}" class="article-link">
-					<h1>{{ $article->title }}</h1>
-				</a>
+				<h1>{{ $article->title }}</h1>
 				<p class="date">{{ date('F d, Y', strtotime($article->updated_at)) }}</p>
-				<a class="top-link" href="#">Back to top</a>
+				<a class="top-link" href="{{ route('blog') }}">All articles</a>
 			</div>
 			<div class="content-container">
 				<p>
@@ -31,13 +28,12 @@
 				@endforeach
 			</div>
 		</div>
-		@endforeach
 		<div class="navigation-link">
-			@if($articles->currentPage()!=1)
-				<a class="previous" href="{{ $articles->previousPageUrl() }}">Previous page</a>
+			@if ( ($article->id - 1) > 0 )
+				<a class="previous" href="{{ route('blog.article',($article->id-1)) }}">Previous article</a>
 			@endif
-			@if($articles->hasMorePages())
-				<a class="next" href="{{ $articles->nextPageUrl() }}">Next page</a>
+			@if ( ($article->id) < $total)
+				<a class="next" href="{{ route('blog.article',($article->id+1)) }}">Next article</a>
 			@endif
 		</div>
 	</div>

@@ -17,10 +17,10 @@ Route::group(['middleware' => 'web'], function()
 	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 	Route::get('/blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
-
+	Route::get('/blog/{id}', ['as' => 'blog.article', 'uses' => 'BlogController@showArticle'])->where('id', '[0-9]+');
 	Route::get('/login', ['uses' => 'Auth\AuthController@showLoginForm']);
 	Route::post('/login', ['uses' => 'Auth\AuthController@login']);
-	Route::get('/logout', ['uses' => 'Auth\AuthController@logout']);
+	Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@logout']);
 
 	Route::get('/jobs', ['as' => 'home.jobs', 'uses' => 'HomeController@job']);
 	Route::get('/legal' ,['as' => 'home.legal', 'uses' => 'HomeController@legal']);
