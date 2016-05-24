@@ -31,6 +31,21 @@ abstract class Repository
         return $this->model->paginate($n);
 	}
 
+	public function take($n)
+    {
+        return $this->model->take($n);
+    }
+
+	public function last()
+    {
+        return $this->model->last();
+    }
+
+    public function first()
+    {
+    	return $this->model->first();
+    }
+
 	public function save()
 	{
 		return $this->model->save();

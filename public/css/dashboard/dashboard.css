@@ -42,16 +42,16 @@ html, body
 
 .header-container .nav .nav-item a
 {
-	color:#fff;
+	color: #fff;
 }
 
 .header-container .nav .nav-item:hover a
 {
-	color:#ffa300;
+	color: #ffa300;
 }
 
 
-/*DashBoard Home*/
+/* DashBoard Home */
 
 .dashboard-container
 {
@@ -111,5 +111,88 @@ html, body
 {
 	-webkit-filter: invert(100%); /* Chrome, Safari, Opera */
     filter: invert(100%);
+}
+/* Common CSS */
+
+.user-management-container
+{
+	margin-top: 100px;
+	margin-bottom: 20px;
+	height: 100%;
+}
+
+.user-management-content
+{
+	height: 100%;
+}
+
+/* User list */
+
+.user-list
+{
+	box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.35), -10px 0px 15px rgba(0, 0, 0, 0.35);
+	height: 100%;
+}
+
+.title-box
+{
+	text-transform: uppercase;
+	font-family : "Segoe Ui";
+	font-weight: bold;
+	background-color: #222222;
+	padding:15px 10px;
+	color:#fff;
+}
+
+.user-box
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family : "Segoe Ui";
+	padding-top: 20px;
+	color: #222222;
+	border-bottom: 0.5px solid #222222;
+}
+
+.user-box a, .user-box a:hover, .user-box a:active, .user-box a:focus
+{
+	color: #222222;
+}
+
+.user-data
+{
+	box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.35), -10px 0px 15px rgba(0, 0, 0, 0.35);
+	min-height: 100%;
+}
+
+.form-title-box
+{
+	font-family : "Segoe Ui";
+	border-bottom: 1px solid rgba(34, 34, 34, 0.15);
+}
+
+.form-title-box h2
+{
+	font-size: 1.8em;
+	margin-top: 5px;
+}
+
+.form-title-box h3
+{
+	margin-top: 5px;
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+.form-content-box
+{
+	font-family : "Segoe Ui";
+	margin-top: 10px;
+	border-bottom: 1px solid rgba(34, 34, 34, 0.15);	
+}
+
+save-input
+{
+	
 }
 /*# sourceMappingURL=dashboard.css.map */

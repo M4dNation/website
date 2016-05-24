@@ -6,9 +6,8 @@ use App\Models\User;
 
 class UserRepository extends Repository
 {
-    public function __construct(USer $user)
+    public function __construct(User $user)
 	{
 	   $this->model = $user;
 	}
-
 }

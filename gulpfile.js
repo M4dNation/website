@@ -37,6 +37,7 @@ elixir(function(mix)
     mix.styles(
     [
         'dashboard/dashboard.css',
+        'dashboard/users.css',
     ], 'public/css/dashboard/dashboard.css')
 
      // Errors CSS

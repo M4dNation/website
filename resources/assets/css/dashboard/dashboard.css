@@ -42,16 +42,16 @@ html, body
 
 .header-container .nav .nav-item a
 {
-	color:#fff;
+	color: #fff;
 }
 
 .header-container .nav .nav-item:hover a
 {
-	color:#ffa300;
+	color: #ffa300;
 }
 
 
-/*DashBoard Home*/
+/* DashBoard Home */
 
 .dashboard-container
 {
