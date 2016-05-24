@@ -19,12 +19,53 @@ $('#galleryModal .next').click(function()
 {
 	var image = $('#galleryModal img');
 	var id = image.data('id');
+	var articleId = id.split("-")[0];
+	var imageId = id.split("-")[1];
+	imageId = parseInt(imageId,10);
 
-	var newImage = $('#gallery-item #' + id);
+	var newImage = $('.gallery-item img[data-id="'+ articleId + '-' + (imageId+1) +'"]');
+	var url = newImage.attr('src');
+
+	if (url === undefined)
+	{
+		newImage = $('.gallery-item img[data-id="'+ articleId + '-' + (1) +'"]');
+	}
+
+	url = newImage.attr('src');
+	var alt = newImage.attr('alt');
+	id = newImage.data('id');
+	var title = $('#galleryModal .modal-title');
+
+	title.text(alt);
+	image.attr('src', url);
+	image.attr('alt', alt);
+	image.data('id', id);
 });
 
 $('#galleryModal .previous').click(function()
 {
 	var image = $('#galleryModal img');
 	var id = image.data('id');
+	var articleId = id.split("-")[0];
+	var imageId = id.split("-")[1];
+	imageId = parseInt(imageId,10);
+
+	var newImage = $('.gallery-item img[data-id="'+ articleId + '-' + (imageId-1) +'"]');
+	var url = newImage.attr('src');
+	var totalImage=$('.gallery-container[data-article="'+ articleId+'"]').data('images');
+
+	if (url === undefined)
+	{
+		newImage = $('.gallery-item img[data-id="'+ articleId + '-' + totalImage +'"]');
+	}
+
+	url = newImage.attr('src');
+	var alt = newImage.attr('alt');
+	id = newImage.data('id');
+	var title = $('#galleryModal .modal-title');
+
+	title.text(alt);
+	image.attr('src', url);
+	image.attr('alt', alt);
+	image.data('id', id);
 });

@@ -1,10 +1,10 @@
 {
   "css/auth/auth.css": "css/auth/auth-cf52c7a401.css",
-  "css/blog/blog.css": "css/blog/blog-07f48fa441.css",
-  "css/dashboard/dashboard.css": "css/dashboard/dashboard-ff8d31780e.css",
+  "css/blog/blog.css": "css/blog/blog-26bfd8ad60.css",
+  "css/dashboard/dashboard.css": "css/dashboard/dashboard-0c30f360f6.css",
   "css/errors/errors.css": "css/errors/errors-1853d2672c.css",
-  "css/homepage/homepage.css": "css/homepage/homepage-a8296ebd7e.css",
+  "css/homepage/homepage.css": "css/homepage/homepage-b5e9670dbe.css",
   "css/lib/libraries.css": "css/lib/libraries-5ec2b49784.css",
-  "js/blog/blog.js": "js/blog/blog-0a31422c73.js",
+  "js/blog/blog.js": "js/blog/blog-b55ac2ae45.js",
   "js/lib/libraries.js": "js/lib/libraries-841ee8a393.js"
 }

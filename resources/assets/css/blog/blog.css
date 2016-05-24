@@ -40,7 +40,7 @@ html, body
 	background-color: #fff;
 }
 
-.header-container .nav .nav-item a
+.header-container .nav .nav-item a, .header-container .nav .nav-item a:focus, .header-container .nav .nav-item a:active, .header-container .nav .nav-item a:visited
 {
 	color:#fff;
 }
@@ -75,6 +75,19 @@ html, body
 .article-container .content-container
 {
 	padding: 10px 30px 10px 30px;
+}
+
+.article-container a 
+{
+	color:#fff;
+}
+
+
+.article-container a:hover, .article-container a:focus, .article-container a:active
+{
+	text-decoration: none;
+	color:#fff;
+	outline:none;
 }
 
 .article-container h1

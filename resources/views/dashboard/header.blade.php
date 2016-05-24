@@ -16,8 +16,16 @@
 		<div id="navbar" class="navbar-collapse collapse menuHeader">
 			<ul class="nav navbar-nav navbar-left">
 		        <li class="nav-item"><a href="{{ route('home') }}">Home</a></li>
-		        <li class="nav-item"><a href="#">Blog</a></li>
+		        <li class="nav-item"><a href="{{ route('blog') }}">Blog</a></li>
       		</ul>
+      		<ul class="nav navbar-nav navbar-right">
+      			<li class="nav-item">
+      			 	<a href="{{ route('logout') }}">Logout</a>
+      			</li>
+            </ul>
 		</div>
+		
+		
 	</div>
 </nav>
+
