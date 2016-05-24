@@ -20,15 +20,13 @@
 				</p>
 			</div>
 			<div class="gallery-container">
+				<?php $i = 0; ?>
+				@foreach ($article->images as $image)
+					<?php $i++ ?>
 					<div class="gallery-item">
-						<img src="https://d1bcl7tdsf48aa.cloudfront.net/images/screenshots/quests2/01.jpg" alt="">
+						<img data-id="{{ $i }}" data-url="{{ asset("" .$image->path . $image->name . "") }}" src="{{ asset("" .$image->path . $image->name . "") }}" data-alt="{{ $image->name }}" alt="{{ $image->name }}">
 					</div>
-					<div class="gallery-item">
-						<img src="https://d1bcl7tdsf48aa.cloudfront.net/images/screenshots/quests2/02.jpg" alt="">
-					</div>
-					<div class="gallery-item">
-						<img src="https://d1bcl7tdsf48aa.cloudfront.net/images/screenshots/quests2/03.jpg" alt="">
-					</div>
+				@endforeach
 			</div>
 		</div>
 		@endforeach
@@ -40,5 +38,6 @@
 				<a class="next" href="{{ $articles->nextPageUrl() }}">Next page</a>
 			@endif
 		</div>
-	</div>	
+	</div>
+	@include('blog.gallery')	
 @stop

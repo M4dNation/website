@@ -1,9 +1,10 @@
 {
   "css/auth/auth.css": "css/auth/auth-cf52c7a401.css",
-  "css/blog/blog.css": "css/blog/blog-e588fca284.css",
+  "css/blog/blog.css": "css/blog/blog-07f48fa441.css",
   "css/dashboard/dashboard.css": "css/dashboard/dashboard-ff8d31780e.css",
   "css/errors/errors.css": "css/errors/errors-1853d2672c.css",
   "css/homepage/homepage.css": "css/homepage/homepage-a8296ebd7e.css",
   "css/lib/libraries.css": "css/lib/libraries-5ec2b49784.css",
+  "js/blog/blog.js": "js/blog/blog-0a31422c73.js",
   "js/lib/libraries.js": "js/lib/libraries-841ee8a393.js"
 }

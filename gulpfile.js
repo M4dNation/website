@@ -58,6 +58,12 @@ elixir(function(mix)
  		'lib/bootstrap.min.js'
  	], 'public/js/lib/libraries.js');
 
+    // Blog Javascript
+    mix.scripts(
+    [
+        'blog/gallery.js',
+    ], 'public/js/blog/blog.js');
+
     
     // Copying fonts to public
  	mix.copy(
@@ -80,5 +86,6 @@ elixir(function(mix)
         'public/css/errors/errors.css',
         'public/css/blog/blog.css',
         'public/js/lib/libraries.js',
+        'public/js/blog/blog.js',
  	]);
 });

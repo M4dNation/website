@@ -9,5 +9,6 @@
 <body>
 	@yield('content')
 	{!! Html::script(elixir('js/lib/libraries.js')) !!}
+	{!! Html::script(elixir('js/blog/blog.js')) !!}
 </body>
 </html>
