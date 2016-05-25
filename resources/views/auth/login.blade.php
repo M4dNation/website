@@ -18,10 +18,13 @@
 			</div>
 			<div class="row mrg-t-20">
 				<div class="col-lg-12 col-md-12">
-					@if(session()->has('error'))
-						@include('errors/error', ['type' => 'danger', 'message' => session('error')])
-					@endif		
-				
+					@if (count($errors) > 0)
+						<div class="alert alert-danger alert-dimissible">
+					        @foreach ($errors->all() as $error)
+					            <p class="text-center">{{ $error }}</p>
+					        @endforeach
+					    </div>	
+					@endif
 					{!! Form::open(['url' => 'login', 'method' => 'post', 'role' => 'form', 'class' => 'form-horizontal center-block']) !!}	
 					
 					<div class="form-group">

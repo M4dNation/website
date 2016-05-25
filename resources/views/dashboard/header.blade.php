@@ -19,9 +19,8 @@
 		        <li class="nav-item"><a href="{{ route('blog') }}">Blog</a></li>
       		</ul>
       		<ul class="nav navbar-nav navbar-right">
-      			<li class="nav-item">
-      			 	<a href="{{ route('logout') }}">Logout</a>
-      			</li>
+      			<li class="nav-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+      			<li class="nav-item"><a href="{{ route('logout') }}">Logout</a></li>
             </ul>
 		</div>
 		

@@ -34,9 +34,11 @@ input:focus
 	box-shadow: none !important;
 }
 
-input:-webkit-autofill {
+input:-webkit-autofill 
+{
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
+
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active 
 {
     transition: background-color 5000s ease-in-out 0s;
@@ -74,4 +76,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	font-weight: bold;
 	font-size : 0.9em;
 	font-style: italic;
+}
+
+.help-block
+{
+	color: red;
+	padding: 0px;
+	margin: 0px;
 }

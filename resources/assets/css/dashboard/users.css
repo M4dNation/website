@@ -14,6 +14,7 @@
 
 /* User list */
 
+
 .user-list
 {
 	box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.35), -10px 0px 15px rgba(0, 0, 0, 0.35);
@@ -28,6 +29,21 @@
 	background-color: #222222;
 	padding:15px 10px;
 	color:#fff;
+}
+
+.title-box h1
+{
+	margin-bottom: 5px;
+}
+
+.title-box a, .title-box a:hover, .title-box a:active, .title-box a:focus
+{
+	color: #fff;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 0.8em;
+	margin: 0px;
+	padding: 0px;
 }
 
 .user-box
@@ -45,39 +61,8 @@
 	color: #222222;
 }
 
-.user-data
+.action-link
 {
-	box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.35), -10px 0px 15px rgba(0, 0, 0, 0.35);
-	min-height: 100%;
-}
-
-.form-title-box
-{
-	font-family : "Segoe Ui";
-	border-bottom: 1px solid rgba(34, 34, 34, 0.15);
-}
-
-.form-title-box h2
-{
-	font-size: 1.8em;
-	margin-top: 5px;
-}
-
-.form-title-box h3
-{
-	margin-top: 5px;
-	font-size: 0.8em;
-	font-style: italic;
-}
-
-.form-content-box
-{
-	font-family : "Segoe Ui";
-	margin-top: 10px;
-	border-bottom: 1px solid rgba(34, 34, 34, 0.15);	
-}
-
-save-input
-{
-	
+	margin-right: 10px !important;
+	font-size: 1.2em;
 }

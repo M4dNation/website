@@ -1,0 +1,63 @@
+.user-creation-container
+{
+	margin-top: 100px;
+	margin-bottom: 20px;
+	box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.35), -10px 0px 15px rgba(0, 0, 0, 0.35);
+}
+
+.help-block
+{
+	color: red;
+	padding: 0px;
+	margin: 0px;
+}
+
+.btn-submit
+{
+	background-color: #222222;
+	color: #fff;
+	border: 0;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.btn-submit:hover, .btn-submit:focus, .btn-submit:active
+{
+	background-color: #222222;
+	color: #fff;
+	border: 0;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.user-data
+{
+	box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.35), -10px 0px 15px rgba(0, 0, 0, 0.35);
+	min-height: 100%;
+}
+
+.form-title-box
+{
+	font-family : "Segoe Ui";
+	border-bottom: 1px solid rgba(34, 34, 34, 0.15);
+}
+
+.form-title-box h2
+{
+	font-size: 1.8em;
+	margin-top: 5px;
+}
+
+.form-title-box h3
+{
+	margin-top: 5px;
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+.form-content-box
+{
+	font-family : "Segoe Ui";
+	margin-top: 10px;
+	border-bottom: 1px solid rgba(34, 34, 34, 0.15);	
+}

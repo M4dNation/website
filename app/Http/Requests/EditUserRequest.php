@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class UserRequest extends Request 
+class EditUserRequest extends Request 
 {
 
     /**
@@ -25,7 +25,7 @@ class UserRequest extends Request
 		return [
 			'username' => 'required|min:5|max:20|alpha_num',
 			'email' => 'required|email',
-			'password' => 'required|max:250'
+			'password' => 'max:250'
 		];
 	}
 
