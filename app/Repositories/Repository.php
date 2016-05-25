@@ -21,6 +21,11 @@ abstract class Repository
 		return $this->model->findOrFail($hash_id);
 	}
 
+	public function count()
+	{
+		return count($this->all());
+	}
+
     public function all()
     {
         return $this->model->all();

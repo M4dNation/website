@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 
 use App\Repositories\ArticleRepository;
@@ -17,14 +18,22 @@ class BlogController extends Controller
         $this->articleRepository = $articleRepository;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $articles = $this->articleRepository->paginate(5);
+        $nbPage = strval(intval(ceil($this->articleRepository->count()/5)));
 
-        if ($articles->currentPage() > $articles->lastPage())
+        if ($request->has("page"))
         {
-            abort('404');
-        }
+            if ($request->page > $nbPage)
+            {
+                Paginator::currentPageResolver(function () use ($nbPage)
+                {
+                    return $nbPage;
+                });
+            }
+        } 
+
+        $articles = $this->articleRepository->paginate(5);
 
     	return view('blog/blog', compact('articles'));
     }
@@ -32,9 +41,9 @@ class BlogController extends Controller
     public function showArticle($id)
     {
         $article = $this->articleRepository->byId($id);        
-        $total = count($this->articleRepository->all());
+        $total = $this->articleRepository->count();
 
-        if ($article === null)
+        if (is_null($article))
         {
             abort('404');
         }
