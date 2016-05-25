@@ -2,10 +2,10 @@
 	<div class="container">
 		<h1>M4dNation</h1>
 		<div class="row">	
-			<div class="col-lg-6 col-md-6 text-center">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
 				<img class="img-responsive center-block pdg-b-10" src="{{ asset('images/common/logo.png') }}" alt="">
 			</div>
-			<div class="col-lg-6 col-md-6">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<p>
 					<strong>M4dNation</strong> is a team gathered around a simple idea, crowdsourcing.
 				</p>

@@ -19,7 +19,7 @@
         <li class="nav-item"><a  href="#project">Yggdrasill</a></li>
         <li class="nav-item"><a  href="#team">Team</a></li>
         <li class="nav-item"><a  href="#blog">Blog</a></li>	
-        <li>
+        <li class="hidden-xs hidden-sm">
           <ul class="navbar-social">
             <li id="facebook">
                 <a target="_blank" rel="nofollow" href="https://www.facebook.com/M4dnation-862421867132210/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>

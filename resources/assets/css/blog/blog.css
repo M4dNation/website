@@ -113,12 +113,20 @@ html, body
 
 .gallery-container
 {
-	display:flex;
+	margin:0px;
+	padding: 0px;
+}
+
+.gallery-container .row
+{
+	margin:0px;
+	padding: 0px;
 }
 
 .gallery-item
 {
-	flex:1;
+	margin:0px;
+	padding:0px;
 }
 
 .gallery-item img
@@ -252,5 +260,49 @@ html, body
 	border-radius:0px;
 }
 
+/* Mobile design */
 
+.navbar-toggle
+{
+
+	margin-top:20px;
+}
+
+
+.navbar-default .navbar-toggle:focus
+{
+	background-color: #ffa300;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active
+{
+	background-color: #fff;
+	border-color:#ffa300;
+}
+
+.navbar-default .navbar-toggle .icon-bar
+{
+	background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:active .icon-bar
+{
+	background-color: #ffa300;
+}
+
+
+.navbar-default .navbar-collapse
+{
+	background-color: #ffa300;
+	color:#fff;
+	text-align: center;
+}
+
+@media (max-width: 985px)
+{
+	.modal-dialog
+	{
+		width : auto;
+	}
+}
 
