@@ -1,0 +1,68 @@
+/* Common CSS */
+
+.article-management-container
+{
+	margin-top: 100px;
+	margin-bottom: 20px;
+	height: 100%;
+}
+
+.article-management-content
+{
+	height: 100%;
+}
+
+/* article list */
+
+
+.article-list
+{
+	box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.35), -10px 0px 15px rgba(0, 0, 0, 0.35);
+	height: 100%;
+}
+
+.title-box
+{
+	text-transform: uppercase;
+	font-family : "Segoe Ui";
+	font-weight: bold;
+	background-color: #222222;
+	padding:15px 10px;
+	color:#fff;
+}
+
+.title-box h1
+{
+	margin-bottom: 5px;
+}
+
+.title-box a, .title-box a:hover, .title-box a:active, .title-box a:focus
+{
+	color: #fff;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 0.8em;
+	margin: 0px;
+	padding: 0px;
+}
+
+.article-box
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family : "Segoe Ui";
+	padding-top: 20px;
+	color: #222222;
+	border-bottom: 0.5px solid #222222;
+}
+
+.article-box a, .article-box a:hover, .article-box a:active, .article-box a:focus
+{
+	color: #222222;
+}
+
+.action-link
+{
+	margin-right: 10px !important;
+	font-size: 1.2em;
+}

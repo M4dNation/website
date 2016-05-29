@@ -23,8 +23,8 @@ class EditUserRequest extends Request
 	public function rules()
 	{
 		return [
-			'username' => 'required|min:5|max:20|alpha_num',
-			'email' => 'required|email',
+			'username' => 'required|min:5|max:20|alpha_num|unique:users',
+			'email' => 'required|email|unique:users',
 			'password' => 'max:250'
 		];
 	}

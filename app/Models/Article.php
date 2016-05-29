@@ -10,7 +10,8 @@ class Article extends Model
 	use SoftDeletes;
 
     protected $table = 'article';
-
+    protected $guarded = array();
+    
     public $timestamps = true;
 
     /**

@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class UserRequest extends Request 
+class ArticleRequest extends Request 
 {
 
     /**
@@ -23,9 +23,8 @@ class UserRequest extends Request
 	public function rules()
 	{
 		return [
-			'username' => 'required|min:5|max:20|alpha_num|unique:users',
-			'email' => 'required|email|unique:users',
-			'password' => 'required|max:250'
+			'title' => 'required|max:255',
+			'content' => 'required',
 		];
 	}
 
