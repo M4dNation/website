@@ -1,8 +1,13 @@
 /* Common CSS */
+*
+{
+	outline:0 !important;
+}
 
 html, body
 {
 	height:100%;
+	overflow: hidden;
 }
 
 .btn-primary
@@ -22,9 +27,19 @@ html, body
 	background-repeat: repeat;	
 }
 
+.anchor
+{
+	position:relative;
+	top:-80px;
+  	visibility: hidden; 
+  	display: block; 
+  	content: " "; 
+}
+
 .body-container
 {
 	height:100%;
+	overflow: scroll; 
 }
 
 section img
@@ -68,6 +83,8 @@ a
 {
 	color:#ffa300;
 }
+
+
 
 /* Header */
 
@@ -249,6 +266,7 @@ a
 
 .article-container img
 {
+	width:100%;
 	max-width: 250px;
 	margin-top: 25px;
 }
