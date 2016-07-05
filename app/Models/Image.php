@@ -12,4 +12,9 @@ class Image extends Model
     protected $table = 'image';
 
     public $timestamps = true;
+
+    public static function byName($name)
+    {
+    	return Image::orderBy('created_at', 'desc')->where('name', $name)->first(); 
+    }
 }

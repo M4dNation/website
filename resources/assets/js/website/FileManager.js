@@ -3,6 +3,14 @@ var Application = Application || {};
 Application.FileManager = (function(FileManager)
 {
 	var _currentUrl = "media";
+	var _selectedImages = new Array();
+	var _idForm = "";
+
+	FileManager.launch = function(idForm)
+	{
+		_idForm = idForm;
+		Application.FileManager.getTree();
+	}
 
 	FileManager.getTree = function()
 	{
@@ -23,20 +31,28 @@ Application.FileManager = (function(FileManager)
 				{
 					var obj = $.parseJSON(data);
 					var fName, fPath;
-
+					var htmlString ="";
+					
 					for(directory in obj.directories)
 					{
+						
 						fName = Application.FileManager.cleanFolderName(_currentUrl + '/', obj.directories[directory]);
-						$('.treeViewer').append('<p onclick="Application.FileManager.down()"><i class="fa fa-folder-o" aria-hidden="true"></i>' + fName + '</p>');
-						$('.fileViewer').append('<div onclick="Application.FileManager.down()" oncontextmenu="Application.FileManager.rmdir();" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><i class="fa fa-folder-o fa-2x" aria-hidden="true"></i><p class="folderName">' + fName+'</p></div>');	
+						htmlString += '<div onclick="Application.FileManager.down()" oncontextmenu="Application.FileManager.rmdir();" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center"><i class="fa fa-folder-o fa-2x" aria-hidden="true"></i><p class="folderName">' + fName+'</p></div>';	
 					}
 
+					htmlString +='<div class="row">';
 					for(file in obj.files)
 					{
-						fPath = Application.FileManager.cleanFolderName(_currentUrl + '/', obj.files[file]);
-						$('.fileViewer').append('<img oncontextmenu="Application.FileManager.rm();" src="'+ Application.url.image + obj.files[file] + '"></img>');	
-					}
+						if(file % 4 === 0 && file !== 0)
+						{
+							htmlString +='</div><div class="row">';
+						}
 
+						fPath = Application.FileManager.cleanFolderName(_currentUrl + '/', obj.files[file]);
+						htmlString +='<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><img onclick="Application.FileManager.toggleSelect();" oncontextmenu="Application.FileManager.rm();" src="'+ Application.url.image + obj.files[file] + '"></img></div>';	
+					}
+					htmlString +='</div>';
+					$('.fileViewer').append(htmlString);
 					$('#fileManagerModal').modal('show');
 				}	
 			});
@@ -179,6 +195,45 @@ Application.FileManager = (function(FileManager)
 		return path.replace(cleaner, '');
 	};
 
+	FileManager.toggleSelect = function()
+	{
+		var image = Application.FileManager.cleanFolderName(Application.url.image + _currentUrl + "/", $(event.target).attr('src'));
+
+		if(_selectedImages.indexOf(image)<0)
+		{
+			_selectedImages.push(image);
+			 $(event.target).addClass("selected");
+		}
+		else
+		{
+			_selectedImages.pop(image);
+			$(event.target).removeClass("selected");
+		} 
+	};
+
+
+	FileManager.emptySelection = function()
+	{
+		_selectedImages = new Array();
+	};
+
+
+	FileManager.addImages = function()
+	{
+		$('.selectedImage').remove();
+		$('.thumbnails').empty();
+		for(i in _selectedImages)
+		{
+			$('#'+_idForm).append('<input class="selectedImage" name="image' + i + '" type="hidden" value="' + _selectedImages[i] + '"/>');
+			$('.thumbnails').append('<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="' + Application.url.image + _currentUrl + "/" + _selectedImages[i] + '"/></div>');
+			
+		}
+		Application.FileManager.emptySelection();
+		$('#fileManagerModal').modal('hide');
+
+	};
+
 	return FileManager;
+
 
 })(Application.FileManager || {});

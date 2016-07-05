@@ -14,18 +14,25 @@ use App\Http\Controllers\Controller;
 
 use App\Repositories\UserRepository;
 use App\Repositories\ArticleRepository;
+use App\Repositories\ImageRepository;
+use App\Repositories\ArticleImageRepository;
 
 
 class DashboardController extends Controller
 {
     protected $articleRepository;
     protected $userRepository;
+    protected $imageRepository;
+    protected $articleImageRepository;
+
 
     public function __construct(ArticleRepository $articleRepository, 
-        UserRepository $userRepository)
+        UserRepository $userRepository, ImageRepository $imageRepository, ArticleImageRepository $articleImageRepository)
     {
         $this->articleRepository = $articleRepository;
         $this->userRepository = $userRepository;
+        $this->imageRepository = $imageRepository;
+        $this->articleImageRepository = $articleImageRepository;
     }
 
     public function index()
@@ -119,8 +126,27 @@ class DashboardController extends Controller
     public function createArticle(ArticleRequest $request)
     {
         $data = $request->all();
+        $images = array();
+
+        foreach ($data as $key => $value) 
+        {
+            if("image" == substr($key,0,5))
+            {
+                $images[] = $this->imageRepository->byName($value)["id"];
+                unset($data[$key]);
+            }
+        }
+
         $data['user_id'] = Auth::user()->id;
-        $this->articleRepository->store($data);
+        $id = $this->articleRepository->store($data)["id"];
+
+        $data= array();
+        $data["article_id"] = $id;
+        foreach ($images as $image)
+        {
+            $data["image_id"] = $image;
+            $this->articleImageRepository->store($data);
+        }
 
         return redirect('dashboard/articles');
     }

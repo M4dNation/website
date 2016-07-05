@@ -10,4 +10,9 @@ class ImageRepository extends Repository
 	{
 	   $this->model = $image;
 	}
+
+	public function byName($name)
+	{
+		return $this->model->byName($name);
+	}
 }

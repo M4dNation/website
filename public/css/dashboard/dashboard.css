@@ -379,4 +379,10 @@ html, body
 	margin-top: 10px;
 	border-bottom: 1px solid rgba(34, 34, 34, 0.15);	
 }
+.thumbnails img
+{
+	max-width:100%;
+}
+
+
 /*# sourceMappingURL=dashboard.css.map */
