@@ -37,6 +37,18 @@ Route::group(['middleware' => 'web'], function()
 		Route::post('/user/{id}', ['as' => 'dashboard.save.user', 'uses' => 'DashboardController@saveUser']);
 		//Route::get('/user/delete/{id}', ['as' => 'dashboard.delete.user', 'uses' => 'DashboardController@deleteUser']);
 		Route::get('/users', ['as' => 'dashboard.users', 'uses' => 'DashboardController@users']);
+		Route::get('/docs', ['as' => 'dashboard.docs', 'uses' => 'DashboardController@docs']);
+	});
+
+	Route::group(['prefix' => 'api', 'middleware' => ['web']], function()
+	{
+		Route::get('/', ['as' => 'api', 'uses' => 'AjaxController@index']);
+		Route::get('/fmtree', ['as' => 'api.fmtree', 'uses' => 'AjaxController@fm_getTree']);
+		Route::get('/fmmkdir', ['as' => 'api.fmmkdir', 'uses' => 'AjaxController@fm_mkdir']);
+		Route::get('/fmrmdir', ['as' => 'api.fmrmdir', 'uses' => 'AjaxController@fm_rmdir']);
+		Route::get('/fmrm', ['as' => 'api.fmrm', 'uses' => 'AjaxController@fm_rm']);
+		Route::post('/fmtouch', ['as' => 'api.fmtouch', 'uses' => 'AjaxController@fm_touch']);
+
 	});
 });
 

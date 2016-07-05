@@ -86,4 +86,9 @@ class DashboardController extends Controller
         return redirect('dashboard/users');
     }
 
+    public function docs()
+    {
+        return view('dashboard/docs');
+    }
+
 }

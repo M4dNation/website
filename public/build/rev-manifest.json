@@ -4,7 +4,9 @@
   "css/dashboard/dashboard.css": "css/dashboard/dashboard-22969a6b82.css",
   "css/errors/errors.css": "css/errors/errors-1853d2672c.css",
   "css/homepage/homepage.css": "css/homepage/homepage-790a5baf21.css",
-  "css/lib/libraries.css": "css/lib/libraries-5ec2b49784.css",
+  "css/lib/libraries.css": "css/lib/libraries-4d4c42b01b.css",
+  "css/tools/tools.css": "css/tools/tools-b2f465f83a.css",
   "js/blog/blog.js": "js/blog/blog-a73ef090a1.js",
-  "js/lib/libraries.js": "js/lib/libraries-841ee8a393.js"
+  "js/lib/libraries.js": "js/lib/libraries-c917e842ab.js",
+  "js/lib/website.js": "js/lib/website-bfc9fdadf3.js"
 }

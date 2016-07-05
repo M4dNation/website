@@ -18,7 +18,9 @@ elixir(function(mix)
     [
     	'lib/bootstrap.min.css',
     	'lib/utils.min.css',
-        'lib/font-awesome.min.css'
+        'lib/font-awesome.min.css',
+        'lib/sweetalert.css',
+        'lib/dropzone.min.css',
     ], 'public/css/lib/libraries.css');
 
     // Auth CSS
@@ -53,11 +55,28 @@ elixir(function(mix)
         'blog/blog.css',
     ], 'public/css/blog/blog.css')
 
+    // Application CSS
+    mix.styles(
+    [
+        'tools/filemanager.css'
+    ], 'public/css/tools/tools.css');
+
+    // Application Javascript
+    mix.scripts(
+    [
+        'website/Application.js',
+        'website/FileManager.js'
+    ], 'public/js/lib/website.js');
+    
+
     // Lib Javascript
  	mix.scripts(
  	[
  		'lib/jquery.min.js',
- 		'lib/bootstrap.min.js'
+ 		'lib/bootstrap.min.js',
+        'lib/sweetalert.min.js',
+        'lib/jquery-ui.min.js',
+        'lib/dropzone.js',
  	], 'public/js/lib/libraries.js');
 
     // Blog Javascript
@@ -86,7 +105,9 @@ elixir(function(mix)
  		'public/css/homepage/homepage.css',
         'public/css/dashboard/dashboard.css',
         'public/css/errors/errors.css',
+        'public/css/tools/tools.css',
         'public/css/blog/blog.css',
+        'public/js/lib/website.js',
         'public/js/lib/libraries.js',
         'public/js/blog/blog.js',
  	]);

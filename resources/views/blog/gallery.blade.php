@@ -1,4 +1,4 @@
-<!-- Modal -->
+<!-- Gallery Modal -->
 <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModal">
 	<div class="modal-dialog" role="document">
     	<div class="modal-content">
