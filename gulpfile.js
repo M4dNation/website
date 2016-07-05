@@ -41,6 +41,8 @@ elixir(function(mix)
         'dashboard/dashboard.css',
         'dashboard/users.css',
         'dashboard/user.css',
+        'dashboard/articles.css',
+        'dashboard/article.css',
     ], 'public/css/dashboard/dashboard.css')
 
      // Errors CSS

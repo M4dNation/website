@@ -30,14 +30,21 @@ Route::group(['middleware' => 'web'], function()
 	Route::group(['prefix' => 'dashboard', 'middleware' => ['web', 'auth']], function ()
 	{
 		Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
-		Route::get('/blog',  ['as' => 'dashboard.blog', 'uses' => 'DashboardController@blog']);
 		Route::get('/user', ['as' => 'dashboard.user', 'uses' => 'DashboardController@user']);
 		Route::post('/user', ['as' => 'dashboard.new.user', 'uses' => 'DashboardController@createUser']);
 		Route::get('/user/{id}', ['as' => 'dashboard.edit.user', 'uses' => 'DashboardController@editUser']);
 		Route::post('/user/{id}', ['as' => 'dashboard.save.user', 'uses' => 'DashboardController@saveUser']);
 		//Route::get('/user/delete/{id}', ['as' => 'dashboard.delete.user', 'uses' => 'DashboardController@deleteUser']);
 		Route::get('/users', ['as' => 'dashboard.users', 'uses' => 'DashboardController@users']);
+
 		Route::get('/docs', ['as' => 'dashboard.docs', 'uses' => 'DashboardController@docs']);
+
+		Route::get('/article', ['as' => 'dashboard.article', 'uses' => 'DashboardController@article']);
+		Route::post('/article', ['as' => 'dashboard.new.article', 'uses' => 'DashboardController@createArticle']);
+		Route::get('/article/{id}', ['as' => 'dashboard.edit.article', 'uses' => 'DashboardController@editArticle']);
+		Route::post('/article/{id}', ['as' => 'dashboard.save.article', 'uses' => 'DashboardController@saveArticle']);
+		//Route::get('/article/delete/{id}', ['as' => 'dashboard.delete.article', 'uses' => 'DashboardController@deleteArticle']);
+		Route::get('/articles', ['as' => 'dashboard.articles', 'uses' => 'DashboardController@articles']);
 	});
 
 	Route::group(['prefix' => 'api', 'middleware' => ['web']], function()
@@ -48,7 +55,6 @@ Route::group(['middleware' => 'web'], function()
 		Route::get('/fmrmdir', ['as' => 'api.fmrmdir', 'uses' => 'AjaxController@fm_rmdir']);
 		Route::get('/fmrm', ['as' => 'api.fmrm', 'uses' => 'AjaxController@fm_rm']);
 		Route::post('/fmtouch', ['as' => 'api.fmtouch', 'uses' => 'AjaxController@fm_touch']);
-
 	});
 });
 

@@ -1,4 +1,5 @@
-<section id="contact" class="section">
+<span id="contact" class="anchor"></span>
+<section class="section">
 	<div class="container">
 		<div class="col-lg-12 col-md-12">
 			<h1 class="text-center">Contact</h1>

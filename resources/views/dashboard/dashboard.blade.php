@@ -9,7 +9,7 @@
 		<div class="container dashboard-container">
 			<div class="row">
 				<div class="dashboard-item text-center">
-					<a href="{{ route('dashboard.blog') }}">
+					<a href="{{ route('dashboard.articles') }}">
 						<img src="{{ asset('images/dashboard/pencil.png') }}" alt="">
 						<h2>Blog</h2>
 					</a>

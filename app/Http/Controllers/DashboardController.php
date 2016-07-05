@@ -8,6 +8,8 @@ use Auth;
 use App\Models\User;
 use App\Http\Requests\UserRequest;
 use App\Http\Requests\EditUserRequest;
+use App\Http\Requests\ArticleRequest;
+use App\Http\Requests\EditArticleRequest;
 use App\Http\Controllers\Controller;
 
 use App\Repositories\UserRepository;
@@ -85,10 +87,56 @@ class DashboardController extends Controller
 
         return redirect('dashboard/users');
     }
+    public function articles()
+    {
+        $articles = $this->articleRepository->all();
+
+        return view('dashboard/articles', compact('articles'));
+    }
 
     public function docs()
     {
         return view('dashboard/docs');
+    }
+
+    public function article()
+    {
+        return view('dashboard/article');
+    }
+
+    public function editArticle($id)
+    {
+        $article = $this->articleRepository->byId($id);
+
+        if (is_null($article))
+        {
+            abort('404');
+        }
+
+        return view('dashboard/edit_article', compact('article'));
+    }
+
+    public function createArticle(ArticleRequest $request)
+    {
+        $data = $request->all();
+        $data['user_id'] = Auth::user()->id;
+        $this->articleRepository->store($data);
+
+        return redirect('dashboard/articles');
+    }
+
+    public function saveArticle(EditArticleRequest $request, $id)
+    {
+        $this->articleRepository->update($id, $request->all());
+
+        return redirect('dashboard/articles');
+    }
+
+    public function deleteArticle($id)
+    {
+        $this->articleRepository->destroy($id);
+
+        return redirect('dashboard/articles');
     }
 
 }
