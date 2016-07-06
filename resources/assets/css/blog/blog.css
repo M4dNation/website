@@ -109,6 +109,7 @@ html, body
 .article-container p
 {
 	font-family : "Segoe Ui";
+	text-align: justify;
 }
 
 .gallery-container
@@ -139,9 +140,8 @@ html, body
 {
 	color:#fff;
 	font-size: 0.8em;
-	position:absolute;
-	right:10px;
-	top:10px;
+	float:right;
+	margin-right: 10px;
 }
 
 .top-link:hover

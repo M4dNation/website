@@ -293,4 +293,22 @@ class DashboardController extends Controller
         return redirect('dashboard/articles');
     }
 
+    /**
+    * previewArticle
+    * This function is used to preview an article
+    * @return view
+    */
+    public function previewArticle($id)
+    {
+        $article = $this->articleRepository->byId($id);        
+        $total = $this->articleRepository->count();
+
+        if (is_null($article))
+        {
+            abort('404');
+        }
+
+        return view('dashboard/preview', compact('article', 'total'));
+    }
+
 }

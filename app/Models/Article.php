@@ -83,6 +83,17 @@ class Article extends Model
         return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->paginate($n);
     }
 
+     /**
+    * allPublished
+    * This function is used in order to get all the articles published. 
+    * @return {Article}
+    */
+
+    public static function allPublished()
+    {
+        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->get();
+    }
+
 
     /**
     * isPublished

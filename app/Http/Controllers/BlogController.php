@@ -54,7 +54,7 @@ class BlogController extends Controller
     public function showArticle($id)
     {
         $article = $this->articleRepository->byId($id);        
-        $total = $this->articleRepository->count();
+        $total = $this->articleRepository->countPublished();
 
         if (is_null($article) || !$article->isPublished())
         {

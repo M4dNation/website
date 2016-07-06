@@ -10,11 +10,11 @@
 		@foreach ($articles as $article)
 		<div class="row">
 			<div class="title-container">
+				<a class="top-link" href="#">Back to top</a>
 				<a href="{{ route('blog.article', $article->id) }}" class="article-link">
 					<h1>{{ $article->title }}</h1>
 				</a>
-				<p class="date">{{ date('F d, Y', strtotime($article->updated_at)) }}</p>
-				<a class="top-link" href="#">Back to top</a>
+				<p class="date">{{ date('F d, Y', strtotime($article->updated_at)) }}</p>				
 			</div>
 			<div class="content-container">
 				<p>

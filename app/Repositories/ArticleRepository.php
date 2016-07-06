@@ -20,4 +20,9 @@ class ArticleRepository extends Repository
 	{
 		return $this->model->takePublished($n);
 	}
+
+	public function countPublished()
+	{
+		return count($this->model->allPublished());
+	}
 }

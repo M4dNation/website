@@ -9,9 +9,10 @@
 	<div class="container article-container">
 		<div class="row">
 			<div class="title-container">
-				<a class="top-link" href="{{ route('blog') }}">All articles</a>
+				<a class="top-link" href="{{ route('dashboard.articles') }}">All articles</a>
+				<a class="top-link" href="{{ route('dashboard.edit.article',$article->id) }}">Edit article</a>
 				<h1>{{ $article->title }}</h1>
-				<p class="date">{{ date('F d, Y', strtotime($article->updated_at)) }}</p>			
+				<p class="date">{{ date('F d, Y', strtotime($article->updated_at)) }}</p>
 			</div>
 			<div class="content-container">
 				<p>
@@ -40,14 +41,6 @@
 					@endforeach
 				</div>
 			</div>
-		</div>
-		<div class="navigation-link">
-			@if ( ($article->id - 1) > 0)
-				<a class="previous" href="{{ route('blog.article',($article->id-1)) }}">Previous article</a>
-			@endif
-			@if ( ($article->id) < $total)
-				<a class="next" href="{{ route('blog.article',($article->id+1)) }}">Next article</a>
-			@endif
 		</div>
 	</div>
 	@include('blog.gallery')	
