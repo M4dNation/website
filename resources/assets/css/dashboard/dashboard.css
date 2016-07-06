@@ -1,4 +1,8 @@
 /* Common CSS */
+*
+{
+	outline:0 !important;
+}
 
 html, body
 {

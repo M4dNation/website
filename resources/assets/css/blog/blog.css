@@ -7,6 +7,11 @@ html, body
 	height:100%;
 }
 
+*
+{
+	outline:0 !important;
+}
+
 /* Header */
 
 .header-container, .header-container .logo img, .header-container .nav li 

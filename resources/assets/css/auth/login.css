@@ -10,6 +10,11 @@ html, body
 	background-image: url("../../../images/common/background.jpg");
 }
 
+*
+{
+	outline:0 !important;
+}
+
 .section
 {
 	min-height:100%;
