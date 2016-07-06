@@ -18,6 +18,13 @@ class BlogController extends Controller
         $this->articleRepository = $articleRepository;
     }
 
+
+     /**
+    * index
+    * This function is used to display all the articles.
+    * @return view
+    */
+
     public function index(Request $request)
     {
         $nbPage = strval(intval(ceil($this->articleRepository->count()/5)));
@@ -33,17 +40,23 @@ class BlogController extends Controller
             }
         } 
 
-        $articles = $this->articleRepository->paginate(5);
+        $articles = $this->articleRepository->published(5);
 
     	return view('blog/blog', compact('articles'));
     }
+
+     /**
+    * showArticle
+    * This function is used to display one article.
+    * @return view
+    */
 
     public function showArticle($id)
     {
         $article = $this->articleRepository->byId($id);        
         $total = $this->articleRepository->count();
 
-        if (is_null($article))
+        if (is_null($article) || !$article->isPublished())
         {
             abort('404');
         }

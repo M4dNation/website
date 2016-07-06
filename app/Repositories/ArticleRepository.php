@@ -10,4 +10,14 @@ class ArticleRepository extends Repository
 	{
 	   $this->model = $article;
 	}   
+
+	public function published($n)
+	{
+		return $this->model->published($n);
+	}
+
+	public function takePublished($n)
+	{
+		return $this->model->takePublished($n);
+	}
 }

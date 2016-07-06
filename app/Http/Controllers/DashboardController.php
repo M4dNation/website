@@ -35,21 +35,32 @@ class DashboardController extends Controller
         $this->articleImageRepository = $articleImageRepository;
     }
 
+    /**
+    * index
+    * This function is used to display the dashboard
+    * @return view
+    */
+
     public function index()
     {
     	return view('dashboard/dashboard');
     }
 
-    public function admin()
-    {
-        return view('dashboard/admin');
-    }
-
+    /**
+    * blog
+    * This function is used to display the blog dashboard
+    * @return view
+    */
     public function blog()
     {
     	return view('dashboard/blog');
     }
 
+     /**
+    * users
+    * This function is used to display all the users
+    * @return view
+    */
     public function users()
     {
         $users = $this->userRepository->all();
@@ -57,11 +68,21 @@ class DashboardController extends Controller
         return view('dashboard/users', compact('users'));
     }
 
+     /**
+    * user
+    * This function is used to display the view to edit an user
+    * @return view
+    */
     public function user()
     {
         return view('dashboard/user');
     }
 
+     /**
+    * editUser
+    * This function is used to edit an user
+    * @return view
+    */
     public function editUser($id)
     {
         $user = $this->userRepository->byId($id);
@@ -74,6 +95,11 @@ class DashboardController extends Controller
         return view('dashboard/edit_user', compact('user'));
     }
 
+     /**
+    * createUser
+    * This function is used to create an user
+    * @return view
+    */
     public function createUser(UserRequest $request)
     {
         $this->userRepository->store($request->all());
@@ -81,6 +107,11 @@ class DashboardController extends Controller
         return redirect('dashboard/users');
     }
 
+    /**
+    * saveUser
+    * This function is used to save in the database an user
+    * @return view
+    */
     public function saveUser(EditUserRequest $request, $id)
     {
         $this->userRepository->update($id, $request->all());
@@ -88,12 +119,23 @@ class DashboardController extends Controller
         return redirect('dashboard/users');
     }
 
+    /**
+    * deleteUser
+    * This function is used to delete an user
+    * @return view
+    */
     public function deleteUser($id)
     {
         $this->userRepository->destroy($id);
 
         return redirect('dashboard/users');
     }
+
+    /**
+    * articles
+    * This function is used to display all the articles
+    * @return view
+    */
     public function articles()
     {
         $articles = $this->articleRepository->all();
@@ -101,16 +143,31 @@ class DashboardController extends Controller
         return view('dashboard/articles', compact('articles'));
     }
 
+    /**
+    * docs
+    * This function is used to display all the docs
+    * @return view
+    */
     public function docs()
     {
         return view('dashboard/docs');
     }
 
+    /**
+    * article
+    * This function is used to display the view to edit an article
+    * @return view
+    */
     public function article()
     {
         return view('dashboard/article');
     }
 
+    /**
+    * editArticle
+    * This function is used to edit an article
+    * @return view
+    */
     public function editArticle($id)
     {
         $article = $this->articleRepository->byId($id);
@@ -123,6 +180,11 @@ class DashboardController extends Controller
         return view('dashboard/edit_article', compact('article'));
     }
 
+    /**
+    * createArticle
+    * This function is used to create an article
+    * @return view
+    */
     public function createArticle(ArticleRequest $request)
     {
         $data = $request->all();
@@ -151,16 +213,82 @@ class DashboardController extends Controller
         return redirect('dashboard/articles');
     }
 
+    /**
+    * saveArticle
+    * This function is used to save in the database an article
+    * @return view
+    */
     public function saveArticle(EditArticleRequest $request, $id)
     {
-        $this->articleRepository->update($id, $request->all());
+        $data = $request->all();
+        $images = array();
+
+        foreach ($data as $key => $value) 
+        {
+            if("image" == substr($key,0,5))
+            {
+                $images[] = $this->imageRepository->byName($value)["id"];
+                unset($data[$key]);
+            }
+        }
+
+        $data['user_id'] = Auth::user()->id;
+        $this->articleRepository->update($id, $data);
+
+        $data= array();
+        $data["article_id"] = $id;
+        $articleImages = $this->articleImageRepository->byArticleId($id);
+
+        foreach ($articleImages as $articleImage)
+        {
+            $articleImage->delete();
+        }
+
+        foreach ($images as $image)
+        {
+            $data["image_id"] = $image;
+            $this->articleImageRepository->store($data);
+        }
 
         return redirect('dashboard/articles');
     }
 
+    /**
+    * deleteArticle
+    * This function is used to delete an article
+    * @return view
+    */
     public function deleteArticle($id)
     {
         $this->articleRepository->destroy($id);
+
+        return redirect('dashboard/articles');
+    }
+
+     /**
+    * publishArticle
+    * This function is used to publish an article
+    * @return view
+    */
+    public function publishArticle($id)
+    {
+        $data = array('state' => 1);
+
+        $this->articleRepository->update($id,$data);
+
+        return redirect('dashboard/articles');
+    }
+
+       /**
+    * draftArticle
+    * This function is used to draft an article
+    * @return view
+    */
+    public function draftArticle($id)
+    {
+        $data = array('state' => 0);
+
+        $this->articleRepository->update($id,$data);
 
         return redirect('dashboard/articles');
     }

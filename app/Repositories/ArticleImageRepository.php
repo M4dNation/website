@@ -10,4 +10,9 @@ class ArticleImageRepository extends Repository
 	{
 	   $this->model = $article_image;
 	}
+
+	public function byArticleId($id)
+	{
+		return $this->model->byArticleId($id);
+	}
 }

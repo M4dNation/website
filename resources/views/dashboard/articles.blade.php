@@ -20,7 +20,15 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 user-box">
 						<p>
 							{{ $article->title . " - " . date('F d, Y', strtotime($article->updated_at)) }}
+
 							<a class="pull-right action-link" href="{{ route('dashboard.edit.article', $article->id) }}"><i class="fa fa-pencil-square-o"></i></a>
+							
+							@if($article->state == 1)
+								<a href= "{{ route('dashboard.draft.article', $article->id) }}" class="state label pull-right label-success">Published</a>
+							@endif
+							@if($article->state == 0)
+								<a href= "{{ route('dashboard.publish.article', $article->id) }}" class="state label pull-right label-danger">Draft</a>
+							@endif
 						<p>
 					</div>
 				</div>

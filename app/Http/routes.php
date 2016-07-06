@@ -42,6 +42,8 @@ Route::group(['middleware' => 'web'], function()
 		Route::get('/article', ['as' => 'dashboard.article', 'uses' => 'DashboardController@article']);
 		Route::post('/article', ['as' => 'dashboard.new.article', 'uses' => 'DashboardController@createArticle']);
 		Route::get('/article/{id}', ['as' => 'dashboard.edit.article', 'uses' => 'DashboardController@editArticle']);
+		Route::get('/article/publish/{id}', ['as' => 'dashboard.publish.article', 'uses' => 'DashboardController@publishArticle']);
+		Route::get('/article/draft/{id}', ['as' => 'dashboard.draft.article', 'uses' => 'DashboardController@draftArticle']);
 		Route::post('/article/{id}', ['as' => 'dashboard.save.article', 'uses' => 'DashboardController@saveArticle']);
 		//Route::get('/article/delete/{id}', ['as' => 'dashboard.delete.article', 'uses' => 'DashboardController@deleteArticle']);
 		Route::get('/articles', ['as' => 'dashboard.articles', 'uses' => 'DashboardController@articles']);

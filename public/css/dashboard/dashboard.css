@@ -316,6 +316,11 @@ html, body
 	margin-right: 10px !important;
 	font-size: 1.2em;
 }
+
+.state
+{
+	margin: 4px 15px 0px 0px;
+}
 .article-creation-container
 {
 	margin-top: 100px;

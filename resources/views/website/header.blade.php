@@ -27,9 +27,6 @@
             <li id="twitter">
                 <a target="_blank" rel="nofollow" href="https://twitter.com/M4dNation"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             </li>
-            <li id="reddit">
-                <a target="_blank" rel="nofollow" href="#"><i class="fa fa-reddit-square" aria-hidden="true"></i></a>
-            </li>
           </ul>
         </li>
       </ul>			

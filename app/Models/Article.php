@@ -14,6 +14,10 @@ class Article extends Model
     
     public $timestamps = true;
 
+    const DRAFT = 0;
+    const PUBLISHED = 1;
+
+
     /**
     * user
     * This function is used in order to get the article's author. 
@@ -57,4 +61,59 @@ class Article extends Model
     {
         return Article::orderBy('created_at', 'desc')->take($n)->get();
     }
+
+     /**
+    * takePublished
+    * This function is used in order to get the n latest article published. 
+    * @return {Article}
+    */
+    public static function takePublished($n)
+    {
+        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->take($n)->get();
+    }
+
+    /**
+    * published
+    * This function is used in order to get all the articles published paginated. 
+    * @return {Article}
+    */
+
+    public static function published($n)
+    {
+        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->paginate($n);
+    }
+
+
+    /**
+    * isPublished
+    * This function is used to know if an article is published. 
+    * @return boolean
+    */
+
+    public function isPublished()
+    {
+        if ($this->state == self::PUBLISHED)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+     /**
+    * isDraft
+    * This function is used to know if an article is draft. 
+    * @return boolean
+    */
+
+    public function isDraft()
+    {
+        if ($this->state == self::DRAFT)
+        {
+            return true;
+        }
+        
+        return false;
+    }
+
 }

@@ -48,7 +48,9 @@ Create Article
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<div class="row">
-						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails"></div> 
+						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails">
+							
+						</div> 
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<a onclick="Application.FileManager.launch('articleCreationForm');" class="btn btn-default btn-lg center-block btn-submit mrg-b-10">Add Image </a>
 						</div>

@@ -17,9 +17,14 @@ class HomeController extends Controller
         $this->articleRepository = $articleRepository;
     }
 
+    /**
+    * index
+    * This function is used to display 3 articles
+    * @return view
+    */
     public function index()
     {
-        $articles = $this->articleRepository->take(3);
+        $articles = $this->articleRepository->takePublished(3);
 
     	return view('website/website', compact('articles'));
     }

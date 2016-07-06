@@ -32,4 +32,14 @@ class ArticleImage extends Model
     {
     	return $this->hasOne('App\Models\Article');
     }
+
+    /**
+    * byArticleId
+    * This function is used in order to return links between an article and images. 
+    * @return {ArticleImage}
+    */
+    public function byArticleId($id)
+    {
+        return ArticleImage::where('article_id', $id)->get();
+    }
 }
