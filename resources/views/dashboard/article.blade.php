@@ -36,7 +36,9 @@ Create Article
 					<label for="content" class="pull-right">Content</label>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<textarea name="content" id="content" required="" class="form-control" rows="25">Your content.</textarea>
+					<a onclick="Application.Redactor.write('b');" href="#">Bold</a>
+					<a onclick="Application.Redactor.write('em');" href="#">Italic</a>
+					<textarea onKeyUp="Application.Redactor.read();" onChange="Application.Redactor.read();" name="content" id="content" required="" class="form-control redactorContainer" rows="25">Your content.</textarea>
 					{!! $errors->first('email', '<small class="help-block">:message</small>') !!}
 				</div>
 			</div>

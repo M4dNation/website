@@ -200,6 +200,7 @@ class DashboardController extends Controller
         }
 
         $data['user_id'] = Auth::user()->id;
+        $data['content'] = strip_tags($data['content'],"<b><em><u><s><h2><h3><h4><h5><ul><ol><li>");
         $id = $this->articleRepository->store($data)["id"];
 
         $data= array();
@@ -222,7 +223,7 @@ class DashboardController extends Controller
     {
         $data = $request->all();
         $images = array();
-        
+
         foreach ($data as $key => $value) 
         {
             if("image" == substr($key,0,5))

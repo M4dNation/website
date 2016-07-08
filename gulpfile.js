@@ -67,7 +67,8 @@ elixir(function(mix)
     mix.scripts(
     [
         'website/Application.js',
-        'website/FileManager.js'
+        'website/FileManager.js',
+        'website/Redactor.js'
     ], 'public/js/lib/website.js');
     
 
