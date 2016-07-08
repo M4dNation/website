@@ -11,7 +11,7 @@
 			<div class="title-container">
 				<a class="top-link" href="{{ route('blog') }}">All articles</a>
 				<h1>{{ $article->title }}</h1>
-				<p class="date">{{ date('F d, Y', strtotime($article->updated_at)) }}</p>			
+				<p class="date">Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</p>			
 			</div>
 			<div class="content-container">
 				<p>

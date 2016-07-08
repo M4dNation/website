@@ -18,7 +18,7 @@
 						<div class="col-lg-9 col-md-9">
 							<div class="header-article">
 								<h2>{{ $article->title }}</h2>
-								<h3>Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }}</h3>
+								<h3>Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</h3>
 							</div>
 							
 							<div class="text-center hidden-lg hidden-md">

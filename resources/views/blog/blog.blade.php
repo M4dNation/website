@@ -14,7 +14,7 @@
 				<a href="{{ route('blog.article', $article->id) }}" class="article-link">
 					<h1>{{ $article->title }}</h1>
 				</a>
-				<p class="date">{{ date('F d, Y', strtotime($article->updated_at)) }}</p>				
+				<p class="date">Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</p>				
 			</div>
 			<div class="content-container">
 				<p>
