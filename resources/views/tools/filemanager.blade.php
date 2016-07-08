@@ -14,6 +14,7 @@
 					<div class="row text-center">	
 						<form action="{{ route("api.fmtouch")}}" class="dropzone">
 							<input type="hidden" name="_token" value="{{csrf_token()}}">
+							<input id="pathInput" type="hidden" name="path" value="media">
 						</form>
 					</div>
 				</div>

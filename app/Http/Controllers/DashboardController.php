@@ -222,7 +222,7 @@ class DashboardController extends Controller
     {
         $data = $request->all();
         $images = array();
-
+        
         foreach ($data as $key => $value) 
         {
             if("image" == substr($key,0,5))
