@@ -76,7 +76,6 @@ Application.FileManager = (function(FileManager)
 			$("#pathInput").attr("value",_currentUrl);
 			Application.FileManager.getTree(_currentUrl);
 		}
-		console.log(_currentUrl);
 	}
 
 	FileManager.mkdir = function()
@@ -159,7 +158,6 @@ Application.FileManager = (function(FileManager)
 		event.preventDefault();
 
 		var path = Application.FileManager.cleanFolderName(Application.url.image, $(event.target).attr('src'));
-		console.log(path);
 
 		swal(
 		{
