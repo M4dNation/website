@@ -36,7 +36,7 @@
 				
 				@endforeach
 				<div class="text-center">
-					<a class="btn btn-lg btn-default btn-blog" href="{{ route('blog')}}">
+					<a class="btn btn-lg btn-default btn-blog" href="{{ route('blog') }}">
 						Read all
 					</a>
 				</div>
