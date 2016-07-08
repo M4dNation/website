@@ -7,11 +7,15 @@ use Storage;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+use App\Repositories\ImageRepository;
+
 class AjaxController extends Controller
 {
-	public function __construct()
-	{
+	protected $imageRepository;
 
+	public function __construct(ImageRepository $imageRepository)
+	{
+		$this->imageRepository = $imageRepository;
 	}
 
 	public function index()
@@ -34,7 +38,7 @@ class AjaxController extends Controller
 		$response = array(
 			"directories" => $directories, 
 			"files" => $files
-		);
+			);
 
 		return json_encode($response);
 	}
@@ -57,7 +61,7 @@ class AjaxController extends Controller
 		{
 			Storage::deleteDirectory($name);
 		}
-			
+
 		return json_encode(array("deleted_folder" => $name));
 	}
 
@@ -67,9 +71,12 @@ class AjaxController extends Controller
 		
 		if (!is_null($name) && $name !== "media")
 		{
+			$image = $this->imageRepository->byName(basename($name));
+			$image->delete();
+
 			Storage::delete($name);
 		}
-			
+
 		return json_encode(array("deleted_file" => $name));
 	}
 
@@ -81,7 +88,15 @@ class AjaxController extends Controller
 			{
 				$file = $request->file('file');
 				$type = $file->getClientOriginalExtension();
-				$file->move(base_path()."/storage/app/media/images/blog/", Carbon::now()->timestamp . "." . $type);
+
+				$data = array();
+				$data["name"] = Carbon::now()->timestamp . "." . $type;
+				$data["format"] = $type;
+				$data["path"] = $request->path . "/";
+
+				$this->imageRepository->store($data);
+
+				$file->move(base_path()."/storage/app/".$request->path, $data["name"]);
 				return;
 			}
 			return ;

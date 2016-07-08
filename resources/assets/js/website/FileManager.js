@@ -62,6 +62,7 @@ Application.FileManager = (function(FileManager)
 	FileManager.down = function()
 	{
 		_currentUrl +=  "/" + $(event.target).parents().children(".folderName").text();
+		$("#pathInput").attr("value",_currentUrl);
 		Application.FileManager.getTree(_currentUrl);
 	}
 
@@ -72,6 +73,7 @@ Application.FileManager = (function(FileManager)
 			var arrayUrl = _currentUrl.split('/');
 			arrayUrl.pop();
 			_currentUrl = arrayUrl.join('/');
+			$("#pathInput").attr("value",_currentUrl);
 			Application.FileManager.getTree(_currentUrl);
 		}
 		console.log(_currentUrl);
