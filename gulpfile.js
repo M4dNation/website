@@ -81,6 +81,12 @@ elixir(function(mix)
         'lib/dropzone.js',
  	], 'public/js/lib/libraries.js');
 
+    // Homepage Javascript
+    mix.scripts(
+    [
+        'homepage/homepage.js',
+    ], 'public/js/homepage/homepage.js');
+
     // Blog Javascript
     mix.scripts(
     [
@@ -112,5 +118,6 @@ elixir(function(mix)
         'public/js/lib/website.js',
         'public/js/lib/libraries.js',
         'public/js/blog/blog.js',
+        'public/js/homepage/homepage.js'
  	]);
 });
