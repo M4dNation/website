@@ -18,7 +18,7 @@
 			</div>
 			<div class="content-container">
 				<p>
-					{{ $article->content }}
+					{!! $article->content !!}
 				</p>
 			</div>
 			<div class="gallery-container" data-article="{{ $article->id }}" data-images="{{ count($article->images) }}">
