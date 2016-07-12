@@ -37,7 +37,6 @@ Route::group(['middleware' => 'web'], function()
 		//Route::get('/user/delete/{id}', ['as' => 'dashboard.delete.user', 'uses' => 'DashboardController@deleteUser']);
 		Route::get('/users', ['as' => 'dashboard.users', 'uses' => 'DashboardController@users']);
 
-		Route::get('/docs', ['as' => 'dashboard.docs', 'uses' => 'DashboardController@docs']);
 
 		Route::get('/article', ['as' => 'dashboard.article', 'uses' => 'DashboardController@article']);
 		Route::post('/article', ['as' => 'dashboard.new.article', 'uses' => 'DashboardController@createArticle']);

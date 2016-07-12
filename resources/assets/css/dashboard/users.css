@@ -31,21 +31,6 @@
 	color:#fff;
 }
 
-.title-box h1
-{
-	margin-bottom: 5px;
-}
-
-.title-box a, .title-box a:hover, .title-box a:active, .title-box a:focus
-{
-	color: #fff;
-	text-decoration: none;
-	font-style: italic;
-	font-size: 0.8em;
-	margin: 0px;
-	padding: 0px;
-}
-
 .user-box
 {
 	text-transform: uppercase;

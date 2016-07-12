@@ -5,5 +5,5 @@
 @stop
 
 @section('content')
-		@include('dashboard.header')
+	@include('dashboard.header')
 @stop

@@ -121,6 +121,36 @@ html, body
 	-webkit-filter: invert(100%); /* Chrome, Safari, Opera */
     filter: invert(100%);
 }
+
+/* Common */
+
+.title-box
+{
+	text-transform: uppercase;
+	font-family : "Segoe Ui";
+	font-weight: bold;
+	background-color: #222222;
+	padding:15px 10px;
+	color:#fff;
+}
+
+.title-box h1
+{
+	margin-bottom: 5px;
+}
+
+.title-box a, .title-box a:hover, .title-box a:active, .title-box a:focus, .title-box a:active:focus
+{
+	color: #fff;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 0.8em;
+	background-color: #ffa300;
+	border-color: #ffa300;
+	box-shadow: none;
+	margin-top: 5px;
+	padding: 5px;
+}
 /* Common CSS */
 
 .user-management-container
@@ -152,21 +182,6 @@ html, body
 	background-color: #222222;
 	padding:15px 10px;
 	color:#fff;
-}
-
-.title-box h1
-{
-	margin-bottom: 5px;
-}
-
-.title-box a, .title-box a:hover, .title-box a:active, .title-box a:focus
-{
-	color: #fff;
-	text-decoration: none;
-	font-style: italic;
-	font-size: 0.8em;
-	margin: 0px;
-	padding: 0px;
 }
 
 .user-box
@@ -273,31 +288,6 @@ html, body
 {
 	box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.35), -10px 0px 15px rgba(0, 0, 0, 0.35);
 	height: 100%;
-}
-
-.title-box
-{
-	text-transform: uppercase;
-	font-family : "Segoe Ui";
-	font-weight: bold;
-	background-color: #222222;
-	padding:15px 10px;
-	color:#fff;
-}
-
-.title-box h1
-{
-	margin-bottom: 5px;
-}
-
-.title-box a, .title-box a:hover, .title-box a:active, .title-box a:focus
-{
-	color: #fff;
-	text-decoration: none;
-	font-style: italic;
-	font-size: 0.8em;
-	margin: 0px;
-	padding: 0px;
 }
 
 .article-box

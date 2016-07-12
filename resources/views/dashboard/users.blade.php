@@ -12,7 +12,7 @@
 				<div class="row">
 					<div class="col-lg-12 text-center title-box">
 						<h1>Users</h1>
-						<a href="{{ route('dashboard.user') }}">New</a>
+						<a class="btn btn-lg btn-primary" href="{{ route('dashboard.user') }}">New</a>
 					</div>
 				</div>
 				@foreach ($users as $u)

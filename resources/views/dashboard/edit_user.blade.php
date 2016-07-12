@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 title-box text-center">
 				<h1>Edit account</h1>
-				<a href="{{ route('dashboard.users') }}">Users list</a>
+				<a class="btn btn-lg btn-primary" href="{{ route('dashboard.users') }}">Users list</a>
 			</div>
 		</div>
 		<div class="row">

@@ -144,16 +144,6 @@ class DashboardController extends Controller
     }
 
     /**
-    * docs
-    * This function is used to display all the docs
-    * @return view
-    */
-    public function docs()
-    {
-        return view('dashboard/docs');
-    }
-
-    /**
     * article
     * This function is used to display the view to edit an article
     * @return view
