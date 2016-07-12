@@ -36,41 +36,56 @@ Create Article
 					<label for="content" class="pull-right">Content</label>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<a onclick="Application.Redactor.write('b');" href="#">Bold</a>
-					<a onclick="Application.Redactor.write('em');" href="#">Italic</a>
-					<textarea onKeyUp="Application.Redactor.read();" onChange="Application.Redactor.read();" name="content" id="content" required="" class="form-control redactorContainer" rows="25">Your content.</textarea>
-					{!! $errors->first('email', '<small class="help-block">:message</small>') !!}
+					<div class="redactorMenu">
+						<a onclick="Application.Redactor.write('b');" href="#"><i class="fa fa-bold" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('em');" href="#"><i class="fa fa-italic" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('u');" href="#"><i class="fa fa-underline" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('s');" href="#"><i class="fa fa-strikethrough" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('ul');" href="#"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('ol');" href="#"><i class="fa fa-list-ol" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('a');" href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('iframe');" href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('h2');" href="#">Title 1</a>
+						<a onclick="Application.Redactor.write('h3');" href="#">Title 2</a>
+						<a onclick="Application.Redactor.write('h4');" href="#">Title 3</a>
+						<a onclick="Application.Redactor.write('h5');" href="#">Title 4</a>
+					</div>
+					<div contenteditable="true" onKeyUp="Application.Redactor.read();" onChange="Application.Redactor.read();" name="content" id="content" required="" class="form-control redactorContainer">Your content.</div>
+
+
 				</div>
+				{!! $errors->first('email', '<small class="help-block">:message</small>') !!}
 			</div>
-			
+		</div>
 
 
-			<div class="form-group mrg-t-20">
-				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<div class="row">
-						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails">
-							
-						</div> 
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-							<a onclick="Application.FileManager.launch('articleCreationForm');" class="btn btn-default btn-lg center-block btn-submit mrg-b-10">Add Image </a>
-						</div>
+
+		<div class="form-group mrg-t-20">
+			<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails">
+
+					</div> 
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<a onclick="Application.FileManager.launch('articleCreationForm');" class="btn btn-default btn-lg center-block btn-submit mrg-b-10">Add Image </a>
 					</div>
 				</div>
 			</div>
-
-			<div class="form-group mrg-t-50">
-				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<input type="submit" class="btn btn-default btn-lg center-block btn-submit pull-left" value="Create" />
-				</div>
-			</div>
-
-
-			{!! Form::close() !!}
 		</div>
+
+		<div class="form-group mrg-t-50">
+			<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<input type="submit" class="btn btn-default btn-lg center-block btn-submit pull-left" value="Create" />
+			</div>
+		</div>
+
+
+		{!! Form::close() !!}
 	</div>
+</div>
 </div>
 @stop

@@ -6,8 +6,8 @@ Application.Redactor = (function(Redactor)
 
 	Redactor.preview = function()
 	{
-		$(".redactorPreview").html('');
-		$(".redactorPreview").html($(".redactorContainer").val());
+		//$(".redactorPreview").html('');
+		//$(".redactorPreview").html($(".redactorContainer").val());
 	}
 
 	Redactor.read = function()
@@ -23,13 +23,15 @@ Application.Redactor = (function(Redactor)
 	{
 		if(allowedTags.indexOf(tags)>=0)
 		{
-			var start = $(".redactorContainer")[0].selectionStart;
-			var end = $(".redactorContainer")[0].selectionEnd;
-			var text = $(".redactorContainer").val();
+			var start = document.getSelection().anchorNode;
+			console.log(start);
+			var end = document.getSelection().anchorOffset;
+			console.log(end);
+			var text = $(".redactorContainer").html();
 
 			text = text.substring(0,start) + "<" + tags + ">" + text.substring(start,end) + "</" + tags + ">" + text.substring(end,text.length);
 
-			$(".redactorContainer").val(text);
+			$(".redactorContainer").html(text);
 		}
 		Application.Redactor.preview();
 	};
