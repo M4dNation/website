@@ -4,22 +4,34 @@ Application.Redactor = (function(Redactor)
 {
 	allowedTags = new Array("b","em","u","s","h2","h3","h4","h5","ul","ol","li");
 
+	Redactor.preview = function()
+	{
+		$(".redactorPreview").html('');
+		$(".redactorPreview").html($(".redactorContainer").val());
+	}
+
 	Redactor.read = function()
 	{
 		for(a in allowedTags)
 		{
 			Application.Redactor.bbCodeToHtml(allowedTags[a]);
-		}	
+		}
+		Application.Redactor.preview();
 	};
 
 	Redactor.write = function(tags)
 	{
-		var start = $(".redactorContainer")[0].selectionStart;
-		var end = $(".redactorContainer")[0].selectionEnd;
-		var text = $(".redactorContainer").val();
-		text = text.substring(0,start) + "<" + tags + ">" + text.substring(start,end) + "</" + tags + ">" + text.substring(end,text.length);
+		if(allowedTags.indexOf(tags)>=0)
+		{
+			var start = $(".redactorContainer")[0].selectionStart;
+			var end = $(".redactorContainer")[0].selectionEnd;
+			var text = $(".redactorContainer").val();
 
-		$(".redactorContainer").val(text);
+			text = text.substring(0,start) + "<" + tags + ">" + text.substring(start,end) + "</" + tags + ">" + text.substring(end,text.length);
+
+			$(".redactorContainer").val(text);
+		}
+		Application.Redactor.preview();
 	};
 
 	Redactor.bbCodeToHtml = function(allowedTag)
