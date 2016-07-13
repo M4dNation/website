@@ -4,26 +4,72 @@ Application.Redactor = (function(Redactor)
 {
 	allowedTags = new Array("b","em","u","s","h2","h3","h4","h5","ul","ol","li");
 
-	Redactor.preview = function()
+	Redactor.toggleView = function()
 	{
-		//$(".redactorPreview").html('');
-		//$(".redactorPreview").html($(".redactorContainer").val());
+		if(($("#redactorView").val())==="preview")
+		{
+			$(".redactorContainer").html($(".redactorContainer").text());
+			$(".redactorMenu a").removeClass("disabled");
+			$(".redactorMenu input").removeClass("disabled");
+		}
+		else if(($("#redactorView").val())==="source")
+		{
+			$(".redactorContainer").text($(".redactorContainer").html());
+			$(".redactorMenu a").addClass("disabled");
+			$(".redactorMenu input").addClass("disabled");
+		}
 	}
 
-	Redactor.read = function()
-	{
-		for(a in allowedTags)
+	Redactor.write = function(command, argument)
+	{		
+		if(($("#redactorView").val())==="preview")
 		{
-			Application.Redactor.bbCodeToHtml(allowedTags[a]);
+			if (typeof argument === 'undefined') {
+				argument = '';
+			}
+			switch(command){
+				case "createLink":
+				if(argument == '')
+				{
+					swal(
+					{ 
+						title: "Insert a link",
+						text: "Write your target below:",
+						type: "input",
+						showCancelButton: true,
+						closeOnConfirm: false,
+						animation: "slide-from-top",
+						inputPlaceholder: "http://example.com" 
+					},
+					function(inputValue)
+					{
+						if (inputValue === false)
+						{
+							return false;
+						} 
+						if (inputValue === "")
+						{     
+							swal.showInputError("You need to write something!");
+							return false;
+						}
+						Application.Redactor.write("createLink",inputValue);
+						swal("Succes!", "Your link : " + inputValue + " has been added", "success");
+					});
+				}
+				break;
+				case "iframe":
+				command= "insertHtml"
+				url = prompt("Quelle est l'adresse du lien ?");
+				argument = '<iframe width="100%" height="500" src="' + url + '" frameborder="0" allowfullscreen></iframe>';
+				break;
+			}
+			document.execCommand(command, false, argument);	
 		}
-		Application.Redactor.preview();
-	};
-
-	Redactor.write = function(tags)
-	{
-		if(allowedTags.indexOf(tags)>=0)
+		
+		
+		/*if(allowedTags.indexOf(tags)>=0)
 		{
-			var start = document.getSelection().anchorNode;
+			var start = Application.Redactor.getCaretPosition($(".redactorContainer"));
 			console.log(start);
 			var end = document.getSelection().anchorOffset;
 			console.log(end);
@@ -33,7 +79,7 @@ Application.Redactor = (function(Redactor)
 
 			$(".redactorContainer").html(text);
 		}
-		Application.Redactor.preview();
+		Application.Redactor.preview();*/
 	};
 
 	Redactor.bbCodeToHtml = function(allowedTag)
@@ -85,6 +131,8 @@ Application.Redactor = (function(Redactor)
 			}
 		});
 	};
+
+
 
 
 	return Redactor;

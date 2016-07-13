@@ -37,18 +37,32 @@ Create Article
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<div class="redactorMenu">
-						<a onclick="Application.Redactor.write('b');" href="#"><i class="fa fa-bold" aria-hidden="true"></i></a>
-						<a onclick="Application.Redactor.write('em');" href="#"><i class="fa fa-italic" aria-hidden="true"></i></a>
-						<a onclick="Application.Redactor.write('u');" href="#"><i class="fa fa-underline" aria-hidden="true"></i></a>
-						<a onclick="Application.Redactor.write('s');" href="#"><i class="fa fa-strikethrough" aria-hidden="true"></i></a>
-						<a onclick="Application.Redactor.write('ul');" href="#"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
-						<a onclick="Application.Redactor.write('ol');" href="#"><i class="fa fa-list-ol" aria-hidden="true"></i></a>
-						<a onclick="Application.Redactor.write('a');" href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-						<a onclick="Application.Redactor.write('iframe');" href="#"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
-						<a onclick="Application.Redactor.write('h2');" href="#">Title 1</a>
-						<a onclick="Application.Redactor.write('h3');" href="#">Title 2</a>
-						<a onclick="Application.Redactor.write('h4');" href="#">Title 3</a>
-						<a onclick="Application.Redactor.write('h5');" href="#">Title 4</a>
+						<a onclick="Application.Redactor.write('bold');" href="#articleCreationForm"><i class="fa fa-bold" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('italic');" href="#articleCreationForm"><i class="fa fa-italic" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('underline');" href="#articleCreationForm"><i class="fa fa-underline" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('strikeThrough');" href="#articleCreationForm"><i class="fa fa-strikethrough" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('insertunorderedlist');" href="#articleCreationForm"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('insertorderedlist');" href="#articleCreationForm"><i class="fa fa-list-ol" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('createLink');" href="#articleCreationForm"><i class="fa fa-link" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('iframe', '');" href="#articleCreationForm"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('formatBlock', '<h2>');" href="#articleCreationForm">h1</a>
+						<a onclick="Application.Redactor.write('formatBlock', '<h3>');" href="#articleCreationForm">h2</a>
+						<a onclick="Application.Redactor.write('formatBlock', '<h4>');" href="#articleCreationForm">h3</a>
+						<a onclick="Application.Redactor.write('formatBlock', '<h5>');" href="#articleCreationForm">h4</a>
+						<a onclick="Application.Redactor.write('justifyCenter');" href="#articleCreationForm"><i class="fa fa-align-center" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('justifyLeft');" href="#articleCreationForm"><i class="fa fa-align-left" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('justifyRight');" href="#articleCreationForm"><i class="fa fa-align-right" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('justifyFull');" href="#articleCreationForm"><i class="fa fa-align-justify" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('superscript');" href="#articleCreationForm"><i class="fa fa-superscript" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('subscript');" href="#articleCreationForm"><i class="fa fa-subscript" aria-hidden="true"></i></a>
+						<input type="color" value="#000000" onChange="Application.Redactor.write('forecolor',this.value);"/>
+						<input type="color" value="#ffffff" onChange="Application.Redactor.write('backColor',this.value);"/>
+						<a onclick="Application.Redactor.write('undo');" href=""><i class="fa fa-undo" aria-hidden="true"></i></a>
+						<a onclick="Application.Redactor.write('redo');" href=""><i class="fa fa-repeat" aria-hidden="true"></i></a>
+						<select onchange="Application.Redactor.toggleView()" id="redactorView">
+							<option value="preview" selected>Preview</option> 
+							<option value="source">Source</option>
+						</select>
 					</div>
 					<div contenteditable="true" onKeyUp="Application.Redactor.read();" onChange="Application.Redactor.read();" name="content" id="content" required="" class="form-control redactorContainer">Your content.</div>
 

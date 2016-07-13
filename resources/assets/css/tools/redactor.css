@@ -1,19 +1,34 @@
-.redactorMenu
+.redactorMenu select
 {
+	margin: 5px;
+}
 
+.redactorMenu a
+{
+	padding: 5px;
+	margin-right:5px;
+	color:#fff;
+}
+
+.redactorMenu a:hover
+{
+	text-decoration: none;
+	color:#ffa300;
+}
+
+.redactorMenu 
+{
+	border:1px solid #222;
+	background-color: #222;
 }
 
 .redactorContainer
 {
-
+	height:auto;
+	min-height:500px;
 }
 
-.redactorPreview
+.redactorMenu .disabled
 {
-	background-color: #fff;
-	width: 100%;
-	border-radius:2px;
-	height:514px;
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	border:1px solid #ccc;
+	display:none;
 }
