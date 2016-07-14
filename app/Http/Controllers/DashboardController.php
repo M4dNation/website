@@ -190,7 +190,7 @@ class DashboardController extends Controller
         }
 
         $data['user_id'] = Auth::user()->id;
-        $data['content'] = strip_tags($data['content'],"<b><em><u><s><h2><h3><h4><h5><ul><ol><li><span><a><iframe>");
+        $data['content'] = strip_tags($data['content'],"<b><i><u><strike><h2><h3><h4><h5><ul><ol><li><span><a><iframe><font>");
         $id = $this->articleRepository->store($data)["id"];
 
         $data= array();
