@@ -82,13 +82,13 @@ html, body
 	padding: 10px 30px 10px 30px;
 }
 
-.article-container a 
+.article-link
 {
 	color:#fff;
 }
 
 
-.article-container a:hover, .article-container a:focus, .article-container a:active
+.article-link:hover, .article-link:focus, .article-link:active
 {
 	text-decoration: none;
 	color:#fff;

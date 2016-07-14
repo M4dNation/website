@@ -36,9 +36,8 @@
 					<label for="content" class="pull-right">Content</label>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<textarea name="content" id="content" required="" class="form-control" rows="25">{!! $article->content !!}</textarea>
-					{!! $errors->first('email', '<small class="help-block">:message</small>') !!}
-
+					<div class="redactor">{!! $article->content !!}</div>
+					{!! $errors->first('content', '<small class="help-block">:message</small>') !!}
 				</div>
 			</div>
 

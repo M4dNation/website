@@ -1,25 +1,36 @@
+.redactorMenu 
+{
+	border:1px solid #222;
+	background-color: #000;
+}
+
+
+.redactorMenu select, .redactorMenu button, .redactorMenu input
+{
+	color:#fff;
+	background-color:#000;
+	border:none;
+}
+
 .redactorMenu select
 {
-	margin: 5px;
+	margin:5px;
 }
 
-.redactorMenu a
+.redactorMenu button
 {
 	padding: 5px;
-	margin-right:5px;
-	color:#fff;
 }
 
-.redactorMenu a:hover
+.redactorMenu button:hover
 {
 	text-decoration: none;
 	color:#ffa300;
 }
 
-.redactorMenu 
+.redactorMenu .disabled
 {
-	border:1px solid #222;
-	background-color: #222;
+	display:none;
 }
 
 .redactorContainer
@@ -28,7 +39,3 @@
 	min-height:500px;
 }
 
-.redactorMenu .disabled
-{
-	display:none;
-}
