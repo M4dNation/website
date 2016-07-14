@@ -64,7 +64,8 @@ Create Article
 							<option value="source">Source</option>
 						</select>
 					</div>
-					<div contenteditable="true" onKeyUp="Application.Redactor.read();" onChange="Application.Redactor.read();" name="content" id="content" required="" class="form-control redactorContainer">Your content.</div>
+					<div contenteditable="true" onKeyUp="Application.Redactor.read();" onChange="Application.Redactor.read();"   required="" class="form-control redactorContainer">Your content.</div>
+					<textarea class="hidden" name="content" id="redactorInput" cols="30" rows="10"></textarea>
 
 
 				</div>

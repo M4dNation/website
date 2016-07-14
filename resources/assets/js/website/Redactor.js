@@ -2,7 +2,11 @@ var Application = Application || {};
 
 Application.Redactor = (function(Redactor)
 {
-	allowedTags = new Array("b","em","u","s","h2","h3","h4","h5","ul","ol","li");
+	var selection;
+
+	Redactor.init = function() 
+	{
+	}
 
 	Redactor.toggleView = function()
 	{
@@ -20,121 +24,140 @@ Application.Redactor = (function(Redactor)
 		}
 	}
 
+	Redactor.read= function() 
+	{
+		$("#redactorInput").val($(".redactorContainer").html());
+	}
+
 	Redactor.write = function(command, argument)
 	{		
 		if(($("#redactorView").val())==="preview")
 		{
-			if (typeof argument === 'undefined') {
+			if (typeof argument === 'undefined')
+			{
 				argument = '';
 			}
-			switch(command){
+			switch(command)
+			{
 				case "createLink":
 				if(argument == '')
 				{
-					swal(
-					{ 
-						title: "Insert a link",
-						text: "Write your target below:",
-						type: "input",
-						showCancelButton: true,
-						closeOnConfirm: false,
-						animation: "slide-from-top",
-						inputPlaceholder: "http://example.com" 
-					},
-					function(inputValue)
-					{
-						if (inputValue === false)
-						{
-							return false;
-						} 
-						if (inputValue === "")
-						{     
-							swal.showInputError("You need to write something!");
-							return false;
-						}
-						Application.Redactor.write("createLink",inputValue);
-						swal("Succes!", "Your link : " + inputValue + " has been added", "success");
-					});
+					selection  = Application.Redactor.saveSelection();
+					Application.Redactor.insertLink(selection);
 				}
 				break;
 				case "iframe":
-				command= "insertHtml"
-				url = prompt("Quelle est l'adresse du lien ?");
-				argument = '<iframe width="100%" height="500" src="' + url + '" frameborder="0" allowfullscreen></iframe>';
+				if(argument == '')
+				{
+					selection  = Application.Redactor.saveSelection();
+					Application.Redactor.insertIFrame(selection);
+				}
 				break;
 			}
 			document.execCommand(command, false, argument);	
 		}
-		
-		
-		/*if(allowedTags.indexOf(tags)>=0)
-		{
-			var start = Application.Redactor.getCaretPosition($(".redactorContainer"));
-			console.log(start);
-			var end = document.getSelection().anchorOffset;
-			console.log(end);
-			var text = $(".redactorContainer").html();
-
-			text = text.substring(0,start) + "<" + tags + ">" + text.substring(start,end) + "</" + tags + ">" + text.substring(end,text.length);
-
-			$(".redactorContainer").html(text);
-		}
-		Application.Redactor.preview();*/
 	};
 
-	Redactor.bbCodeToHtml = function(allowedTag)
-	{
-		var content = $(".redactorContainer").val();
-
-		if(content.indexOf("[" + allowedTag + "]") >= 0)
+	Redactor.insertLink = function(selection)
+	{	
+		swal(
+		{ 
+			title: "Insert a link",
+			text: "Write your target below:",
+			type: "input",
+			showCancelButton: true,
+			closeOnConfirm: false,
+			animation: "slide-from-top",
+			inputPlaceholder: "http://example.com" 
+		},
+		function(inputValue)
 		{
-			var bbCode = "[" + allowedTag + "]";
-			var html = "<" + allowedTag + "></" + allowedTag + ">";
-			var pos = content.indexOf(bbCode) + bbCode.length;
-			$(".redactorContainer").val(content.replace(bbCode ,html));
-			Application.Redactor.selectRange($(".redactorContainer"),pos,pos);	
-		}
-
-		if(content.indexOf("[/" + allowedTag + "]") >= 0)
-		{
-			var bbCode = "[/" + allowedTag + "]";
-			var html = "</" + allowedTag + ">";
-			$(".redactorContainer").val(content.replace(bbCode ,html));
-		}
-	};
-
-
-	Redactor.selectRange = function(domElement, start, end)
-	{
-		if(end === undefined)
-		{
-			end = start;
-		}
-		return domElement.each(function() 
-		{
-			if('selectionStart' in this)
+			if (inputValue === false)
 			{
-				this.selectionStart = start;
-				this.selectionEnd = end;
+				return false;
 			} 
-			else if(this.setSelectionRange)
-			{
-				this.setSelectionRange(start, end);
+			if (inputValue === "")
+			{     
+				swal.showInputError("You need to write something!");
+				return false;
 			}
-			else if(this.createTextRange)
-			{
-				var range = this.createTextRange();
-				range.collapse(true);
-				range.moveEnd('character', end);
-				range.moveStart('character', start);
-				range.select();
-			}
+			Application.Redactor.restoreSelection(selection);
+			Application.Redactor.write("createLink",inputValue);
+			swal("Succes!", "Your link : " + inputValue + " has been added", "success");
 		});
-	};
+	}
 
+	Redactor.insertIFrame = function(selection)
+	{	
+		swal(
+		{ 
+			title: "Insert a iFrame",
+			text: "Write your target below:",
+			type: "input",
+			showCancelButton: true,
+			closeOnConfirm: false,
+			animation: "slide-from-top",
+			inputPlaceholder: "https://www.youtube.com/embed/C0DPdy98e4c" 
+		},
+		function(inputValue)
+		{
+			if (inputValue === false)
+			{
+				return false;
+			} 
+			if (inputValue === "")
+			{     
+				swal.showInputError("You need to write something!");
+				return false;
+			}
+			argument = '<iframe width="100%" height="500" src="' + inputValue + '" frameborder="0" allowfullscreen></iframe>';
+			Application.Redactor.restoreSelection(selection);
+			Application.Redactor.write("insertHtml",argument);
+			swal("Succes!", "Your iFrame : " + inputValue + " has been added", "success");
+		});
+	}
+	
+	Redactor.saveSelection = function()
+	{
+		if (window.getSelection)
+		{
+			sel = window.getSelection();
+			if (sel.getRangeAt && sel.rangeCount)
+			{
+				var ranges = [];
+				for (var i = 0, len = sel.rangeCount; i < len; ++i)
+				{
+					ranges.push(sel.getRangeAt(i));
+				}
+				return ranges;
+			}
+		} 
+		else if (document.selection && document.selection.createRange)
+		{
+			return document.selection.createRange();
+		}
+		return null;
+	}
 
-
-
+	Redactor.restoreSelection = function (savedSel)
+	{
+		if (savedSel)
+		{
+			if (window.getSelection)
+			{
+				sel = window.getSelection();
+				sel.removeAllRanges();
+				for (var i = 0, len = savedSel.length; i < len; ++i)
+				{
+					sel.addRange(savedSel[i]);
+				}
+			} 
+			else if (document.selection && savedSel.select)
+			{
+				savedSel.select();
+			}
+		}
+	}
 	return Redactor;
 
 })(Application.Redactor || {});
