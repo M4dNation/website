@@ -10,5 +10,6 @@
 <body>
 	@yield('content')
 	{!! Html::script(elixir('js/lib/libraries.js')) !!}
+	{!! Html::script(elixir('js/project/project.js')) !!}
 </body>
 </html>

@@ -95,6 +95,12 @@ elixir(function(mix)
         'homepage/homepage.js',
     ], 'public/js/homepage/homepage.js');
 
+    // Project Javascript
+    mix.scripts(
+    [
+        'project/project.js',
+    ], 'public/js/project/project.js');
+
     // Blog Javascript
     mix.scripts(
     [
@@ -127,6 +133,7 @@ elixir(function(mix)
         'public/js/lib/website.js',
         'public/js/lib/libraries.js',
         'public/js/blog/blog.js',
-        'public/js/homepage/homepage.js'
+        'public/js/homepage/homepage.js',
+        'public/js/project/project.js'
  	]);
 });
