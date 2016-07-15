@@ -27,6 +27,8 @@ Route::group(['middleware' => 'web'], function()
 
 	Route::get('/jobs', ['as' => 'home.jobs', 'uses' => 'HomeController@job']);
 
+	Route::get('/yggdrasill', ['as' => 'project', 'uses' => 'ProjectController@index']);
+
 	Route::group(['prefix' => 'dashboard', 'middleware' => ['web', 'auth']], function ()
 	{
 		Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);

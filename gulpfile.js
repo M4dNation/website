@@ -35,6 +35,12 @@ elixir(function(mix)
         'homepage/homepage.css',
     ], 'public/css/homepage/homepage.css');
 
+    // Project CSS
+    mix.styles(
+    [
+        'project/project.css',
+    ], 'public/css/project/project.css')
+
     // Dashboard CSS
     mix.styles(
     [
@@ -113,6 +119,7 @@ elixir(function(mix)
  		'public/css/lib/libraries.css',
         'public/css/auth/auth.css',
  		'public/css/homepage/homepage.css',
+        'public/css/project/project.css',
         'public/css/dashboard/dashboard.css',
         'public/css/errors/errors.css',
         'public/css/tools/tools.css',
