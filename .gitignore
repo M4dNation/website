@@ -6,6 +6,8 @@
 /public/js
 /tests
 /vendor
+/contrib
+.gpm/
 .env
 sftp-config.json
 Homestead.yaml
