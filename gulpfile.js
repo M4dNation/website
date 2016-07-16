@@ -60,14 +60,16 @@ elixir(function(mix)
     // Application CSS
     mix.styles(
     [
-        'tools/filemanager.css'
+        'tools/filemanager.css',
+        'tools/redactor.css'
     ], 'public/css/tools/tools.css');
 
     // Application Javascript
     mix.scripts(
     [
         'website/Application.js',
-        'website/FileManager.js'
+        'website/FileManager.js',
+        'website/Redactor.js'
     ], 'public/js/lib/website.js');
     
 

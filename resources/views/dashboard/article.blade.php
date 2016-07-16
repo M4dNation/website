@@ -36,11 +36,10 @@ Create Article
 					<label for="content" class="pull-right">Content</label>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<textarea name="content" id="content" required="" class="form-control" rows="25">Your content.</textarea>
-					{!! $errors->first('email', '<small class="help-block">:message</small>') !!}
+					<div class="redactor">Your content.</div>
 				</div>
+				{!! $errors->first('content', '<small class="help-block">:message</small>') !!}
 			</div>
-			
 
 
 			<div class="form-group mrg-t-20">
@@ -49,7 +48,7 @@ Create Article
 				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 					<div class="row">
 						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails">
-							
+
 						</div> 
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<a onclick="Application.FileManager.launch('articleCreationForm');" class="btn btn-default btn-lg center-block btn-submit mrg-b-10">Add Image </a>
@@ -65,10 +64,10 @@ Create Article
 					<input type="submit" class="btn btn-default btn-lg center-block btn-submit pull-left" value="Create" />
 				</div>
 			</div>
-
-
-			{!! Form::close() !!}
 		</div>
+
+		{!! Form::close() !!}
 	</div>
+</div>
 </div>
 @stop

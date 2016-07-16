@@ -5,10 +5,8 @@ var Application = (function(Application)
 	return Application;
 })(Application || {});
 
-$('.testButton').click(function()
-{
-	var container = $('#fileManagerModal filemanager-body');
-	Application.FileManager.getTree();
-});
+	
+
+
 
 

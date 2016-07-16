@@ -1,0 +1,41 @@
+.redactorMenu 
+{
+	border:1px solid #222;
+	background-color: #000;
+}
+
+
+.redactorMenu select, .redactorMenu button, .redactorMenu input
+{
+	color:#fff;
+	background-color:#000;
+	border:none;
+}
+
+.redactorMenu select
+{
+	margin:5px;
+}
+
+.redactorMenu button
+{
+	padding: 5px;
+}
+
+.redactorMenu button:hover
+{
+	text-decoration: none;
+	color:#ffa300;
+}
+
+.redactorMenu .disabled
+{
+	display:none;
+}
+
+.redactorContainer
+{
+	height:auto;
+	min-height:500px;
+}
+
