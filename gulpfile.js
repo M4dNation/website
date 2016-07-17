@@ -35,6 +35,12 @@ elixir(function(mix)
         'homepage/homepage.css',
     ], 'public/css/homepage/homepage.css');
 
+    // Project CSS
+    mix.styles(
+    [
+        'project/project.css',
+    ], 'public/css/project/project.css')
+
     // Dashboard CSS
     mix.styles(
     [
@@ -89,6 +95,12 @@ elixir(function(mix)
         'homepage/homepage.js',
     ], 'public/js/homepage/homepage.js');
 
+    // Project Javascript
+    mix.scripts(
+    [
+        'project/project.js',
+    ], 'public/js/project/project.js');
+
     // Blog Javascript
     mix.scripts(
     [
@@ -113,6 +125,7 @@ elixir(function(mix)
  		'public/css/lib/libraries.css',
         'public/css/auth/auth.css',
  		'public/css/homepage/homepage.css',
+        'public/css/project/project.css',
         'public/css/dashboard/dashboard.css',
         'public/css/errors/errors.css',
         'public/css/tools/tools.css',
@@ -120,6 +133,7 @@ elixir(function(mix)
         'public/js/lib/website.js',
         'public/js/lib/libraries.js',
         'public/js/blog/blog.js',
-        'public/js/homepage/homepage.js'
+        'public/js/homepage/homepage.js',
+        'public/js/project/project.js'
  	]);
 });

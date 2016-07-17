@@ -19,6 +19,11 @@
 				<p>
 					Even better, <strong>post your own games</strong> and watch them grow in a skilled and passionate community in order to have them developed by <strong>the greatest video games studios</strong> in the world.
 				</p>
+				<div class="text-center">
+					<a class="btn btn-lg btn-default btn-blog" href="{{ route('project') }}">
+						Read more
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
