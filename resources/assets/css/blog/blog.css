@@ -2,7 +2,7 @@
 
 html, body
 {
-	background-image: url("../../../images/common/background.jpg");
+	background-color : #f4f4f4;
 	background-repeat: repeat;	
 	height:100%;
 }
@@ -11,6 +11,7 @@ html, body
 {
 	outline:0 !important;
 }
+
 
 /* Header */
 
@@ -21,7 +22,7 @@ html, body
 
 .header-container
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
 	border:none;
 }
@@ -33,7 +34,7 @@ html, body
 
 .header-container .nav-item
 {
-	border-right : 1px solid #ffa300;
+	border-right : 1px solid #1a9850;
 	text-transform: uppercase;
 	padding-top: 15px;
 	font-weight: bold;
@@ -45,14 +46,33 @@ html, body
 	background-color: #fff;
 }
 
-.header-container .nav .nav-item a, .header-container .nav .nav-item a:focus, .header-container .nav .nav-item a:active, .header-container .nav .nav-item a:visited
+.header-container .nav .nav-item a
 {
 	color:#fff;
 }
 
 .header-container .nav .nav-item:hover a
 {
-	color:#ffa300;
+	color:#1a9850;
+}
+
+.header-container .navbar-social
+{
+	list-style: none;
+	padding:30px 0px 0px 5px;
+}
+
+.header-container .navbar-social li 
+{
+	display : inline-block;
+	border:none;
+	width:20px;
+	font-size: 16px;
+}
+
+.header-container .navbar-social li a
+{
+	color:#fff;
 }
 
 /*Blog css*/
@@ -276,13 +296,13 @@ html, body
 
 .navbar-default .navbar-toggle:focus
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active
 {
 	background-color: #fff;
-	border-color:#ffa300;
+	border-color:#1a9850;
 }
 
 .navbar-default .navbar-toggle .icon-bar
@@ -292,13 +312,13 @@ html, body
 
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:active .icon-bar
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 }
 
 
 .navbar-default .navbar-collapse
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 	color:#fff;
 	text-align: center;
 }

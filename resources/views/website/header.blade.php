@@ -15,14 +15,13 @@
    </div>
     <div id="navbar" class="navbar-collapse collapse menuHeader">
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item"><a  href="#company">M4dNation</a></li>
-        <li class="nav-item"><a  href="#project">Yggdrasill</a></li>
-        <li class="nav-item"><a  href="#team">Team</a></li>
-        <li class="nav-item"><a  href="#blog">Blog</a></li>	
+        <li class="nav-item"><a  href="{{ route('home') }}">Home</a></li>
+        <li class="nav-item"><a  href="{{ route('project') }}">Yggdrasill</a></li>
+        <li class="nav-item"><a  href="{{ route('blog') }}">Blog</a></li>	
         <li class="hidden-xs hidden-sm">
           <ul class="navbar-social">
             <li id="facebook">
-                <a target="_blank" rel="nofollow" href="https://www.facebook.com/M4dnation-862421867132210/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a target="_blank" rel="nofollow" href="https://www.facebook.com/M4dNationOfficial/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
             </li>
             <li id="twitter">
                 <a target="_blank" rel="nofollow" href="https://twitter.com/M4dNation"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>

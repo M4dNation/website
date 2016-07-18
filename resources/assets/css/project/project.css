@@ -65,8 +65,8 @@ h1,h2,h3,h4,h5,h6
 
 h1
 {
-	color:#ffa300;
-	border-bottom : solid 1px #ffa300;
+	color:#1a9850;
+	border-bottom : solid 1px #1a9850;
 	padding: 0px 20px 15px 10px;
 }
 
@@ -74,8 +74,10 @@ h1
 
 a
 {
-	color:#ffa300;
+	color:#1a9850;
 }
+
+
 
 
 
@@ -88,7 +90,7 @@ a
 
 .header-container
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
 	border:none;
 }
@@ -100,7 +102,7 @@ a
 
 .header-container .nav-item
 {
-	border-right : 1px solid #ffa300;
+	border-right : 1px solid #1a9850;
 	text-transform: uppercase;
 	padding-top: 15px;
 	font-weight: bold;
@@ -119,7 +121,7 @@ a
 
 .header-container .nav .nav-item:hover a
 {
-	color:#ffa300;
+	color:#1a9850;
 }
 
 .header-container .navbar-social
@@ -154,7 +156,7 @@ a
 
 footer
 {
-	background-color:#ffa300;
+	background-color:#1a9850;
 	background-image: none;
 }
 
@@ -194,13 +196,13 @@ footer a:hover
 
 .navbar-default .navbar-toggle:focus
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active
 {
 	background-color: #fff;
-	border-color:#ffa300;
+	border-color:#1a9850;
 }
 
 .navbar-default .navbar-toggle .icon-bar
@@ -210,14 +212,20 @@ footer a:hover
 
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:active .icon-bar
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 }
 
 
 .navbar-default .navbar-collapse
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 	color:#fff;
 	text-align: center;
 }
 
+.legal
+{
+	font-size: 0.8em;
+	color:#fff;
+	text-align: center;
+}

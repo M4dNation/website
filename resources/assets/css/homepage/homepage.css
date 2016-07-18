@@ -21,7 +21,7 @@ html, body
 	min-height:100%;
 	border-bottom: 	1px solid  #989898;
 	flex:1;
-	background-image: url("../../../images/common/background.jpg");
+	background-color: #F4F4F4;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35) inset;
 	background-repeat: repeat;	
 }
@@ -59,8 +59,8 @@ h1,h2,h3,h4,h5,h6
 
 h1
 {
-	color:#ffa300;
-	border-bottom : solid 1px #ffa300;
+	color:#1a9850;
+	border-bottom : solid 1px #1a9850;
 	padding: 0px 20px 15px 10px;
 	display:none;
 }
@@ -70,7 +70,7 @@ h1::before
 	width: 0.5em;
 	height:0.5em;
 	border-radius:50%;
-	background: #ffa300;
+	background: #1a9850;
 	display:inline-block;
 	content: "";
 	margin-bottom: 5px;
@@ -79,7 +79,7 @@ h1::before
 
 a
 {
-	color:#ffa300;
+	color:#1a9850;
 }
 
 
@@ -93,7 +93,7 @@ a
 
 .header-container
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
 	border:none;
 }
@@ -105,7 +105,7 @@ a
 
 .header-container .nav-item
 {
-	border-right : 1px solid #ffa300;
+	border-right : 1px solid #1a9850;
 	text-transform: uppercase;
 	padding-top: 15px;
 	font-weight: bold;
@@ -124,7 +124,7 @@ a
 
 .header-container .nav .nav-item:hover a
 {
-	color:#ffa300;
+	color:#1a9850;
 }
 
 .header-container .navbar-social
@@ -159,7 +159,7 @@ a
 .btn-yggdrasill
 {
 	margin-top: 20px;
-	background-color: #77a42c;
+	background-color: #1a9850;
 	color:#fff;
 }
 
@@ -189,7 +189,7 @@ a
 #team h4
 {
 	text-transform: uppercase;
-	background-color: #ffa300;
+	background-color: #1a9850;
 	font-weight: bold;
 	color:#fff;
 	width:100%;
@@ -227,7 +227,7 @@ a
 
 #team .team-item:hover
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 	-webkit-transition:  0.2s ease-in; /* Safari */
     transition: 0.2s ease-in;
 }
@@ -240,7 +240,7 @@ a
 #team .team-item:hover h4
 {
 	background-color: #fff;
-	color:#ffa300;
+	color:#1a9850;
 	-webkit-transition:  0.2s ease-in; /* Safari */
     transition: 0.2s ease-in;
 }
@@ -254,7 +254,7 @@ a
 
 .article-link:hover
 {
-	color: #ffa300;
+	color: #1a9850;
 }
 
 .article-container
@@ -286,7 +286,7 @@ a
 
 .btn-blog
 {
-	background-color: #222222;
+	background-color: #1a9850;
 	color:#fff;
 	margin:30px;
 	float:right;
@@ -294,7 +294,7 @@ a
 
 .btn-blog:hover, .btn-blog:focus, .btn-blog:active
 {
-	background-color: #222222;
+	background-color: #1a9850;
 	color:#fff;
 }
 
@@ -314,7 +314,7 @@ a
 
 footer
 {
-	background-color:#ffa300;
+	background-color:#1a9850;
 	background-image: none;
 }
 
@@ -354,13 +354,13 @@ footer a:hover
 
 .navbar-default .navbar-toggle:focus
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active
 {
 	background-color: #fff;
-	border-color:#ffa300;
+	border-color:#1a9850;
 }
 
 .navbar-default .navbar-toggle .icon-bar
@@ -370,13 +370,13 @@ footer a:hover
 
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:active .icon-bar
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 }
 
 
 .navbar-default .navbar-collapse
 {
-	background-color: #ffa300;
+	background-color: #1a9850;
 	color:#fff;
 	text-align: center;
 }
@@ -410,4 +410,11 @@ footer a:hover
 	{
 		text-align:center;
 	}
+}
+
+.legal
+{
+	font-size: 0.8em;
+	color:#fff;
+	text-align: center;
 }
