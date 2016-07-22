@@ -9,13 +9,21 @@
       </button>
       <div class="logo">
         <a href="{{ route('home') }}">
-          <img src="{{ asset('images/common/logo_title.png') }}" />
+          <img src="{{ asset('images/common/m4dnationlogo2.png') }}" />
         </a>
       </div>
    </div>
     <div id="navbar" class="navbar-collapse collapse menuHeader">
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item"><a  href="{{ route('home') }}">Home</a></li>
+        <li class="nav-item dropdown">
+          <a href="{{ route('home') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#company">M4dnation</a></li>
+            <li><a href="#project">Yggdrasill</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a  href="{{ route('project') }}">Yggdrasill</a></li>
         <li class="nav-item"><a  href="{{ route('blog') }}">Blog</a></li>	
         <li class="hidden-xs hidden-sm">

@@ -22,7 +22,7 @@ html, body
 
 .header-container
 {
-	background-color: #1a9850;
+	background-color: #679F5A;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
 	border:none;
 }
@@ -34,7 +34,7 @@ html, body
 
 .header-container .nav-item
 {
-	border-right : 1px solid #1a9850;
+	border-right : 1px solid #679F5A;
 	text-transform: uppercase;
 	padding-top: 15px;
 	font-weight: bold;
@@ -53,7 +53,7 @@ html, body
 
 .header-container .nav .nav-item:hover a
 {
-	color:#1a9850;
+	color:#679F5A;
 }
 
 .header-container .navbar-social
@@ -296,13 +296,13 @@ html, body
 
 .navbar-default .navbar-toggle:focus
 {
-	background-color: #1a9850;
+	background-color: #679F5A;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active
 {
 	background-color: #fff;
-	border-color:#1a9850;
+	border-color:#679F5A;
 }
 
 .navbar-default .navbar-toggle .icon-bar
@@ -312,13 +312,13 @@ html, body
 
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:active .icon-bar
 {
-	background-color: #1a9850;
+	background-color: #679F5A;
 }
 
 
 .navbar-default .navbar-collapse
 {
-	background-color: #1a9850;
+	background-color: #679F5A;
 	color:#fff;
 	text-align: center;
 }
