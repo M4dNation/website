@@ -15,8 +15,24 @@
    </div>
     <div id="navbar" class="navbar-collapse collapse menuHeader">
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item"><a  href="{{ route('home') }}">Home</a></li>
-        <li class="nav-item"><a  href="{{ route('project') }}">Yggdrasill</a></li>
+        <li class="nav-item dropdown">
+          <a href="{{ route('home') }}" >Home</a>
+          <ul class="dropdown-menu">
+            <li><a href="{{(Request::is('/') ?  "#company" : route('home')."#company")}}">M4dnation</a></li>
+            <li><a href="{{(Request::is('/') ?  "#project" : route('home')."#project")}}">Yggdrasill</a></li>
+            <li><a href="{{(Request::is('/') ?  "#team" : route('home')."team")}}">Team</a></li>
+            <li><a href="{{(Request::is('/') ?  "#blog" : route('home')."blog")}}">Blog</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a href="{{ route('project') }}">Yggdrasill</a>
+          <ul class="dropdown-menu">
+            <li><a href="{{(Request::is('yggdrasill') ?  "#yggdrasill" : route('project')."#yggdrasill")}}">Presentation</a></li>
+            <li><a href="{{(Request::is('yggdrasill') ?  "#why" : route('project')."#why")}}">Why?</a></li>
+            <li><a href="{{(Request::is('yggdrasill') ?  "#how" : route('project')."#how")}}">How it works</a></li>
+            <li><a href="{{(Request::is('yggdrasill') ?  "#what" : route('project')."#what")}}">What next?</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a  href="{{ route('blog') }}">Blog</a></li> 
         <li class="hidden-xs hidden-sm">
           <ul class="navbar-social">

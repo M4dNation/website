@@ -30,9 +30,9 @@ html, body
 {
 	position:relative;
 	top:-80px;
-  	visibility: hidden; 
-  	display: block; 
-  	content: " "; 
+	visibility: hidden; 
+	display: block; 
+	content: " "; 
 }
 
 .body-container
@@ -127,6 +127,31 @@ a
 	color:#679F5A;
 }
 
+.header-container .nav li.dropdown >ul.dropdown-menu
+{
+	position:relative;
+	display:block;
+	visibility:hidden;
+	border:none;
+	border-top:1px solid #222;
+}
+
+.header-container .nav li.dropdown:hover > ul.dropdown-menu 
+{
+	visibility:visible;   
+	margin:0px;
+	padding:0px;
+	top:14px;
+}
+
+.header-container .nav li.dropdown:hover > ul.dropdown-menu li:hover a
+{
+	background-color:#679F5A;
+	color:#fff;
+}
+
+
+
 .header-container .navbar-social
 {
 	list-style: none;
@@ -195,7 +220,7 @@ a
 	width:100%;
 	padding: 10px 0px;
 	-webkit-transition:  0.2s ease-out; /* Safari */
-    transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
 }
 
 .teammate-name
@@ -215,7 +240,7 @@ a
 	padding:30px 30px;
 	flex:1;
 	-webkit-transition:  0.2s ease-out; /* Safari */
-    transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
 }
 
 #team .team-item a
@@ -229,7 +254,7 @@ a
 {
 	background-color: #679F5A;
 	-webkit-transition:  0.2s ease-in; /* Safari */
-    transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
 }
 
 #team .team-item:hover h3
@@ -242,7 +267,7 @@ a
 	background-color: #fff;
 	color:#679F5A;
 	-webkit-transition:  0.2s ease-in; /* Safari */
-    transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
 }
 
 /* Section Blog */
@@ -410,6 +435,12 @@ footer a:hover
 	{
 		text-align:center;
 	}
+
+	.header-container .nav li.dropdown > ul.dropdown-menu 
+	{
+		display: none;
+	}
+	
 }
 
 .legal
