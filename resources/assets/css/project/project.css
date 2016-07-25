@@ -80,7 +80,6 @@ a
 
 
 
-
 /* Header */
 
 .header-container, .header-container .logo img, .header-container .nav li 
@@ -104,9 +103,10 @@ a
 {
 	border-right : 1px solid #679F5A;
 	text-transform: uppercase;
-	padding-top: 15px;
+	padding-top: 19px;
 	font-weight: bold;
 	font-family: "Segoe Ui";
+	width:160px;
 }
 
 .header-container .nav-item:hover
@@ -144,7 +144,7 @@ a
 	visibility:visible;   
 	margin:0px;
 	padding:0px;
-	top:14px;
+	top:11px;
 }
 
 .header-container .nav li.dropdown:hover > ul.dropdown-menu li
@@ -163,7 +163,8 @@ a
 	display : inline-block;
 	border:none;
 	width:20px;
-	font-size: 16px;
+	font-size: 1.5em;
+	margin : 0px 5px;
 }
 
 .header-container .navbar-social li a
