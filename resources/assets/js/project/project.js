@@ -1,5 +1,5 @@
 var $root = $('html, body');
-$('a').click(function() 
+$('.nav-item .yggdrasill-menu a').click(function() 
 {
     var href = $.attr(this, 'href');
     

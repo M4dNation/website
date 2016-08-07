@@ -14,7 +14,7 @@
 				<p>When <b>the first release</b> is available, the project is finally in <b>the diffusion phase</b>, in which you can start <b>promoting the game you help created</b> around you and gather more players until <b>the final release.</b></p>
 			</div>
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 text-center">
-				<img class="img-responsive center-block pdg-b-10" src="{{ asset('images/common/logo.png') }}" alt="">
+				<img class="img-responsive center-block pdg-b-10" src="{{ asset('images/project/timeline.png') }}" alt="">
 			</div>
 		</div>
 	</div>

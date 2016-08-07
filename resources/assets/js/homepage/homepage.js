@@ -1,5 +1,5 @@
 var $root = $('html, body');
-$('a').click(function() 
+$('.nav-item .home-menu a').click(function() 
 {
     var href = $.attr(this, 'href');
     
@@ -12,4 +12,12 @@ $('a').click(function()
     });
     
     return false;
+});
+
+$( ".team-item" ).mouseenter(function() {
+ 	$(this).addClass("flip");
+});
+
+$( ".team-item" ).mouseleave(function() {
+ 	$(this).removeClass("flip");
 });

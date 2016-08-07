@@ -83,6 +83,7 @@ elixir(function(mix)
  	mix.scripts(
  	[
  		'lib/jquery.min.js',
+        'lib/analytics.js',
  		'lib/bootstrap.min.js',
         'lib/sweetalert.min.js',
         'lib/jquery-ui.min.js',

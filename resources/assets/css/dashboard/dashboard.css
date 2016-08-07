@@ -7,8 +7,7 @@
 html, body
 {
 	height:100%;
-	background-image: url("../../../images/common/background.jpg");
-	background-repeat: repeat;	
+	background-color: #F4F4F4;
 }
 
 /* Header */
@@ -20,7 +19,7 @@ html, body
 
 .header-container
 {
-	background-color: #ffa300;
+	background-color: #679F5A;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
 	border:none;
 }
@@ -32,7 +31,7 @@ html, body
 
 .header-container .nav-item
 {
-	border-right : 1px solid #ffa300;
+	border-right : 1px solid #679F5A;
 	text-transform: uppercase;
 	padding-top: 15px;
 	font-weight: bold;
@@ -51,7 +50,7 @@ html, body
 
 .header-container .nav .nav-item:hover a
 {
-	color: #ffa300;
+	color: #679F5A;
 }
 
 
@@ -107,8 +106,8 @@ html, body
 .dashboard-container a:hover
 {
 	text-decoration: none;
-	background-color: #ffa300;
-	border-color: 	#ffa300;
+	background-color: #679F5A;
+	border-color: 	#679F5A;
 }
 
 .dashboard-container a:hover h2
@@ -145,8 +144,8 @@ html, body
 	text-decoration: none;
 	font-style: italic;
 	font-size: 0.8em;
-	background-color: #ffa300;
-	border-color: #ffa300;
+	background-color: #679F5A;
+	border-color: #679F5A;
 	box-shadow: none;
 	margin-top: 5px;
 	padding: 5px;
