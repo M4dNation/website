@@ -1,3 +1,12 @@
+/*
+|--------------------------------------------------------------------------
+| File Manager JS File
+|--------------------------------------------------------------------------
+|
+| This file defines the behavior of the File Manager
+|
+*/
+
 var Application = Application || {};
 
 Application.FileManager = (function(FileManager)
@@ -6,12 +15,23 @@ Application.FileManager = (function(FileManager)
 	var _selectedImages = new Array();
 	var _idForm = "";
 
+	
+	/**
+	* launch
+	* This function is used in order to launch the File Manager. 
+	* @param {int} [idForm] Id of the form where the File Manager will be used.
+	*/
 	FileManager.launch = function(idForm)
 	{
 		_idForm = idForm;
 		Application.FileManager.getTree();
 	}
 
+	/**
+	* getTree
+	* This function is used to get all the file and the folder of a directory;
+	* @param void
+	*/
 	FileManager.getTree = function()
 	{
 		var path = _currentUrl;
@@ -59,6 +79,11 @@ Application.FileManager = (function(FileManager)
 		}
 	};
 
+	/**
+	* down
+	* This function is used to enter in a folder and display the subfolders and the files.
+	* @param void
+	*/
 	FileManager.down = function()
 	{
 		_currentUrl +=  "/" + $(event.target).parents().children(".folderName").text();
@@ -66,6 +91,11 @@ Application.FileManager = (function(FileManager)
 		Application.FileManager.getTree(_currentUrl);
 	}
 
+	/**
+	* up
+	* This function is used to return to the parent directory.
+	* @param void
+	*/
 	FileManager.up = function()
 	{
 		if(_currentUrl !== "media")
@@ -78,6 +108,12 @@ Application.FileManager = (function(FileManager)
 		}
 	}
 
+	/**
+	* mkdir
+	* This function is used to create a folder.
+	* Due to display issues of a modal in a modal, the input for the name of the file must be displayed in the parent modal
+	* @param void
+	*/
 	FileManager.mkdir = function()
 	{
 		var nameFolder = $('#nameFolder').val();
@@ -120,6 +156,11 @@ Application.FileManager = (function(FileManager)
 		}
 	};
 
+	/**
+	* rmdir
+	* This function is used to delete a folder.
+	* @param void
+	*/
 	FileManager.rmdir = function()
 	{
 		event.preventDefault();
@@ -153,6 +194,11 @@ Application.FileManager = (function(FileManager)
 		});
 	};
 
+	/**
+	* rm
+	* This function is used to delete a file.
+	* @param void
+	*/
 	FileManager.rm = function()
 	{
 		event.preventDefault();
@@ -185,16 +231,22 @@ Application.FileManager = (function(FileManager)
 		});
 	};
 
-	FileManager.rename = function()
-	{
-
-	};
-
+	/**
+	* cleanFolderName
+	* This function is used to get the name of the folder without the path.
+	* @param {String} [cleaner] The string to remove from the name
+	* {String} [path] The path of the file
+	*/
 	FileManager.cleanFolderName = function(cleaner, path)
 	{
 		return path.replace(cleaner, '');
 	};
 
+	/**
+	* toggleSelect
+	* This function is used to select files to insert in the form.
+	* @param void
+	*/
 	FileManager.toggleSelect = function()
 	{
 		var image = Application.FileManager.cleanFolderName(Application.url.image + _currentUrl + "/", $(event.target).attr('src'));
@@ -211,13 +263,22 @@ Application.FileManager = (function(FileManager)
 		} 
 	};
 
-
+	/**
+	* emptySelection
+	* This function is used to empty the current selection.
+	* @param {String} [cleaner] The string to remove from the name
+	* {String} [path] The path of the file
+	*/
 	FileManager.emptySelection = function()
 	{
 		_selectedImages = new Array();
 	};
 
-
+	/**
+	* addImages
+	* This function is used to add images on the server.
+	* @param void
+	*/
 	FileManager.addImages = function()
 	{
 		$('.selectedImage').remove();

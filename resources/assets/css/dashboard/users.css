@@ -1,3 +1,13 @@
+/*
+|--------------------------------------------------------------------------
+| Dashboard Users CSS File
+|--------------------------------------------------------------------------
+|
+| This file defines all of the dashboard users page CSS rules.
+|
+*/
+
+
 /* Common CSS */
 
 .user-management-container
@@ -24,18 +34,33 @@
 .title-box
 {
 	text-transform: uppercase;
-	font-family : "Segoe Ui";
+	font-family: "Segoe Ui";
 	font-weight: bold;
 	background-color: #222222;
-	padding:15px 10px;
-	color:#fff;
+	padding: 15px 10px;
+	color: #fff;
+}
+
+.title-box h1
+{
+	margin-bottom: 5px;
+}
+
+.title-box a, .title-box a:hover, .title-box a:active, .title-box a:focus
+{
+	color: #fff;
+	text-decoration: none;
+	font-style: italic;
+	font-size: 0.8em;
+	margin: 0px;
+	padding: 0px;
 }
 
 .user-box
 {
 	text-transform: uppercase;
 	font-weight: bold;
-	font-family : "Segoe Ui";
+	font-family: "Segoe Ui";
 	padding-top: 20px;
 	color: #222222;
 	border-bottom: 0.5px solid #222222;

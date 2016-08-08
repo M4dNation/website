@@ -15,8 +15,7 @@ class ArticleImage extends Model
     * image
     * This function is used in order to get the related image. 
     * @return {Image}
-    */
-   
+    */ 
     public function image()
     {
     	return $this->hasOne('App\Models\Image');
@@ -24,10 +23,9 @@ class ArticleImage extends Model
 
     /**
     * article
-    * This function is used in order the related article. 
+    * This function is used in order to get the related article. 
     * @return {Article}
-    */
-   
+    */  
     public function article()
     {
     	return $this->hasOne('App\Models\Article');

@@ -1,10 +1,16 @@
-/* Common CSS */
-
+/*
+|--------------------------------------------------------------------------
+| Login CSS File
+|--------------------------------------------------------------------------
+|
+| This file defines all Login page CSS rules.
+|
+*/
 
 html, body
 {
-	height:100%;
-	text-align:justify;
+	height: 100%;
+	text-align: justify;
 	font-size: 1em;
 	font-family: "Segoe ui";
 	background-image: url("../../../images/common/background.jpg");
@@ -12,13 +18,13 @@ html, body
 
 *
 {
-	outline:0 !important;
+	outline: 0 !important;
 }
 
 .section
 {
-	min-height:100%;
-	display:flex;
+	min-height: 100%;
+	display: flex;
 	align-items: center;
 	background-repeat: repeat;	
 }
@@ -79,7 +85,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .remember-me
 {
 	font-weight: bold;
-	font-size : 0.9em;
+	font-size: 0.9em;
 	font-style: italic;
 }
 

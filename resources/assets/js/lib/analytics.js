@@ -1,3 +1,12 @@
+/*
+|--------------------------------------------------------------------------
+| Analytics JS File
+|--------------------------------------------------------------------------
+|
+| This file defines the behavior of google analytics.
+|
+*/
+
 (function(i,s,o,g,r,a,m)
 {
 	i['GoogleAnalyticsObject'] = r;

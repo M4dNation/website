@@ -22,8 +22,7 @@ class Article extends Model
     * user
     * This function is used in order to get the article's author. 
     * @return {User}
-    */
-   
+    */ 
     public function user()
     {
     	return $this->belongsTo('App\Models\User');
@@ -33,8 +32,7 @@ class Article extends Model
     * images
     * This function is used in order to get the article's images.
     * @return {LaravelCollection => Images}
-    */
-   
+    */ 
     public function images()
     {
     	return $this->belongsToMany('App\Models\Image');
@@ -45,7 +43,6 @@ class Article extends Model
     * This function is used in order to get the latest article. 
     * @return {Article}
     */
-   
     public static function last()
     {
     	return Article::orderBy('created_at', 'desc')->first();
@@ -55,8 +52,7 @@ class Article extends Model
     * take
     * This function is used in order to get the n latest article. 
     * @return {Article}
-    */
-   
+    */ 
     public static function take($n)
     {
         return Article::orderBy('created_at', 'desc')->take($n)->get();
@@ -77,7 +73,6 @@ class Article extends Model
     * This function is used in order to get all the articles published paginated. 
     * @return {Article}
     */
-
     public static function published($n)
     {
         return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->paginate($n);
@@ -88,7 +83,6 @@ class Article extends Model
     * This function is used in order to get all the articles published. 
     * @return {Article}
     */
-
     public static function allPublished()
     {
         return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->get();
@@ -100,7 +94,6 @@ class Article extends Model
     * This function is used to know if an article is published. 
     * @return boolean
     */
-
     public function isPublished()
     {
         if ($this->state == self::PUBLISHED)
@@ -116,7 +109,6 @@ class Article extends Model
     * This function is used to know if an article is draft. 
     * @return boolean
     */
-
     public function isDraft()
     {
         if ($this->state == self::DRAFT)

@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-	@include('blog.header')	
+	@include('header')	
 	<div class="container article-container">
 		@foreach ($articles as $article)
 		<div class="row">

@@ -1,9 +1,23 @@
+/*
+|--------------------------------------------------------------------------
+| Redactor JS File
+|--------------------------------------------------------------------------
+|
+| This file defines the behavior of the Redactor
+|
+*/
+
 var Application = Application || {};
 
 Application.Redactor = (function(Redactor)
 {
 	var selection;
 
+	/**
+	* init
+	* This function is used in order to initialize the Redactor. 
+	* @param void
+	*/
 	Redactor.init = function()
 	{
 		var content = $(".redactor").html();
@@ -41,6 +55,12 @@ Application.Redactor = (function(Redactor)
 		$(".redactor").html(redactorHtml);	
 	}
 
+	/**
+	* toggleView
+	* This function is used in order to switch between the preview view and the source view. 
+	* @param void
+	*/
+
 	Redactor.toggleView = function()
 	{
 		if(($("#redactorView").val())==="preview")
@@ -57,6 +77,11 @@ Application.Redactor = (function(Redactor)
 		}
 	};
 
+	/**
+	* read
+	* This function is used in order to apply style on the text
+	* @param void
+	*/
 	Redactor.read= function() 
 	{
 		if(($("#redactorView").val())!=="preview")
@@ -68,6 +93,12 @@ Application.Redactor = (function(Redactor)
 		$("#redactorInput").val($(".redactorContainer").html());
 	};
 
+	/**
+	* write
+	* This function is used in order to apply style when a button is clicked.
+	* @param {String} [command] the type of the style applied
+	* {String} [argument] the value of the style applied
+	*/
 	Redactor.write = function(command, argument)
 	{		
 		if(($("#redactorView").val())==="preview")
@@ -98,6 +129,11 @@ Application.Redactor = (function(Redactor)
 		}
 	};
 
+	/**
+	* insertLink
+	* This function is used to insert a link in the text.
+	* @param {String} [Selection] selection of the text where link will be inserted.
+	*/
 	Redactor.insertLink = function(selection)
 	{	
 		swal(
@@ -127,6 +163,11 @@ Application.Redactor = (function(Redactor)
 		});
 	};
 
+	/**
+	* insertIFrame
+	* This function is used to insert an IFrame in the text.
+	* @param {String} [Selection] selection of the text where link will be inserted.
+	*/
 	Redactor.insertIFrame = function(selection)
 	{	
 		swal(
@@ -157,6 +198,11 @@ Application.Redactor = (function(Redactor)
 		});
 	};
 
+	/**
+	* saveSelection
+	* This function is used to get the current selection.
+	* @param void
+	*/
 	Redactor.saveSelection = function()
 	{
 		if (window.getSelection)
@@ -179,6 +225,11 @@ Application.Redactor = (function(Redactor)
 		return null;
 	};
 
+	/**
+	* restoreSelection
+	* This function is used to restore a saved selection.
+	* @param {String} [savedSel] The saved selection.
+	*/
 	Redactor.restoreSelection = function (savedSel)
 	{
 		if (savedSel)

@@ -32,8 +32,7 @@ class User extends Authenticatable
      * setPasswordAttribute
      * @param [string] $password User's password
      * This function is used whenever the password attribute is set to bcrypt it.
-     */
-    
+     */  
     public function setPasswordAttribute($password)
     {
         if (!empty($password))
@@ -45,7 +44,6 @@ class User extends Authenticatable
     * This function is used in order to get the latest User. 
     * @return {User}
     */
-   
     public static function last()
     {
         return User::orderBy('created_at', 'desc')->first();
@@ -56,7 +54,6 @@ class User extends Authenticatable
     * This function is used in order to get the n latest User. 
     * @return {User}
     */
-   
     public static function take($n)
     {
         return User::orderBy('created_at', 'desc')->take($n)->get();

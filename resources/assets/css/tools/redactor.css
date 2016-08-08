@@ -1,3 +1,12 @@
+/*
+|--------------------------------------------------------------------------
+| Redactor CSS File
+|--------------------------------------------------------------------------
+|
+| This file defines all Redactor CSS rules.
+|
+*/
+
 .redactorMenu 
 {
 	border:1px solid #222;
@@ -7,14 +16,14 @@
 
 .redactorMenu select, .redactorMenu button, .redactorMenu input
 {
-	color:#fff;
-	background-color:#000;
-	border:none;
+	color: #fff;
+	background-color: #000;
+	border: none;
 }
 
 .redactorMenu select
 {
-	margin:5px;
+	margin: 5px;
 }
 
 .redactorMenu button
@@ -25,17 +34,17 @@
 .redactorMenu button:hover
 {
 	text-decoration: none;
-	color:#ffa300;
+	color: #ffa300;
 }
 
 .redactorMenu .disabled
 {
-	display:none;
+	display: none;
 }
 
 .redactorContainer
 {
-	height:auto;
-	min-height:500px;
+	height: auto;
+	min-height: 500px;
 }
 

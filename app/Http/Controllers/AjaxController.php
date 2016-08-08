@@ -18,16 +18,31 @@ class AjaxController extends Controller
 		$this->imageRepository = $imageRepository;
 	}
 
+	/**
+    * index
+    * This function is used to verify that the api is running
+    * @return mixed
+    */
 	public function index()
 	{
 		return json_encode(["website_api" => "running"]);
 	}
 
+	/**
+    * fm
+    * This function is used to verify that the File Manager is running
+    * @return mixed
+    */
 	public function fm()
 	{
-
+		return json_encode(["website_fileManager_api" => "running"]);
 	}
 
+	/**
+    * fm_getTree
+    * This function is used to get the folder and the files in a folder.
+    * @return mixed
+    */
 	public function fm_getTree(Request $request)
 	{
 		$path = $request->path ? $request->path : "media";
@@ -43,6 +58,11 @@ class AjaxController extends Controller
 		return json_encode($response);
 	}
 
+	/**
+    * fm_getTree
+    * This function is used to create a folder on the server.
+    * @return mixed
+    */
 	public function fm_mkdir(Request $request)
 	{
 		$name = $request->name ? $request->name : "" . Carbon::now()->timestamp;
@@ -53,6 +73,11 @@ class AjaxController extends Controller
 		return json_encode($response);
 	}
 
+	/**
+    * fm_rmdir
+    * This function is used to remove a folder from the server.
+    * @return mixed
+    */
 	public function fm_rmdir(Request $request)
 	{
 		$name = $request->name ? $request->name : null;
@@ -65,6 +90,11 @@ class AjaxController extends Controller
 		return json_encode(array("deleted_folder" => $name));
 	}
 
+	/**
+    * fm_rm
+    * This function is used to remove a file from the server.
+    * @return mixed
+    */
 	public function fm_rm(Request $request)
 	{
 		$name = $request->name ? $request->name : null;
@@ -80,6 +110,11 @@ class AjaxController extends Controller
 		return json_encode(array("deleted_file" => $name));
 	}
 
+	/**
+    * fm_touch
+    * This function is used to create a file on the server.
+    * @return mixed
+    */
 	public function fm_touch(Request $request)
 	{
 		if ($request->hasFile('file'))

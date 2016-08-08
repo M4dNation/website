@@ -1,3 +1,13 @@
+/*
+|--------------------------------------------------------------------------
+| Dashboard User CSS File
+|--------------------------------------------------------------------------
+|
+| This file defines all of the dashboard user page CSS rules.
+|
+*/
+
+
 .user-creation-container
 {
 	margin-top: 100px;
@@ -38,7 +48,7 @@
 
 .form-title-box
 {
-	font-family : "Segoe Ui";
+	font-family: "Segoe Ui";
 	border-bottom: 1px solid rgba(34, 34, 34, 0.15);
 }
 
@@ -57,7 +67,7 @@
 
 .form-content-box
 {
-	font-family : "Segoe Ui";
+	font-family: "Segoe Ui";
 	margin-top: 10px;
 	border-bottom: 1px solid rgba(34, 34, 34, 0.15);	
 }

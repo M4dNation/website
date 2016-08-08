@@ -6,12 +6,12 @@
 
 @section('content')
 	<div class="body-container">	
-		@include('website.header')
+		@include('header')
 		@include('website.slideshow')		
 		@include('website.company')
 		@include('website.project')
 		@include('website.team')
 		@include('website.blog')
-		@include('website.footer')
+		@include('footer')
 	</div>
 @stop

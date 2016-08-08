@@ -14,6 +14,11 @@ class Image extends Model
 
     public $timestamps = true;
 
+    /**
+    * byName
+    * This function is used in order to get an image by its name. 
+    * @return {Image}
+    */
     public static function byName($name)
     {
     	return Image::orderBy('created_at', 'desc')->where('name', $name)->first(); 

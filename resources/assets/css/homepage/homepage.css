@@ -1,12 +1,22 @@
+/*
+|--------------------------------------------------------------------------
+| Homepage CSS File
+|--------------------------------------------------------------------------
+|
+| This file defines all homepage CSS rules.
+|
+*/
+
+
 /* Common CSS */
 *
 {
-	outline:0 !important;
+	outline: 0 !important;
 }
 
 html, body
 {
-	height:100%;
+	height: 100%;
 }
 
 .btn-primary
@@ -16,11 +26,11 @@ html, body
 
 .section
 {
-	display:flex;
+	display: flex;
 	align-items: center;
-	min-height:100%;
-	border-bottom: 	1px solid  #989898;
-	flex:1;
+	min-height: 100%;
+	border-bottom: 1px solid  #989898;
+	flex: 1;
 	background-color: #F4F4F4;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35) inset;
 	background-repeat: repeat;	
@@ -28,8 +38,8 @@ html, body
 
 .anchor
 {
-	position:relative;
-	top:-80px;
+	position: relative;
+	top: -80px;
 	visibility: hidden; 
 	display: block; 
 	content: " "; 
@@ -37,17 +47,17 @@ html, body
 
 .body-container
 {
-	height:100%;
+	height: 100%;
 }
 
 section img
 {
-	max-width:100%;
+	max-width: 100%;
 }
 
 p
 {
-	text-align:justify;
+	text-align: justify;
 	font-size: 1.3em;
 	font-family: "Segoe ui";
 }
@@ -59,19 +69,19 @@ h1,h2,h3,h4,h5,h6
 
 h1
 {
-	color:#679F5A;
-	border-bottom : solid 1px #679F5A;
+	color: #679F5A;
+	border-bottom: solid 1px #679F5A;
 	padding: 0px 20px 15px 10px;
-	display:none;
+	display: none;
 }
 
 h1::before 
 {
 	width: 0.5em;
-	height:0.5em;
-	border-radius:50%;
+	height: 0.5em;
+	border-radius: 50%;
 	background: #679F5A;
-	display:inline-block;
+	display: inline-block;
 	content: "";
 	margin-bottom: 5px;
 	margin-right: 10px;
@@ -79,7 +89,7 @@ h1::before
 
 a
 {
-	color:#679F5A;
+	color: #679F5A;
 }
 
 
@@ -87,19 +97,19 @@ a
 
 .header-container, .header-container .logo img, .header-container .nav li 
 {
-	height:80px;
+	height: 80px;
 }
 
 .header-container
 {
 	background-color: #679F5A;
 	box-shadow: 0px 10px 20px rgba(0,0,0,0.35);
-	border:none;
+	border: none;
 }
 
 .header-container .nav
 {
-	margin:auto;
+	margin: auto;
 }
 
 .header-container .nav-item
@@ -109,7 +119,7 @@ a
 	padding-top: 19px;
 	font-weight: bold;
 	font-family: "Segoe Ui";
-	width:160px;
+	width: 160px;
 }
 
 .header-container .nav-item:hover
@@ -119,60 +129,60 @@ a
 
 .header-container .nav .nav-item a
 {
-	color:#fff;
+	color: #fff;
 }
 
 .header-container .nav .nav-item:hover a
 {
-	color:#679F5A;
+	color: #679F5A;
 }
 
 .header-container .navbar-social
 {
 	list-style: none;
-	padding:30px 0px 0px 5px;
+	padding: 30px 0px 0px 5px;
 }
 
 .header-container .nav li.dropdown >ul.dropdown-menu
 {
-	position:relative;
-	display:block;
-	visibility:hidden;
-	border:none;
-	border-top:1px solid #222;
+	position: relative;
+	display: block;
+	visibility: hidden;
+	border: none;
+	border-top: 1px solid #222;
 }
 
 .header-container .nav li.dropdown:hover > ul.dropdown-menu 
 {
-	visibility:visible;   
-	margin:0px;
-	padding:0px;
-	top:11px;
+	visibility: visible;   
+	margin: 0px;
+	padding: 0px;
+	top: 11px;
 }
 
 .header-container .nav li.dropdown:hover > ul.dropdown-menu li
 {
-	height:auto;
+	height: auto;
 }
 
 .header-container .nav li.dropdown:hover > ul.dropdown-menu li:hover a
 {
-	background-color:#679F5A;
-	color:#fff;
+	background-color: #679F5A;
+	color: #fff;
 }
 
 .header-container .navbar-social li 
 {
-	display : inline-block;
-	border:none;
-	width:20px;
+	display: inline-block;
+	border: none;
+	width: 20px;
 	font-size: 1.5em;
-	margin : 0px 5px;
+	margin: 0px 5px;
 }
 
 .header-container .navbar-social li a
 {
-	color:#fff;
+	color: #fff;
 }
 
 /* Section Company */
@@ -189,24 +199,24 @@ a
 {
 	margin-top: 20px;
 	background-color: #679F5A;
-	color:#fff;
+	color: #fff;
 }
 
 .btn-yggdrasill:hover
 {
-	color:#fff;
+	color: #fff;
 }
 
 /* Section Team */
 
 #team .row
 {
-	display:flex;
+	display: flex;
 }
 
 #team .team-picture
 {
-	position:relative;
+	position: relative;
 }
 
 #team img
@@ -221,15 +231,15 @@ a
 
 #team h4
 {
-	position:absolute;
-	bottom:0px;
-	left:0;
-	margin:0;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	margin: 0;
 	text-transform: uppercase;
 	background-color: #679F5A;
 	font-weight: bold;
-	color:#fff;
-	width:100%;
+	color: #fff;
+	width: 100%;
 	padding: 10px 0px;
 	-webkit-transition:  0.2s ease-out; /* Safari */
 	transition: 0.2s ease-out;
@@ -243,17 +253,17 @@ a
 
 #team .team-item
 {
-	padding:10px 10px;
-	flex:1;
+	padding: 10px 10px;
+	flex: 1;
 	perspective: 1000px;
 	transform: rotateY(0deg);
 	-webkit-transform: rotateY(0deg);
 	-webkit-transition: transform 0.6s ease-out; /* Safari */
 	transition: transform 0.6s ease-out;
 	transform-style: preserve-3d;
-	position:relative;
-	height:300px;
-	margin:10px;
+	position: relative;
+	height: 300px;
+	margin: 10px;
 	border: 1px solid #679F5A;
 	border-radius: 6px;
 }
@@ -262,8 +272,8 @@ a
 {
 	color: black;
 	text-decoration: none;
-	height:100%;
-	width:100%;
+	height: 100%;
+	width: 100%;
 }
 
 #team .front, #team .back
@@ -285,15 +295,15 @@ a
 	background-color: #679F5A;
 	-webkit-transform: rotateY( 180deg );
 	transform: rotateY( 180deg );
-	display:flex;
-	align-items:center;
-	height:100%;
-	padding:10px;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 10px;
 }
 
 #team .flip
 {
-	-webkit-transition:  transform 0.5s ease-in; /* Safari */
+	-webkit-transition: transform 0.5s ease-in; /* Safari */
 	transition: transform 0.5s ease-in;
 	transform: rotateY(180deg);
 	transform-style: preserve-3d;
@@ -301,7 +311,7 @@ a
 
 #team .team-item .back p
 {
-	color:#fff;
+	color: #fff;
 }
 
 
@@ -319,12 +329,12 @@ a
 
 .article-container
 {
-	padding:20px;
+	padding: 20px;
 }
 
 .article-container img
 {
-	width:100%;
+	width: 100%;
 	max-width: 250px;
 	margin-top: 25px;
 }
@@ -347,40 +357,42 @@ a
 .btn-blog
 {
 	background-color: #679F5A;
-	color:#fff;
-	margin:30px;
-	float:right;
+	color: #fff;
+	margin: 30px;
+	float: right;
 }
 
 .btn-blog:hover, .btn-blog:focus, .btn-blog:active
 {
 	background-color: #679F5A;
-	color:#fff;
+	color: #fff;
 }
 
 /* Section Contact */
 
 #contact .row
 {
-	display:flex;
+	display: flex;
 }
 
 #contact .contact-item
 {
-	flex:1;
+	flex: 1;
 }
+
+
 
 /* Footer */
 
 footer
 {
-	background-color:#679F5A;
+	background-color: #679F5A;
 	background-image: none;
 }
 
 footer .container
 {
-	min-height:50px;
+	min-height: 50px;
 }
 
 footer .row
@@ -390,7 +402,7 @@ footer .row
 
 footer a
 {
-	font-size: 	14px;
+	font-size: 14px;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -399,16 +411,22 @@ footer a
 
 footer a:hover
 {
-	color:#fff;
+	color: #fff;
 }
 
+.legal
+{
+	font-size: 0.8em;
+	color: #fff;
+	text-align: center;
+}
 
 /* Mobile design */
 
 .navbar-toggle
 {
 
-	margin-top:20px;
+	margin-top: 20px;
 }
 
 
@@ -420,7 +438,7 @@ footer a:hover
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:active
 {
 	background-color: #fff;
-	border-color:#679F5A;
+	border-color: #679F5A;
 }
 
 .navbar-default .navbar-toggle .icon-bar
@@ -445,7 +463,7 @@ footer a:hover
 {
 	#team .team-item
 	{
-		height:250px;
+		height: 250px;
 	}
 	#team h4
 	{
@@ -469,25 +487,25 @@ footer a:hover
 
 	#team .row
 	{
-		display:block;
+		display: block;
 	}
 
 	#team .container
 	{
-		width:100%;
+		width: 100%;
 	}
 
 	#team .team-item
 	{
 		transform: none;
-		margin:0;
-		height:auto;
-		border:none;
+		margin: 0;
+		height: auto;
+		border: none;
 	}
 
 	#team .team-item .front
 	{
-		position:relative;
+		position: relative;
 	}
 
 	#team .flip
@@ -503,20 +521,20 @@ footer a:hover
 
 	#team img
 	{
-		max-height:150px;
+		max-height: 150px;
 	}
 
 	#team h4
 	{
-		position:relative;
+		position: relative;
 	}
 
 	.#team .team-item
 	{
-		height:auto;
-		width:100%;
-		display:block;
-		position:relative;
+		height: auto;
+		width: 100%;
+		display: block;
+		position: relative;
 	}
 
 	.article-container img
@@ -527,19 +545,19 @@ footer a:hover
 
 	.btn-blog
 	{
-		float:none;
+		float: none;
 		margin-bottom: 20px;
 		text-align: center;
 	}
 
 	.header-article
 	{
-		text-align:center;
+		text-align: center;
 	}
 
 	.header-container .nav li
 	{
-		margin:auto;
+		margin: auto;
 	}
 	
 	.header-container .nav li.dropdown > ul.dropdown-menu 
@@ -549,9 +567,4 @@ footer a:hover
 	
 }
 
-.legal
-{
-	font-size: 0.8em;
-	color:#fff;
-	text-align: center;
-}
+

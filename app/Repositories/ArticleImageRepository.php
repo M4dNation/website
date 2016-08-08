@@ -11,6 +11,11 @@ class ArticleImageRepository extends Repository
 	   $this->model = $article_image;
 	}
 
+	/**
+    * byArticleId
+    * This function is used in order to get all the image related to an article.
+    * @return {Images}
+    */
 	public function byArticleId($id)
 	{
 		return $this->model->byArticleId($id);

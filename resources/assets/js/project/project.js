@@ -1,3 +1,13 @@
+/*
+|--------------------------------------------------------------------------
+| Project JS File
+|--------------------------------------------------------------------------
+|
+| This file defines the behavior of the project page.
+|
+*/
+
+//This function enable the scroll when a link on the same page is clicked.
 var $root = $('html, body');
 $('.nav-item .yggdrasill-menu a').click(function() 
 {

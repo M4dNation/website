@@ -1,14 +1,24 @@
+/*
+|--------------------------------------------------------------------------
+| 404 CSS File
+|--------------------------------------------------------------------------
+|
+| This file defines all error 404 page CSS rules.
+|
+*/
+
+
 html, body, .errors-container
 {
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
 
 .errors-container a
 {
-	width:100%;
-	height:100%;
-	display : flex ;
+	width: 100%;
+	height: 100%;
+	display: flex ;
 	align-items: center;
   	justify-content: center;
 }

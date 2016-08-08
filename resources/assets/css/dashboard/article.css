@@ -1,3 +1,12 @@
+/*
+|--------------------------------------------------------------------------
+| Dashboard Article CSS File
+|--------------------------------------------------------------------------
+|
+| This file defines all of the dashboard article page CSS rules.
+|
+*/
+
 .article-creation-container
 {
 	margin-top: 100px;
@@ -57,7 +66,7 @@
 
 .form-content-box
 {
-	font-family : "Segoe Ui";
+	font-family: "Segoe Ui";
 	margin-top: 10px;
 	border-bottom: 1px solid rgba(34, 34, 34, 0.15);	
 }

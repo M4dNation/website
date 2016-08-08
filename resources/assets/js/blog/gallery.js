@@ -1,4 +1,13 @@
+/*
+|--------------------------------------------------------------------------
+| Gallery JS File
+|--------------------------------------------------------------------------
+|
+| This file defines the behavior of the gallery.
+|
+*/
 
+//This function opens the gallery
 $('.gallery-item img').click(function()
 {
 	var url = $(this).data('url');
@@ -15,6 +24,7 @@ $('.gallery-item img').click(function()
 	$('#galleryModal').modal('toggle');
 });
 
+//This function get the next image of the gallery
 $('#galleryModal .next').click(function()
 {
 	var image = $('#galleryModal img');
@@ -42,6 +52,7 @@ $('#galleryModal .next').click(function()
 	image.data('id', id);
 });
 
+//This function get the previous image of the gallery
 $('#galleryModal .previous').click(function()
 {
 	var image = $('#galleryModal img');

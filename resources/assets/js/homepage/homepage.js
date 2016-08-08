@@ -1,3 +1,13 @@
+/*
+|--------------------------------------------------------------------------
+| Homepage JS File
+|--------------------------------------------------------------------------
+|
+| This file defines the behavior of the homepage.
+|
+*/
+
+//This function enable the scroll when a link on the same page is clicked.
 var $root = $('html, body');
 $('.nav-item .home-menu a').click(function() 
 {
@@ -14,10 +24,14 @@ $('.nav-item .home-menu a').click(function()
     return false;
 });
 
-$( ".team-item" ).mouseenter(function() {
+//This function flip the card of a teammember when the mouse is over the card.
+$( ".team-item" ).mouseenter(function()
+ {
  	$(this).addClass("flip");
 });
 
-$( ".team-item" ).mouseleave(function() {
+//This function remove the card flip when the mouse is over the card.
+$( ".team-item" ).mouseleave(function()
+{
  	$(this).removeClass("flip");
 });
