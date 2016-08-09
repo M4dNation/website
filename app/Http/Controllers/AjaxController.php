@@ -8,14 +8,17 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 
 use App\Repositories\ImageRepository;
+use App\Managers\FileManager;
 
 class AjaxController extends Controller
 {
 	protected $imageRepository;
+	protected $fileManager;
 
-	public function __construct(ImageRepository $imageRepository)
+	public function __construct(ImageRepository $imageRepository, FileManager $fileManager)
 	{
 		$this->imageRepository = $imageRepository;
+		$this->fileManager = $fileManager;
 	}
 
 	/**
@@ -47,30 +50,19 @@ class AjaxController extends Controller
 	{
 		$path = $request->path ? $request->path : "media";
 
-		$directories = Storage::directories($path);
-		$files = Storage::files($path);
-
-		$response = array(
-			"directories" => $directories, 
-			"files" => $files
-			);
-
-		return json_encode($response);
+		return $this->fileManager->getTree($path);
 	}
 
 	/**
-    * fm_getTree
+    * fm_mkdir
     * This function is used to create a folder on the server.
     * @return mixed
     */
 	public function fm_mkdir(Request $request)
 	{
 		$name = $request->name ? $request->name : "" . Carbon::now()->timestamp;
-		Storage::makeDirectory($name);
 
-		$response = array("created_folder" => $name);
-
-		return json_encode($response);
+		return $this->fileManager->mkdir($name);
 	}
 
 	/**
@@ -82,12 +74,7 @@ class AjaxController extends Controller
 	{
 		$name = $request->name ? $request->name : null;
 		
-		if (!is_null($name) && $name !== "media")
-		{
-			Storage::deleteDirectory($name);
-		}
-
-		return json_encode(array("deleted_folder" => $name));
+		return $this->fileManager->rmdir($name);
 	}
 
 	/**
@@ -99,15 +86,7 @@ class AjaxController extends Controller
 	{
 		$name = $request->name ? $request->name : null;
 		
-		if (!is_null($name) && $name !== "media")
-		{
-			$image = $this->imageRepository->byName(basename($name));
-			$image->delete();
-
-			Storage::delete($name);
-		}
-
-		return json_encode(array("deleted_file" => $name));
+		return $this->fileManager->rm($name);
 	}
 
 	/**
@@ -122,20 +101,14 @@ class AjaxController extends Controller
 			if ($request->file('file')->isValid())
 			{
 				$file = $request->file('file');
-				$type = $file->getClientOriginalExtension();
+				$path = $request->path;
 
-				$data = array();
-				$data["name"] = Carbon::now()->timestamp . "." . $type;
-				$data["format"] = $type;
-				$data["path"] = $request->path . "/";
-
-				$this->imageRepository->store($data);
-
-				$file->move(base_path()."/storage/app/".$request->path, $data["name"]);
-				return;
+				return $this->fileManager->touch($file, $path);
 			}
-			return ;
+
+			return json_encode(array("added_file" => "none"));
 		}
-		return;	
+
+		return json_encode(array("added_file" => "none"));	
 	}
 }

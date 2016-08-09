@@ -17,6 +17,8 @@ use App\Repositories\ArticleRepository;
 use App\Repositories\ImageRepository;
 use App\Repositories\ArticleImageRepository;
 
+use App\Managers\ArticleManager;
+
 
 class DashboardController extends Controller
 {
@@ -24,15 +26,16 @@ class DashboardController extends Controller
     protected $userRepository;
     protected $imageRepository;
     protected $articleImageRepository;
-
+    protected $ArticleManager;
 
     public function __construct(ArticleRepository $articleRepository, 
-        UserRepository $userRepository, ImageRepository $imageRepository, ArticleImageRepository $articleImageRepository)
+        UserRepository $userRepository, ImageRepository $imageRepository, ArticleImageRepository $articleImageRepository, ArticleManager $articleManager)
     {
         $this->articleRepository = $articleRepository;
         $this->userRepository = $userRepository;
         $this->imageRepository = $imageRepository;
         $this->articleImageRepository = $articleImageRepository;
+        $this->articleManager = $articleManager;
     }
 
     /**
@@ -189,13 +192,13 @@ class DashboardController extends Controller
             }
         }
 
-        $data['user_id'] = Auth::user()->id;
-        $data['content'] = strip_tags($data['content'],"<b><i><u><strike><h2><h3><h4><h5><ul><ol><li><span><a><iframe><font><div><sup><sub><p>");
-        $data['content'] = str_replace('<a ', '<a target="_blank"', $data['content']);
+        $data = $this->articleManager->format($data);
+
         $id = $this->articleRepository->store($data)["id"];
 
-        $data= array();
+        $data = array();
         $data["article_id"] = $id;
+
         foreach ($images as $image)
         {
             $data["image_id"] = $image;
@@ -217,17 +220,17 @@ class DashboardController extends Controller
 
         foreach ($data as $key => $value) 
         {
-            if("image" == substr($key,0,5))
+            if ("image" == substr($key,0,5))
             {
                 $images[] = $this->imageRepository->byName($value)["id"];
                 unset($data[$key]);
             }
         }
 
-        $data['user_id'] = Auth::user()->id;
+        $data = $this->articleManager->format($data);
         $this->articleRepository->update($id, $data);
 
-        $data= array();
+        $data = array();
         $data["article_id"] = $id;
         $articleImages = $this->articleImageRepository->byArticleId($id);
 
