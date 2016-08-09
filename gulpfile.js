@@ -1,5 +1,3 @@
-var elixir = require('laravel-elixir');
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -10,6 +8,9 @@ var elixir = require('laravel-elixir');
  | file for our application, as well as publishing vendor resources.
  |
  */
+
+var elixir = require('laravel-elixir');
+var inProduction = elixir.config.production;
 
 elixir(function(mix)
 {
@@ -78,17 +79,22 @@ elixir(function(mix)
         'website/Redactor.js'
     ], 'public/js/lib/website.js');
     
-
     // Lib Javascript
- 	mix.scripts(
- 	[
- 		'lib/jquery.min.js',
-        'lib/analytics.js',
- 		'lib/bootstrap.min.js',
+    var lib = 
+    [
+        'lib/jquery.min.js',
+        'lib/bootstrap.min.js',
         'lib/sweetalert.min.js',
         'lib/jquery-ui.min.js',
         'lib/dropzone.js',
- 	], 'public/js/lib/libraries.js');
+    ];
+
+    if (inProduction)
+    {
+        lib.push('lib/analytics.js');
+    }
+
+ 	mix.scripts(lib, 'public/js/lib/libraries.js');
 
     // Homepage Javascript
     mix.scripts(
