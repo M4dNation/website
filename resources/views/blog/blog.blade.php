@@ -1,7 +1,7 @@
 @extends('blog.template')
 
 @section('title')
-	Blog
+	M4dNation - Blog
 @stop
 
 @section('content')

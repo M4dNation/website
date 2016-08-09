@@ -1,7 +1,7 @@
 @extends('project.template')
 
 @section('title')
-	M4dNation
+	M4dNation - Yggdrasill
 @stop
 
 @section('content')
