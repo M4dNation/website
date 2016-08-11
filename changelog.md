@@ -1,5 +1,12 @@
 # CHANGE LOG
 
+## [v.1.1.2.1](https://github.com/M4dNation/website/tree/v1.1.2.1)
+[Full Changelog](https://github.com/M4dNation/website/compare/v1.1.2...v1.1.2.1)
+
+**Implemented enhancements:**
+
+- Add Segoe UI as default font for article
+
 
 ## [v.1.1.2](https://github.com/M4dNation/website/tree/v1.1.2)
 [Full Changelog](https://github.com/M4dNation/website/compare/v1.1.1...v1.1.2)
@@ -7,7 +14,6 @@
 **Implemented enhancements:**
 
 - Add change log
-
 
 **Closed Issues:**
 
