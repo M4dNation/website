@@ -168,7 +168,7 @@ html, body
 	font-style: italic;
 }
 
-.article-container p
+.article-container *
 {
 	font-family: "Segoe Ui";
 	text-align: justify;

@@ -15,7 +15,7 @@
 								<img src="{{$article->images->first()->path . $article->images->first()->name}}" alt="{{$article->images->first()->name}}">
 							@endif
 						</div>
-						<div class="col-lg-9 col-md-9">
+						<div class="col-lg-9 col-md-9 content-article">
 							<div class="header-article">
 								<h2>{{ $article->title }}</h2>
 								<h3>Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</h3>

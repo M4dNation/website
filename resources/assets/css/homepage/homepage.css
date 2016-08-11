@@ -360,6 +360,11 @@ a
 	font-style: italic;
 }
 
+.content-article *
+{
+	font-family: "Segoe UI";
+}
+
 .btn-blog
 {
 	background-color: #679F5A;
