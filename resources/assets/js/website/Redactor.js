@@ -53,6 +53,7 @@ Application.Redactor = (function(Redactor)
 		redactorHtml +=  "<div contenteditable=\"true\" onKeyUp=\"Application.Redactor.read();\" onChange=\"Application.Redactor.read();\"   required=\"\" class=\"form-control redactorContainer\">" + content + "</div>";
 		redactorHtml +=  "<textarea class=\"hidden\" name=\"content\" id=\"redactorInput\" cols=\"30\" rows=\"10\"></textarea>";
 		$(".redactor").html(redactorHtml);	
+		$("#redactorInput").val($(".redactorContainer").html());
 	}
 
 	/**
