@@ -63,11 +63,12 @@ Application.Redactor = (function(Redactor)
 
 	Redactor.toggleView = function()
 	{
-		if(($("#redactorView").val())==="preview")
+		if (($("#redactorView").val())==="preview")
 		{
 			$(".redactorContainer").html($(".redactorContainer").text());
 			$(".redactorMenu button").removeClass("disabled");
 			$(".redactorMenu input").removeClass("disabled");
+			$("#redactorInput").val($(".redactorContainer").html());
 		}
 		else if(($("#redactorView").val())==="source")
 		{
@@ -84,13 +85,14 @@ Application.Redactor = (function(Redactor)
 	*/
 	Redactor.read= function() 
 	{
-		if(($("#redactorView").val())!=="preview")
+		if (($("#redactorView").val())==="preview")
 		{
-			$(".redactorContainer").html($(".redactorContainer").text());
-			$(".redactorMenu button").removeClass("disabled");
-			$(".redactorMenu input").removeClass("disabled");
+			$("#redactorInput").val($(".redactorContainer").html());
 		}
-		$("#redactorInput").val($(".redactorContainer").html());
+		else  if (($("#redactorView").val())==="source")
+		{
+			$("#redactorInput").val($(".redactorContainer").text());
+		}
 	};
 
 	/**
@@ -101,7 +103,7 @@ Application.Redactor = (function(Redactor)
 	*/
 	Redactor.write = function(command, argument)
 	{		
-		if(($("#redactorView").val())==="preview")
+		if (($("#redactorView").val())==="preview")
 		{
 			if (typeof argument === 'undefined')
 			{
@@ -110,14 +112,14 @@ Application.Redactor = (function(Redactor)
 			switch(command)
 			{
 				case "createLink":
-				if(argument == '')
+				if (argument == '')
 				{
 					selection  = Application.Redactor.saveSelection();
 					Application.Redactor.insertLink(selection);
 				}
 				break;
 				case "iframe":
-				if(argument == '')
+				if (argument == '')
 				{
 					selection  = Application.Redactor.saveSelection();
 					Application.Redactor.insertIFrame(selection);
