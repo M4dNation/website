@@ -7,30 +7,30 @@
 				@foreach ($articles as $article)
 				<div class="article-container">	
 					<a href="{{ route('blog.article', $article->id) }}" class="article-link">
-					<div class="row mrg-b-20">	
-						<div class="col-lg-3 col-md-3 hidden-sm hidden-xs text-center">	
-							@if ($article->images->isEmpty())
-								<img src="{{ asset('images/common/defaultBlog.png') }}" alt="default image">
-							@else
-								<img src="{{$article->images->first()->path . $article->images->first()->name}}" alt="{{$article->images->first()->name}}">
-							@endif
-						</div>
-						<div class="col-lg-9 col-md-9 content-article">
-							<div class="header-article">
-								<h2>{{ $article->title }}</h2>
-								<h3>Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</h3>
-							</div>
-							
-							<div class="text-center hidden-lg hidden-md">
+						<div class="row mrg-b-20">	
+							<div class="col-lg-3 col-md-3 hidden-sm hidden-xs text-center">	
 								@if ($article->images->isEmpty())
 									<img src="{{ asset('images/common/defaultBlog.png') }}" alt="default image">
 								@else
 									<img src="{{$article->images->first()->path . $article->images->first()->name}}" alt="{{$article->images->first()->name}}">
 								@endif
 							</div>
-							<p class="auto-hgt"> {!! substr($article->content, 0 , 300) . '...' !!} </p>
-						</div>	
-					</div>
+							<div class="col-lg-9 col-md-9 content-article">
+								<div class="header-article">
+									<h2>{{ $article->title }}</h2>
+									<h3>Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</h3>
+								</div>
+								
+								<div class="text-center hidden-lg hidden-md">
+									@if ($article->images->isEmpty())
+										<img src="{{ asset('images/common/defaultBlog.png') }}" alt="default image">
+									@else
+										<img src="{{$article->images->first()->path . $article->images->first()->name}}" alt="{{$article->images->first()->name}}">
+									@endif
+								</div>
+								<p class="auto-hgt"> {!! str_replace(['<div>','</div>'],'',substr($article->content, 0 , 300)) . '...' !!} </p>
+							</div>	
+						</div>
 					</a>
 				</div>
 				
