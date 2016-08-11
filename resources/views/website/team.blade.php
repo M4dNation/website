@@ -13,7 +13,7 @@
 						<h3>Axel Vaindal</h3>
 					</div>
 					<div class="back">
-						<p>Model Property Tree inventor, Martial Arts and Video Games addict. I guess that's enough for now on.</p>			
+						<p>Model Property Tree inventor, Martial Arts and Video Games addict. <br>I guess that's enough for now on.</p>			
 					</div>
 				</a>
 			</div>
@@ -41,7 +41,7 @@
 						<h3>Maxime Breuil</h3>
 					</div>
 					<div class="back">
-						<p>I used to design games for fun. Almost doing the same now, for a living. Good video games are my religion.</p>
+						<p>I used to design games for fun.<br>Almost doing the same now, for a living. <br>Good video games are my religion.</p>
 					</div>	
 				</a>
 			</div>
@@ -55,7 +55,7 @@
 						<h3>Rémi Hau</h3>
 					</div>
 					<div class="back">
-						<p>Coming from Java to Javascript. Interested in new tech, video games, politics and economy.</p>
+						<p>Coming from Java to Javascript. <br>Interested in new tech, video games, politics and economy.</p>
 					</div>	
 				</a>
 			</div>
@@ -69,7 +69,7 @@
 						<h3>Nicolas Valck</h3>
 					</div>
 					<div class="back">
-						<p>Cisco is my best friend: true story. Airsoft, video games and open software are my things.</p>
+						<p>Cisco is my best friend: true story. <br>Airsoft, video games and open software are my things.</p>
 					</div>	
 				</a>
 			</div>
