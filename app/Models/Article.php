@@ -75,7 +75,8 @@ class Article extends Model
     */
     public static function published($n)
     {
-        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->paginate($n);
+        dd(Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->paginate($n));
+        return;
     }
 
      /**
