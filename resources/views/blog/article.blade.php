@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-	@include('blog.header')	
+	@include('header')	
 	<div class="container article-container">
 		<div class="row">
 			<div class="title-container">
