@@ -6,7 +6,7 @@ use Auth;
 
 class ArticleManager 
 {
-    const TAGS = "<b><i><u><strike><h2><h3><h4><h5><ul><ol><li><span><a><iframe><font><div><sup><sub><p>";
+    const TAGS = "<b><i><u><strike><h2><h3><h4><h5><ul><ol><li><span><a><iframe><font><div><sup><sub><p><br>";
 
     public function __construct()
     {
