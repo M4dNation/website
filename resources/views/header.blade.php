@@ -42,6 +42,9 @@
             <li id="twitter">
                 <a target="_blank" rel="nofollow" href="https://twitter.com/M4dNation"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
             </li>
+             <li id="instagram">
+                <a target="_blank" rel="nofollow" href="https://www.instagram.com/M4dnation/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
           </ul>
         </li>
       </ul>			
