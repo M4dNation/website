@@ -3,6 +3,10 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+use Illuminate\Support\Facades\DB as DB;
+
+use App\Models\Article;
+
 class ArticleLang extends Migration
 {
     /**
@@ -14,10 +18,14 @@ class ArticleLang extends Migration
     {
         Schema::table('article', function ($table) 
         {
+            $table->integer('number_label')
+                  ->after('user_id');
             $table->string('lang', 5)
-                  ->after('user_id')
+                  ->after('number_label')
                   ->default('en');
         });
+        
+        DB::statement('UPDATE article SET number_label = id');
     }
 
     /**
@@ -29,7 +37,8 @@ class ArticleLang extends Migration
     {
         Schema::table('article', function ($table) 
         {
-            $table->dropColumn('state');
+            $table->dropColumn('number_label');
+            $table->dropColumn('lang');
         });
     }
 }

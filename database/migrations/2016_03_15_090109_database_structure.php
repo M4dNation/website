@@ -91,6 +91,17 @@ class DatabaseStructure extends Migration
      */
     public function down()
     {
+        Schema::table('article', function($table)
+        {
+            $table->dropForeign('article_user_id_foreign');
+        });
+
+        Schema::table('article_image', function($table)
+        {
+            $table->dropForeign('article_image_article_id_foreign');
+            $table->dropForeign('article_image_image_id_foreign');
+        });
+
         Schema::drop('image');
         Schema::drop('users');
         Schema::drop('password_resets');
