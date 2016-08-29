@@ -59,12 +59,12 @@ p
 {
 	text-align: justify;
 	font-size: 1.3em;
-	font-family: "Segoe ui";
+	font-family: "Segoe ui", "Open Sans";
 }
 
 h1,h2,h3,h4,h5,h6
 {
-	font-family: "Segoe ui";
+	font-family: "Segoe ui", "Open Sans";
 }
 
 h1
