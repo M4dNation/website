@@ -18,56 +18,64 @@ Create Article
 			<h2>Basic Settings</h2>
 			<h3>Create a new article</h3>
 		</div>
+		<select class="lang-selector" onchange="Application.LangEditor.init();"  name="lang" id="lang">
+			<option value="en" selected>English</option>
+			<option value="fr">Français</option>
+		</select>
 		<div class="col-lg-12 col-md-12 col-sm-12 form-content-box">
+			
 			{!! Form::open(['id' => 'articleCreationForm', 'url' => 'dashboard/article', 'method' => 'post', 'role' => 'form', 'class' => 'form-horizontal article-form center-block']) !!}
-
-			<div class="form-group">
-				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-					<label for="title" class="pull-right">Title</label>
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<input type="text" name="title" id="title" required="" class="form-control" placeholder="Your title" />
-					{!! $errors->first('title', '<small class="help-block">:message</small>') !!}
-				</div>
+			<div class="form-group">				
+					<input name="number_label" type="hidden" value="0"/>
 			</div>
 
-			<div class="form-group">
-				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-					<label for="content" class="pull-right">Content</label>
+			<div class="en">	
+				<div class="form-group">
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<label for="title" class="pull-right">Title</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<input type="text" name="title" id="title" required="" class="form-control" placeholder="Your title" />
+						{!! $errors->first('title', '<small class="help-block">:message</small>') !!}
+					</div>
 				</div>
-				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<div class="redactor">Your content.</div>
+
+				<div class="form-group">
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						<label for="content" class="pull-right">Content</label>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<div class="redactor">Your content.</div>
+					</div>
+					{!! $errors->first('content', '<small class="help-block">:message</small>') !!}
 				</div>
-				{!! $errors->first('content', '<small class="help-block">:message</small>') !!}
-			</div>
 
 
-			<div class="form-group mrg-t-20">
-				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<div class="row">
-						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails">
+				<div class="form-group mrg-t-20">
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<div class="row">
+							<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails">
 
-						</div> 
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-							<a onclick="Application.FileManager.launch('articleCreationForm');" class="btn btn-default btn-lg center-block btn-submit mrg-b-10">Add Image </a>
+							</div> 
+							<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+								<a onclick="Application.FileManager.launch('articleCreationForm');" class="btn btn-default btn-lg center-block btn-submit mrg-b-10">Add Image </a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="form-group mrg-t-50">
-				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<input type="submit" class="btn btn-default btn-lg center-block btn-submit pull-left" value="Create" />
+				<div class="form-group mrg-t-50">
+					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<input type="submit" class="btn btn-default btn-lg center-block btn-submit pull-left" value="Create" />
+					</div>
 				</div>
 			</div>
+			{!! Form::close() !!}		
 		</div>
-
-		{!! Form::close() !!}
 	</div>
-</div>
 </div>
 @stop

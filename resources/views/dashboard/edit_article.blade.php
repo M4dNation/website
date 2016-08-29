@@ -21,6 +21,10 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 form-content-box">
 			{!! Form::open(['id' => 'articleEditForm', 'url' => 'dashboard/article/' . $article->id, 'method' => 'post', 'role' => 'form', 'class' => 'form-horizontal user-form center-block']) !!}
 
+			<div class="form-group">				
+				<input name="number_label" type="hidden" value="{{ $article->number_label }}"/>
+			</div>
+
 			<div class="form-group">
 				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
 					<label for="title" class="pull-right">Title</label>
