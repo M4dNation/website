@@ -118,7 +118,7 @@ a
 	text-transform: uppercase;
 	padding-top: 19px;
 	font-weight: bold;
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 	width: 160px;
 }
 
@@ -248,7 +248,7 @@ a
 .teammate-name h3
 {
 	font-weight: bold;
-	font-family: "Segoe ui";
+	font-family: "Segoe ui", "Open Sans";
 }
 
 #team .team-item
@@ -362,7 +362,7 @@ a
 
 .content-article *
 {
-	font-family: "Segoe UI";
+	font-family: "Segoe ui", "Open Sans";
 }
 
 .btn-blog
@@ -417,7 +417,7 @@ footer a
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 }
 
 footer a:hover

@@ -46,7 +46,7 @@ html, body
 	text-transform: uppercase;
 	padding-top: 19px;
 	font-weight: bold;
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 	width: 160px;
 }
 
@@ -154,7 +154,7 @@ html, body
 
 .article-container h1
 {
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 	font-weight: bold;
 	margin-bottom: 0px;
 }
@@ -170,7 +170,7 @@ html, body
 
 .article-container *
 {
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 	text-align: justify;
 }
 
@@ -271,14 +271,14 @@ html, body
 
 .gallery-header h1
 {
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 	text-transform: uppercase;
 	margin-bottom: 0px;
 }
 
 .gallery-header h2
 {
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 	font-style: italic;
 	font-weight: bold;
 	font-size: 0.8em;

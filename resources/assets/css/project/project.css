@@ -64,12 +64,12 @@ section img
 p
 {
 	font-size: 1.3em;
-	font-family: "Segoe ui";
+	font-family: "Segoe ui", "Open Sans";
 }
 
 h1,h2,h3,h4,h5,h6
 {
-	font-family: "Segoe ui";
+	font-family: "Segoe ui", "Open Sans";
 }
 
 h1
@@ -114,7 +114,7 @@ a
 	text-transform: uppercase;
 	padding-top: 19px;
 	font-weight: bold;
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 	width: 160px;
 }
 
@@ -214,7 +214,7 @@ footer a
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-family: "Segoe Ui";
+	font-family: "Segoe ui", "Open Sans";
 }
 
 footer a:hover
