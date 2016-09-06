@@ -48,6 +48,27 @@ class Article extends Model
     	return Article::orderBy('created_at', 'desc')->first();
     }
 
+     /**
+    * byNumberLabelLocal
+    * This function is used in order to get all the articles published.
+    * @return {Article}
+    */
+    public function byNumberLabel($numberLabel)
+    {
+        return Article::where('number_label', $numberLabel)->get();
+    }
+
+
+    /**
+    * byNumberLabelLocal
+    * This function is used in order to get all the articles published.
+    * @return {Article}
+    */
+    public function byNumberLabelLocal($numberLabel, $lang)
+    {
+        return Article::where('number_label', $numberLabel)->where('lang', $lang)->first();
+    }
+
     /**
     * take
     * This function is used in order to get the n latest article. 
@@ -68,6 +89,16 @@ class Article extends Model
         return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->take($n)->get();
     }
 
+     /**
+    * takePublished
+    * This function is used in order to get the n latest article published. 
+    * @return {Article}
+    */
+    public static function takePublishedLocal($n, $lang)
+    {
+        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->take($n)->get();
+    }
+
     /**
     * published
     * This function is used in order to get all the articles published paginated. 
@@ -75,8 +106,17 @@ class Article extends Model
     */
     public static function published($n)
     {
-        dd(Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->paginate($n));
-        return;
+        return (Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->paginate($n));
+    }
+
+     /**
+    * publishedLocal
+    * This function is used in order to get all the articles published of your current language paginated. 
+    * @return {Article}
+    */
+    public static function publishedLocal($n, $lang)
+    {
+        return (Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->paginate($n));
     }
 
      /**
@@ -87,6 +127,16 @@ class Article extends Model
     public static function allPublished()
     {
         return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->get();
+    }
+
+     /**
+    * allPublished
+    * This function is used in order to get all the articles published in your current language. 
+    * @return {Article}
+    */
+    public static function allPublishedLocal($lang)
+    {
+        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->get();
     }
 
 
@@ -106,18 +156,33 @@ class Article extends Model
     }
 
      /**
-    * isDraft
-    * This function is used to know if an article is draft. 
+    * lastArticleNumber
+    * This function is used to know the last article number. 
     * @return boolean
     */
-    public function isDraft()
+    public function lastNumberLabel()
     {
-        if ($this->state == self::DRAFT)
-        {
-            return true;
-        }
-        
-        return false;
-    }
+        return Article::max('number_label');        
+    } 
+
+    /**
+    * previousArticleLocal
+    * This function is used to know the last article number. 
+    * @return boolean
+    */
+    public function previousArticleLocal($numberLabel, $lang)
+    {
+        return Article::orderBy('number_label', 'desc')->where('number_label','<', $numberLabel)->where('lang', $lang)->first();       
+    } 
+
+      /**
+    * nextArticleLocal
+    * This function is used to know the last article number. 
+    * @return boolean
+    */
+    public function nextArticleLocal($numberLabel, $lang)
+    {
+        return Article::orderBy('number_label', 'desc')->where('number_label','>', $numberLabel)->where('lang', $lang)->first();          
+    } 
 
 }

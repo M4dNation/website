@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use Lang;
 
 
 use App\Repositories\ArticleRepository;
@@ -39,8 +40,8 @@ class BlogController extends Controller
                 });
             }
         } 
-
-        $articles = $this->articleRepository->published(5);
+        $lang = Lang::getLocale();
+        $articles = $this->articleRepository->publishedLocal(5, $lang);
 
     	return view('blog/blog', compact('articles'));
     }
@@ -53,14 +54,16 @@ class BlogController extends Controller
 
     public function showArticle($id)
     {
-        $article = $this->articleRepository->byId($id);        
-        $total = $this->articleRepository->countPublished();
+        $lang = Lang::getLocale();
+        $article = $this->articleRepository->byNumberLabelLocal($id, $lang);        
+        $previous = $this->articleRepository->previousArticleLocal($id, $lang)['number_label'];
+        $next = $this->articleRepository->nextArticleLocal($id, $lang)['number_label'];
 
         if (is_null($article) || !$article->isPublished())
         {
             abort('404');
         }
 
-        return view('blog/article', compact('article', 'total'));
+        return view('blog/article', compact('article', 'previous','next'));
     }
 }

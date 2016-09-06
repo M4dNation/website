@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="title-container">
 				<a class="top-link" href="#">Back to top</a>
-				<a href="{{ route('blog.article', $article->id) }}" class="article-link">
+				<a href="{{ route('blog.article', $article->number_label) }}" class="article-link">
 					<h1>{{ $article->title }}</h1>
 				</a>
 				<p class="date">Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</p>				

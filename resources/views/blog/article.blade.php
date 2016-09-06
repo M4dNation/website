@@ -42,11 +42,11 @@
 			</div>
 		</div>
 		<div class="navigation-link">
-			@if ( ($article->id - 1) > 0)
-				<a class="previous" href="{{ route('blog.article',($article->id-1)) }}">Previous article</a>
+			@if ($previous)
+				<a class="previous" href="{{ route('blog.article',($previous)) }}">Previous article</a>
 			@endif
-			@if ( ($article->id) < $total)
-				<a class="next" href="{{ route('blog.article',($article->id+1)) }}">Next article</a>
+			@if ($next)
+				<a class="next" href="{{ route('blog.article',($next)) }}">Next article</a>
 			@endif
 		</div>
 	</div>

@@ -281,12 +281,13 @@ Application.FileManager = (function(FileManager)
 	*/
 	FileManager.addImages = function()
 	{
-		$('.selectedImage').remove();
-		$('.thumbnails').empty();
+		var currentFileManager = $('.current_fileManager').val();
+		$('.' + currentFileManager + ' .selectedImage').remove();
+		$('.' + currentFileManager + ' .thumbnails').empty();
 		for(i in _selectedImages)
 		{
-			$('#'+_idForm).append('<input class="selectedImage" name="image' + i + '" type="hidden" value="' + _selectedImages[i] + '"/>');
-			$('.thumbnails').append('<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="' + Application.url.image + _currentUrl + "/" + _selectedImages[i] + '"/></div>');
+			$('#'+_idForm + ' .' + currentFileManager).append('<input class="selectedImage" name="image' + currentFileManager + i + '" type="hidden" value="' + _selectedImages[i] + '"/>');
+			$('.' + currentFileManager + ' .thumbnails').append('<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img src="' + Application.url.image + _currentUrl + "/" + _selectedImages[i] + '"/></div>');
 			
 		}
 		Application.FileManager.emptySelection();

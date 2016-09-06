@@ -65,7 +65,7 @@ class DashboardController extends Controller
     * @return view
     */
     public function users()
-    {
+     {
         $users = $this->userRepository->all();
 
         return view('dashboard/users', compact('users'));
@@ -163,14 +163,13 @@ class DashboardController extends Controller
     */
     public function editArticle($id)
     {
-        $article = $this->articleRepository->byId($id);
-
-        if (is_null($article))
+        $articles = $this->articleRepository->byNumberLabel($id); 
+        if (is_null($articles))
         {
             abort('404');
         }
 
-        return view('dashboard/edit_article', compact('article'));
+        return view('dashboard/edit_article', compact('articles'));
     }
 
     /**
@@ -181,30 +180,37 @@ class DashboardController extends Controller
     public function createArticle(ArticleRequest $request)
     {
         $data = $request->all();
-        $images = array();
+        $langs = explode(",", $data["lang_list"]);
+        $i = 0;
+        $article_number = $this->articleRepository->lastNumberLabel() +1 ;      
 
-        foreach ($data as $key => $value) 
+        foreach ($langs as $lang) 
         {
-            if("image" == substr($key,0,5))
+            $images = array();
+
+            foreach ($data as $key => $value) 
             {
-                $images[] = $this->imageRepository->byName($value)["id"];
-                unset($data[$key]);
+                if("image".$lang == substr($key,0,7))
+                {
+                    $images[] = $this->imageRepository->byName($value)["id"];
+                    unset($data[$key]);
+                }
+            }
+
+            $articleData = $this->articleManager->format($data, $lang);
+            $articleData["number_label"] = $article_number;
+
+            $id = $this->articleRepository->store($articleData)["id"];
+
+            $articleData = array();
+            $articleData["article_id"] = $id;
+
+            foreach ($images as $image)
+            {
+                $articleData["image_id"] = $image;
+                $this->articleImageRepository->store($articleData);
             }
         }
-
-        $data = $this->articleManager->format($data);
-
-        $id = $this->articleRepository->store($data)["id"];
-
-        $data = array();
-        $data["article_id"] = $id;
-
-        foreach ($images as $image)
-        {
-            $data["image_id"] = $image;
-            $this->articleImageRepository->store($data);
-        }
-
         return redirect('dashboard/articles');
     }
 
@@ -265,8 +271,8 @@ class DashboardController extends Controller
     * This function is used to publish an article
     * @return view
     */
-    public function publishArticle($id)
-    {
+     public function publishArticle($id)
+     {
         $data = array('state' => 1);
 
         $this->articleRepository->update($id,$data);
@@ -279,8 +285,8 @@ class DashboardController extends Controller
     * This function is used to draft an article
     * @return view
     */
-    public function draftArticle($id)
-    {
+       public function draftArticle($id)
+       {
         $data = array('state' => 0);
 
         $this->articleRepository->update($id,$data);

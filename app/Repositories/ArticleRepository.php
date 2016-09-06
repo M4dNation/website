@@ -21,6 +21,17 @@ class ArticleRepository extends Repository
 		return $this->model->published($n);
 	}
 
+		/**
+    * published
+    * This function is used in order to get all the articles published.
+    * @return {Article}
+    */
+	public function publishedLocal($n, $lang)
+	{
+		return $this->model->publishedLocal($n, $lang);
+	}
+
+
 	/**
     * takePublished
     * This function is used in order to get n articles published.
@@ -32,12 +43,82 @@ class ArticleRepository extends Repository
 	}
 
 	/**
+    * takePublishedLocal
+    * This function is used in order to get n articles published in the local language.
+    * @return {Article}
+    */
+	public function takePublishedLocal($n, $lang)
+	{
+		return $this->model->takePublishedLocal($n, $lang);
+	}
+
+	/**
     * countPublished
-    * This function is used in order to getthe number of articles published.
+    * This function is used in order to get the number of articles published.
     * @return {Article}
     */
 	public function countPublished()
 	{
 		return count($this->model->allPublished());
+	}
+
+	/**
+    * countPublishedLocal
+    * This function is used in order to get the number of articles published in your current language.
+    * @return {Article}
+    */
+	public function countPublishedLocal($lang)
+	{
+		return count($this->model->allPublishedLocal($lang));
+	}
+
+	/**
+    * clastNumberLabel
+    * This function is used in order to getthe number of articles published.
+    * @return {Article}
+    */
+	public function lastNumberLabel()
+	{
+		return $this->model->lastNumberLabel();
+	}
+
+	/**
+    * byNumberLabelLocal
+    * This function is used in order to get all the articles published.
+    * @return {Article}
+    */
+	public function byNumberLabel($numberLabel)
+	{
+		return $this->model->byNumberLabel($numberLabel);
+	}
+
+	/**
+    * byNumberLabelLocal
+    * This function is used in order to get all the articles published.
+    * @return {Article}
+    */
+	public function byNumberLabelLocal($numberLabel, $lang)
+	{
+		return $this->model->byNumberLabelLocal($numberLabel, $lang);
+	}
+
+	/**
+    * previousArticleLocal
+    * This function is used in order to get all the articles published.
+    * @return {Article}
+    */
+	public function previousArticleLocal($numberLabel, $lang)
+	{
+		return $this->model->previousArticleLocal($numberLabel, $lang);
+	}
+
+	/**
+    * nextArticleLocal
+    * This function is used in order to get all the articles published.
+    * @return {Article}
+    */
+	public function nextArticleLocal($numberLabel, $lang)
+	{
+		return $this->model->nextArticleLocal($numberLabel, $lang);
 	}
 }

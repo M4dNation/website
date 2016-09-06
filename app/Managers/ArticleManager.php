@@ -18,13 +18,17 @@ class ArticleManager
     * This function is used to 
     * @return 
     */
-    public function format($data)
+    public function format($data, $lang)
     {
-        $data['user_id'] = Auth::user()->id;
-        $data['content'] = strip_tags($data['content'], self::TAGS);
-        $data['content'] = str_replace('<a ', '<a target="_blank"', $data['content']);
+        $formatData = array();
+        $formatData['user_id'] = Auth::user()->id;
+        $formatData['lang'] = $lang;
+        $formatData['number_label'] = $data['number_label'];
+        $formatData['title'] = $data['title-'.$lang];
+        $formatData['content'] = strip_tags($data['content-'.$lang], self::TAGS);
+        $formatData['content'] = str_replace('<a ', '<a target="_blank"', $formatData['content']);
 
-        return $data;
+        return $formatData;
     }
 
 }

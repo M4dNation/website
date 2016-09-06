@@ -21,9 +21,13 @@ Application.Redactor = (function(Redactor)
 	Redactor.init = function()
 	{
 		var content = $(".redactor").html();
-		//$(".redactor").html('');
+		if($(".current_redactor").val() != '')
+		{
+			$(".redactor").attr("id",$(".current_redactor").val());			
+		}
+		console.l
 		var redactorHtml = "<div class=\"redactorMenu\">";
-		redactorHtml +=  "<select onchange=\"Application.Redactor.toggleView()\" id=\"redactorView\">";
+		redactorHtml +=  "<select onchange=\"Application.Redactor.toggleView()\" class=\"redactorView\">";
 		redactorHtml +=  	"<option value=\"preview\" selected>Preview</option> ";
 		redactorHtml +=  	"<option value=\"source\">Source</option>";
 		redactorHtml +=  "</select>";
@@ -51,9 +55,9 @@ Application.Redactor = (function(Redactor)
 		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('redo');\" ><i class=\"fa fa-repeat\" aria-hidden=\"true\"></i></button>";	
 		redactorHtml +=  "</div>";
 		redactorHtml +=  "<div contenteditable=\"true\" onKeyUp=\"Application.Redactor.read();\" onChange=\"Application.Redactor.read();\"   required=\"\" class=\"form-control redactorContainer\">" + content + "</div>";
-		redactorHtml +=  "<textarea class=\"hidden\" name=\"content\" id=\"redactorInput\" cols=\"30\" rows=\"10\"></textarea>";
+		redactorHtml +=  "<textarea class=\"hidden redactorInput\" name=\"content-en\" cols=\"30\" rows=\"10\"></textarea>";
 		$(".redactor").html(redactorHtml);	
-		$("#redactorInput").val($(".redactorContainer").html());
+		$(".redactorInput").val($(".redactorContainer").html());
 	}
 
 	/**
@@ -64,18 +68,19 @@ Application.Redactor = (function(Redactor)
 
 	Redactor.toggleView = function()
 	{
-		if (($("#redactorView").val())==="preview")
+		var currentRedactor = $(".current_redactor").val();
+		if (($(".redactor#" + currentRedactor + " .redactorView").val())==="preview")
 		{
-			$(".redactorContainer").html($(".redactorContainer").text());
-			$(".redactorMenu button").removeClass("disabled");
-			$(".redactorMenu input").removeClass("disabled");
-			$("#redactorInput").val($(".redactorContainer").html());
+			$(".redactor#" + currentRedactor + " .redactorContainer").html($(".redactor#" + currentRedactor + " .redactorContainer").text());
+			$(".redactor#" + currentRedactor + " .redactorMenu button").removeClass("disabled");
+			$(".redactor#" + currentRedactor + " .redactorMenu input").removeClass("disabled");
+			$(".redactor#" + currentRedactor + " .redactorInput").val($(".redactor#" + currentRedactor + " .redactorContainer").html());
 		}
-		else if(($("#redactorView").val())==="source")
+		else if(($(".redactor#" + currentRedactor + " .redactorView").val())==="source")
 		{
-			$(".redactorContainer").text($(".redactorContainer").html());
-			$(".redactorMenu button").addClass("disabled");
-			$(".redactorMenu input").addClass("disabled");
+			$(".redactor#" + currentRedactor + " .redactorContainer").text($(".redactor#" + currentRedactor + " .redactorContainer").html());
+			$(".redactor#" + currentRedactor + " .redactorMenu button").addClass("disabled");
+			$(".redactor#" + currentRedactor + " .redactorMenu input").addClass("disabled");
 		}
 	};
 
@@ -86,13 +91,15 @@ Application.Redactor = (function(Redactor)
 	*/
 	Redactor.read= function() 
 	{
-		if (($("#redactorView").val())==="preview")
+		var currentRedactor = $(".current_redactor").val();
+		console.log($(".redactor#" + currentRedactor + " .redactorInput").val());
+		if (($(".redactor#" + currentRedactor + " .redactorView").val())==="preview")
 		{
-			$("#redactorInput").val($(".redactorContainer").html());
+			$(".redactor#" + currentRedactor + " .redactorInput").val($(".redactor#" + currentRedactor + " .redactorContainer").html());
 		}
-		else  if (($("#redactorView").val())==="source")
+		else  if (($(".redactor#" + currentRedactor + " .redactorView").val())==="source")
 		{
-			$("#redactorInput").val($(".redactorContainer").text());
+			$(".redactor#" + currentRedactor + " .redactorInput").val($(".redactor#" + currentRedactor + " .redactorContainer").text());
 		}
 	};
 
@@ -104,7 +111,8 @@ Application.Redactor = (function(Redactor)
 	*/
 	Redactor.write = function(command, argument)
 	{		
-		if (($("#redactorView").val())==="preview")
+		var currentRedactor = $(".current_redactor").val();
+		if (($(".redactor#" + currentRedactor + " .redactorView").val())==="preview")
 		{
 			if (typeof argument === 'undefined')
 			{
