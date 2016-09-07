@@ -223,32 +223,41 @@ class DashboardController extends Controller
     {
         $data = $request->all();
         $images = array();
+        $langs = explode(",", $data["lang_list"]);
 
-        foreach ($data as $key => $value) 
+         foreach ($langs as $lang) 
         {
-            if ("image" == substr($key,0,5))
+            $images = array();
+
+            foreach ($data as $key => $value) 
             {
-                $images[] = $this->imageRepository->byName($value)["id"];
-                unset($data[$key]);
+                if ("image" == substr($key,0,5))
+                {
+                    $images[] = $this->imageRepository->byName($value)["id"];
+                    unset($data[$key]);
+                }
+            }   
+
+            $articleData = $this->articleManager->format($data, $lang);
+            $articleData["number_label"] = $data["number_label"];
+            $id = $data["id-".$lang];
+            $this->articleRepository->update($id, $articleData);
+
+            $articleData = array();
+            $articleData["article_id"] = $id;
+
+            $articleImages = $this->articleImageRepository->byArticleId($id);
+
+            foreach ($articleImages as $articleImage)
+            {
+                $articleImage->delete();
             }
-        }
 
-        $data = $this->articleManager->format($data);
-        $this->articleRepository->update($id, $data);
-
-        $data = array();
-        $data["article_id"] = $id;
-        $articleImages = $this->articleImageRepository->byArticleId($id);
-
-        foreach ($articleImages as $articleImage)
-        {
-            $articleImage->delete();
-        }
-
-        foreach ($images as $image)
-        {
-            $data["image_id"] = $image;
-            $this->articleImageRepository->store($data);
+            foreach ($images as $image)
+            {
+                $articleData["image_id"] = $image;
+                $this->articleImageRepository->store($articleData);
+            }
         }
 
         return redirect('dashboard/articles');

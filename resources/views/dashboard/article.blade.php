@@ -50,7 +50,7 @@ Create Article
 							<label for="content" class="pull-right">Content</label>
 						</div>
 						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-							<div class="redactor">Your content.</div>
+							<div id="en" class="redactor">Your content.</div>
 						</div>
 						{!! $errors->first('content-en', '<small class="help-block">:message</small>') !!}
 					</div>
