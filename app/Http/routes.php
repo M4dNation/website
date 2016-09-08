@@ -29,6 +29,8 @@ Route::group(['middleware' => 'web'], function()
 
 	Route::get('/yggdrasill', ['as' => 'project', 'uses' => 'ProjectController@index']);
 
+	Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
+
 	Route::group(['prefix' => 'dashboard', 'middleware' => ['web', 'auth']], function ()
 	{
 		Route::get('/',  ['as' => 'dashboard', 'uses' => 'DashboardController@index']);

@@ -15,6 +15,20 @@
    </div>
     <div id="navbar" class="navbar-collapse collapse menuHeader">
       <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                {{ Config::get('app.locales')[App::getLocale()] }}
+            </a>
+            <ul class="dropdown-menu">
+                @foreach (Config::get('app.locales') as $lang => $language)
+                    @if ($lang != App::getLocale())
+                        <li>
+                            <a href="{{ route('lang.switch', $lang) }}">{!! trans('langs.'.$lang) !!}</a>
+                        </li>
+                    @endif
+                @endforeach
+            </ul>
+        </li>
          <li class="nav-item dropdown">
           <a href="{{ route('home') }}" >{{ trans('header.home') }}</a>
           <ul class="dropdown-menu home-menu">

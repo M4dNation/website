@@ -8,20 +8,20 @@
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<p>
-					<strong>Yggdrasill</strong> is a <strong>crowdsourcing</strong> platform for video games players and developers in order to help them create games closer to their needs.
+					{!! trans('website.project1') !!}
 				</p>
 				<p>
-					<strong>Yggdrasill</strong> is built on the top of a new tree representation model in order to allow everyone to take part, share and discuss his point about every game element. It also incorporates a lot of features for communication and <strong>crowdsourcing</strong> such as media vizualisation, chat channels and more.
+					{!! trans('website.project2') !!}
 				</p>
 				<p>
-					Follow the production of your favorite games <strong>from the first idea to their official release </strong>with a blog and  a roadmap specifics to each game and stay in touch with the developers thanks to social network integration.
+					{!! trans('website.project3') !!}
 				</p>
 				<p>
-					Even better, <strong>post your own games</strong> and watch them grow in a skilled and passionate community in order to have them developed by <strong>the greatest video games studios</strong> in the world.
+					{!! trans('website.project4') !!}
 				</p>
 				<div class="text-center">
 					<a class="btn btn-lg btn-default btn-blog" href="{{ route('project') }}">
-						Read more
+						{!! trans('website.projectLink') !!}
 					</a>
 				</div>
 			</div>

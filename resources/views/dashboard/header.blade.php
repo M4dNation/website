@@ -17,6 +17,20 @@
 			<ul class="nav navbar-nav navbar-left">
 		        <li class="nav-item"><a href="{{ route('home') }}">Home</a></li>
 		        <li class="nav-item"><a href="{{ route('blog') }}">Blog</a></li>
+		        <li class="dropdown nav-item">
+		            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		                {{ Config::get('app.locales')[App::getLocale()] }}
+		            </a>
+		            <ul class="dropdown-menu">
+		                @foreach (Config::get('app.locales') as $lang => $language)
+		                    @if ($lang != App::getLocale())
+		                        <li>
+		                            <a href="{{ route('lang.switch', $lang) }}">{!! $language !!}</a>
+		                        </li>
+		                    @endif
+		                @endforeach
+		            </ul>
+		        </li>
       		</ul>
       		<ul class="nav navbar-nav navbar-right">
       			<li class="nav-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>

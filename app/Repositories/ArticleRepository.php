@@ -121,4 +121,24 @@ class ArticleRepository extends Repository
 	{
 		return $this->model->nextArticleLocal($numberLabel, $lang);
 	}
+
+	/**
+    * publish
+    * This function is used in order to publish article
+    * @return {Article}
+    */
+	public function publish($number_label)
+	{
+		return $this->model->publish($number_label);
+	}
+
+	/**
+    * draft
+    * This function is used in order to draft article
+    * @return {Article}
+    */
+	public function draft($number_label)
+	{
+		return $this->model->draft($number_label);
+	}
 }

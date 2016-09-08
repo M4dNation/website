@@ -11,7 +11,7 @@ use App\Http\Requests\EditUserRequest;
 use App\Http\Requests\ArticleRequest;
 use App\Http\Requests\EditArticleRequest;
 use App\Http\Controllers\Controller;
-
+use Lang;
 use App\Repositories\UserRepository;
 use App\Repositories\ArticleRepository;
 use App\Repositories\ImageRepository;
@@ -182,7 +182,8 @@ class DashboardController extends Controller
         $data = $request->all();
         $langs = explode(",", $data["lang_list"]);
         $i = 0;
-        $article_number = $this->articleRepository->lastNumberLabel() +1 ;      
+        $article_number = $this->articleRepository->lastNumberLabel() +1 ;
+
 
         foreach ($langs as $lang) 
         {
@@ -231,7 +232,7 @@ class DashboardController extends Controller
 
             foreach ($data as $key => $value) 
             {
-                if ("image" == substr($key,0,5))
+                if ("image".$lang == substr($key,0,7))
                 {
                     $images[] = $this->imageRepository->byName($value)["id"];
                     unset($data[$key]);
@@ -280,11 +281,9 @@ class DashboardController extends Controller
     * This function is used to publish an article
     * @return view
     */
-     public function publishArticle($id)
-     {
-        $data = array('state' => 1);
-
-        $this->articleRepository->update($id,$data);
+    public function publishArticle($number_label)
+    {
+        $this->articleRepository->publish($number_label);
 
         return redirect('dashboard/articles');
     }
@@ -294,11 +293,9 @@ class DashboardController extends Controller
     * This function is used to draft an article
     * @return view
     */
-       public function draftArticle($id)
-       {
-        $data = array('state' => 0);
-
-        $this->articleRepository->update($id,$data);
+    public function draftArticle($id)
+    {
+        $this->articleRepository->draft($number_label);
 
         return redirect('dashboard/articles');
     }
@@ -310,15 +307,15 @@ class DashboardController extends Controller
     */
     public function previewArticle($id)
     {
-        $article = $this->articleRepository->byId($id);        
-        $total = $this->articleRepository->count();
+        $lang = Lang::getLocale();
+        $article = $this->articleRepository->byNumberLabelLocal($id, $lang);  
 
         if (is_null($article))
         {
             abort('404');
         }
 
-        return view('dashboard/preview', compact('article', 'total'));
+        return view('dashboard/preview', compact('article'));
     }
 
 }

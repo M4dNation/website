@@ -185,4 +185,25 @@ class Article extends Model
         return Article::orderBy('number_label', 'desc')->where('number_label','>', $numberLabel)->where('lang', $lang)->first();          
     } 
 
+    /**
+    * publish
+    * This function is used to know the last article number. 
+    * @return boolean
+    */
+    public function publish($numberLabel)
+    {
+        return Article::where('number_label', $numberLabel)->update(['state' => '1']);
+    } 
+
+    /**
+    * publish
+    * This function is used to know the last article number. 
+    * @return boolean
+    */
+    public function draft($numberLabel)
+    {
+        return Article::where('number_label', $numberLabel)->update(['state' => '0']);
+    } 
+
+
 }
