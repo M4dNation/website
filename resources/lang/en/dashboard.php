@@ -31,7 +31,7 @@ return [
         'create' => 'Create',
         'articlesTitle' => 'Article Management',
         'published' => 'Published',
-        'drafted' => 'Drafted',
+        'draft' => 'Draft',
         'editArticle' => 'Edit article',
         'save' => 'Save',
     ],
@@ -45,7 +45,7 @@ return [
         'create' => 'Create',
         'editAccount' => 'Edit account',
         'save' => 'Save',
-        'usersTitle' => 'Article Management',
+        'usersTitle' => 'Users Management',
     ]
 
 ];

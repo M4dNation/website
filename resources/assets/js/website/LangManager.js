@@ -13,7 +13,6 @@ Application.LangManager = (function(LangManager)
 {
 	var currentLang = "en";
 
-
 	LangManager.switchLang = function()
 	{		
 			console.log("test");

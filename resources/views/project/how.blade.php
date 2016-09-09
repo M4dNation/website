@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row vertical-center">	
 			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 text-justify">
-				<h1>How it works ?</h1>
+				<h1>{!! trans('project.howTitle') !!}</h1>
 				<p> {!! trans('project.how1') !!} </p>
 				<p> {!! trans('project.how2') !!}  </p>
 				<p> {!! trans('project.how3') !!}  </p>

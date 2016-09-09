@@ -26,9 +26,9 @@
 				<select class="lang-selector" onchange="Application.LangManager.switchLang('form');"  name="lang" id="lang">
 					@foreach(Config::get('app.locales') as $lang => $languages)
 						@if($lang == "en")
-							<option value="{{$lang}}" selected>{{ trans('langs.'.$lang) }}</option>
+							<option value="{{$lang}}" selected>{!! trans('langs.dashboard.'.$lang) !!}</option>
 						@else
-							<option value="{{$lang}}">{{ trans('langs.'.$lang) }}</option>
+							<option value="{{$lang}}">{!! trans('langs.dashboard.'.$lang) !!}</option>
 						@endif
 						
 					@endforeach

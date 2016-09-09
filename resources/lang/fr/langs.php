@@ -13,9 +13,9 @@ return [
     */
 
     'en' => '<img class="flag" src="'.asset("/images/common/us.svg").'"/>',
-	'fr' => '<img class="flag" src="'.asset("/images/common/fr.svg").'"/>',
+    'fr' => '<img class="flag" src="'.asset("/images/common/fr.svg").'"/>',
     'dashboard' => [
-        'en' => 'English',
-        'fr' => 'French'
+        'en' => 'Anglais',
+        'fr' => 'Français'
     ],
 ];

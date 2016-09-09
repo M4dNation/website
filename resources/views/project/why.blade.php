@@ -6,7 +6,7 @@
 				<img class="img-responsive center-block pdg-b-10" src="{{ asset('images/project/wheel.png') }}" alt="">
 			</div>
 			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 text-justify">
-				<h1>Why ?</h1>
+				<h1>{!! trans('project.whyTitle') !!}</h1>
 				<p>{!! trans('project.why1') !!}</p>
 				<p>{!! trans('project.why2') !!}</p>
 				<p>{!! trans('project.why3') !!}</p>

@@ -27,7 +27,7 @@
 									<a href= "{{ route('dashboard.draft.article', $article->number_label) }}" class="state label pull-right label-success">{{ trans('dashboard.blog.published') }}</a>
 								@endif
 								@if($article->state == 0)
-									<a href= "{{ route('dashboard.publish.article', $article->number_label) }}" class="state label pull-right label-danger">{{ trans('dashboard.blog.drafted') }}</a>
+									<a href= "{{ route('dashboard.publish.article', $article->number_label) }}" class="state label pull-right label-danger">{{ trans('dashboard.blog.draft') }}</a>
 								@endif
 							<p>
 						</div>

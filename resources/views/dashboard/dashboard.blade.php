@@ -11,29 +11,15 @@
 				<div class="dashboard-item text-center">
 					<a href="{{ route('dashboard.articles') }}">
 						<img src="{{ asset('images/dashboard/pencil.png') }}" alt="">
-						<h2>Blog</h2>
+						<h2>{{ trans('dashboard.blogLink') }}</h2>
 					</a>
 				</div>
 				<div class="dashboard-item text-center">
-					<a href="">
-						<img src="{{ asset('images/dashboard/file.png') }}" alt="">
-						<h2>Docs</h2>
-					</a>
-				</div>
-			</div>
-				<div class="row">
-					<div class="dashboard-item text-center">
 						<a href="{{ route('dashboard.users') }}">
 							<img src="{{ asset('images/dashboard/user.png') }}" alt="">
-						<h2>Users</h2>
+						<h2>{{ trans('dashboard.usersLink') }}</h2>
 					</a>
-				</div>
-				<div class="dashboard-item text-center">
-					<a href="">
-						<img src="{{ asset('images/dashboard/tool.png') }}" alt="">
-						<h2>Admin</h2>
-					</a>
-				</div>
+				</div>			
 			</div>
 		</div>
 @stop

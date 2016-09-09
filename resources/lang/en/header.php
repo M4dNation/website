@@ -24,4 +24,6 @@ return [
     'yggdrasill_how' => 'How it works',
     'yggdrasill_what' => 'What next?',
     'blog' => 'Blog',
+    'dashboard' => 'Dashboard',
+    'logout' => 'Logout',
 ];

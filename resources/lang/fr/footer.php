@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Language Lines
+    | Header Language Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are used during authentication for various
@@ -13,11 +13,8 @@ return [
     |
     */
 
-    'failed'   => 'Ces identifiants ne correspondent pas à nos enregistrements',
-    'throttle' => 'Trop de tentatives de connexion. Veuillez essayer de nouveau dans :seconds secondes.',
-    'email' => 'COURRIEL',
-    'password' => 'MOT DE PASSE',
-    'rememberme' => 'SE SOUVENIR DE MOI',
-    'login' => 'S\'authentifier',
+    'legal' => 'L\'ensemble des images, noms et marques utilisés sont la propriété de M4dNation SAS. Tous droits réservés.',
+    'press' => 'Presse',
+    'contact' => 'Contact',
 
 ];

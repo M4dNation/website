@@ -16,20 +16,6 @@
     <div id="navbar" class="navbar-collapse collapse menuHeader">
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                {{ Config::get('app.locales')[App::getLocale()] }}
-            </a>
-            <ul class="dropdown-menu">
-                @foreach (Config::get('app.locales') as $lang => $language)
-                    @if ($lang != App::getLocale())
-                        <li>
-                            <a href="{{ route('lang.switch', $lang) }}">{!! trans('langs.'.$lang) !!}</a>
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
-        </li>
-         <li class="nav-item dropdown">
           <a href="{{ route('home') }}" >{{ trans('header.home') }}</a>
           <ul class="dropdown-menu home-menu">
             <li><a href="{{(Request::is('/') ?  "#company" : route('home')."#company")}}">{{ trans('header.home_company') }}</a></li>
@@ -38,7 +24,7 @@
             <li><a href="{{(Request::is('/') ?  "#blog" : route('home')."#blog")}}">{{ trans('header.home_blog') }}</a></li>
           </ul>
         </li>
-         <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a href="{{ route('project') }}">{{ trans('header.yggdrasill') }}</a>
           <ul class="dropdown-menu yggdrasill-menu">
             <li><a href="{{(Request::is('yggdrasill') ?  "#yggdrasill" : route('project')."#yggdrasill")}}">{{ trans('header.yggdrasill_presentation') }}</a></li>
@@ -60,6 +46,20 @@
                 <a target="_blank" rel="nofollow" href="https://www.instagram.com/M4dnation/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             </li>
           </ul>
+        </li>
+        <li class="nav-item dropdown lang-menu">
+            <a href="#">
+                {!! trans('langs.'.Config::get('app.locales')[App::getLocale()]) !!}
+            </a>
+            <ul class="dropdown-menu">
+                @foreach (Config::get('app.locales') as $lang => $language)
+                    @if ($lang != App::getLocale())
+                        <li class="text-center">
+                            <a href="{{ route('lang.switch', $lang) }}">{!! trans('langs.'.$lang) !!}</a>
+                        </li>
+                    @endif
+                @endforeach
+            </ul>
         </li>
       </ul>			
  </div>

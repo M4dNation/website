@@ -8,7 +8,7 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/axel.jpg') }}" />
-							<h4>CEO</h4>
+							<h4>{!! trans('website.team.ceo') !!}</h4>
 						</div>	
 						<h3>Axel Vaindal</h3>
 					</div>
@@ -22,7 +22,7 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/gabin.jpg') }}" />
-							<h4>COO</h4>
+							<h4>{!! trans('website.team.coo') !!}</h4>
 						</div>			
 						<h3>Gabin Raffoux</h3>
 					</div>
@@ -36,7 +36,7 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/max.jpg') }}" />	
-							<h4>Lead Game Designer</h4>						
+							<h4>{!! trans('website.team.leadGameDesigner') !!}</h4>						
 						</div>
 						<h3>Maxime Breuil</h3>
 					</div>
@@ -50,7 +50,7 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/remi.jpg') }}" />
-							<h4>Lead Developper</h4>
+							<h4>{!! trans('website.team.leadDevelopper') !!}</h4>
 						</div>
 						<h3>Rémi Hau</h3>
 					</div>
@@ -64,7 +64,7 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/nico.jpg') }}" />
-							<h4>SysAdmin</h4>
+							<h4>{!! trans('website.team.sysAdmin') !!}</h4>
 						</div>
 						<h3>Nicolas Valck</h3>
 					</div>

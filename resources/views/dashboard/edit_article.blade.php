@@ -28,9 +28,9 @@
 			<select class="lang-selector" onchange="Application.LangManager.switchLang();"  name="lang" id="lang">
 					@foreach($articles as $article)
 						@if($article->lang == $articles[0]->lang)
-							<option value="{{ $article->lang }}" selected>{{ $article->lang }}</option>
+							<option value="{{ $article->lang }}" selected>{!! trans('langs.dashboard.'.$article->lang) !!}</option>
 						@else
-							<option value="{{ $article->lang }}">{{ $article->lang }}</option>
+							<option value="{{ $article->lang }}">{!! trans('langs.dashboard.'.$article->lang) !!}</option>
 							<?php
 								$langList .= ",".$article->lang;
 							?>

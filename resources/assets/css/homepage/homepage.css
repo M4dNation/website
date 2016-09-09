@@ -185,6 +185,26 @@ a
 	color: #fff;
 }
 
+.header-container .lang-menu, .header-container .lang-menu .dropdown-menu
+{
+	width:50px;
+	min-width: 50px;
+}
+
+.header-container .lang-menu .dropdown-menu
+{
+	margin-top:-2px;
+}
+.header-container .lang-menu .dropdown-menu li a
+{
+	padding:5px 0px;
+}
+
+.header-container .lang-menu .flag
+{
+	height:15px;
+}
+
 /* Section Company */
 
 #company
