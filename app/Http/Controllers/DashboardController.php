@@ -141,8 +141,12 @@ class DashboardController extends Controller
     */
     public function articles()
     {
+        $lang = Lang::getLocale();
         $articles = $this->articleRepository->all();
-
+        foreach ($articles as $article)
+        {
+            $article['local_updated_at'] = ArticleManager::formatDate($article, $lang);
+        }
         return view('dashboard/articles', compact('articles'));
     }
 
@@ -242,7 +246,14 @@ class DashboardController extends Controller
             $articleData = $this->articleManager->format($data, $lang);
             $articleData["number_label"] = $data["number_label"];
             $id = $data["id-".$lang];
-            $this->articleRepository->update($id, $articleData);
+            if($id != "undefined")
+            {
+                $this->articleRepository->update($id, $articleData);
+            }
+            else
+            {
+                $id = $this->articleRepository->store($articleData)["id"];
+            }
 
             $articleData = array();
             $articleData["article_id"] = $id;
@@ -293,7 +304,7 @@ class DashboardController extends Controller
     * This function is used to draft an article
     * @return view
     */
-    public function draftArticle($id)
+    public function draftArticle($number_label)
     {
         $this->articleRepository->draft($number_label);
 
@@ -314,6 +325,8 @@ class DashboardController extends Controller
         {
             abort('404');
         }
+
+        $article['local_updated_at'] = ArticleManager::formatDate($article, $lang);   
 
         return view('dashboard/preview', compact('article'));
     }

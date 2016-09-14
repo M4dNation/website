@@ -15,29 +15,30 @@ Application.LangManager = (function(LangManager)
 
 	LangManager.switchLang = function()
 	{		
-			console.log("test");
-			$("." + currentLang).hide();
-			var previousLang = currentLang;
-			currentLang = $(".lang-selector option:selected").val();
-			$(".current_redactor").val(currentLang);
-			$(".current_fileManager").val(currentLang);
-			if ($("." + currentLang).length===0)
-			{
-				$(".lang_list").val($(".lang_list").val() + "," + currentLang);
-				var child = "<div class=\"" + currentLang + "\">" + $("." + previousLang).html() + "</div>" ;
-				$(".form").append(child);
-				$("." + currentLang + " .redactor").attr("id",currentLang);
-				$("." + currentLang + " input, ." + currentLang + " textarea").map(function(){
-	    			
-	    			let currentName = $(this).attr("name");
-	    			if(currentName != undefined)
-	    			{
-	    				currentName = currentName.replace("-" + previousLang, "-" + currentLang);
-	    				$(this).attr("name", currentName);
-	    			}
-				});
-			}
-			$("." + currentLang).show();
+		$("." + currentLang).hide();
+		var previousLang = currentLang;
+		currentLang = $(".lang-selector option:selected").val();
+		$(".current_redactor").val(currentLang);
+		$(".current_fileManager").val(currentLang);
+		if ($("." + currentLang).length===0)
+		{
+			$(".lang_list").val($(".lang_list").val() + "," + currentLang);
+			var child = "<div class=\"" + currentLang + "\">" + $("." + previousLang).html() + "</div>" ;
+			$(".form").append(child);
+			$("." + currentLang + " .redactor").attr("id",currentLang);
+			$("." + currentLang + " .redactor").attr("id",currentLang);
+			$("." + currentLang + " .id").val("undefined");
+			$("." + currentLang + " input, ." + currentLang + " textarea").map(function()
+			{	
+   				let currentName = $(this).attr("name");
+   				if(currentName != undefined)
+   				{
+   					currentName = currentName.replace("-" + previousLang, "-" + currentLang);
+   					$(this).attr("name", currentName);
+   				}
+			});
+		}
+		$("." + currentLang).show();
 				
 	}
 
@@ -46,7 +47,6 @@ Application.LangManager = (function(LangManager)
 		var langList= $(".lang_list").val().split(',');
 		for(var i in langList)
 		{
-			console.log(langList[i])
 			$("." + langList[i]).hide();			
 		}
 		$(".en").show();

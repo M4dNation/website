@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row vertical-center">	
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 text-center">
-				<img class="img-responsive center-block pdg-b-10" src="{{ asset('images/project/wheel.png') }}" alt="">
+				<img class="img-responsive center-block pdg-b-10" src="{{ asset('images/project/wheel_'.App::getLocale().'.png') }}" alt="">
 			</div>
 			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 text-justify">
 				<h1>{!! trans('project.whyTitle') !!}</h1>

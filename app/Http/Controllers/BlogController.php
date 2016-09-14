@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Lang;
+use App\Managers\ArticleManager;
 
 
 use App\Repositories\ArticleRepository;
@@ -43,6 +44,11 @@ class BlogController extends Controller
         $lang = Lang::getLocale();
         $articles = $this->articleRepository->publishedLocal(5, $lang);
 
+        foreach ($articles as $article)
+        {
+            $article['local_updated_at'] = ArticleManager::formatDate($article, $lang);
+        }
+
     	return view('blog/blog', compact('articles'));
     }
 
@@ -55,7 +61,7 @@ class BlogController extends Controller
     public function showArticle($id)
     {
         $lang = Lang::getLocale();
-        $article = $this->articleRepository->byNumberLabelLocal($id, $lang);        
+        $article = $this->articleRepository->byNumberLabelLocal($id, $lang);           
         $previous = $this->articleRepository->previousArticleLocal($id, $lang)['number_label'];
         $next = $this->articleRepository->nextArticleLocal($id, $lang)['number_label'];
 
@@ -64,6 +70,8 @@ class BlogController extends Controller
             abort('404');
         }
 
+        $article['local_updated_at'] = ArticleManager::formatDate($article, $lang);   
+         
         return view('blog/article', compact('article', 'previous','next'));
     }
 }

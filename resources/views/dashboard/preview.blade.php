@@ -9,10 +9,10 @@
 	<div class="container article-container">
 		<div class="row">
 			<div class="title-container">
-				<a class="top-link" href="{{ route('dashboard.articles') }}">All articles</a>
-				<a class="top-link" href="{{ route('dashboard.edit.article',$article->id) }}">Edit article</a>
+				<a class="top-link" href="{{ route('blog') }}">{!! trans('blog.allArticles')!!}</a>
+				<a class="top-link" href="{{ route('dashboard.edit.article',$article->id) }}">{{ trans('dashboard.blog.editArticle') }}</a>
 				<h1>{{ $article->title }}</h1>
-				<p class="date">Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</p>				
+				<p class="date">{{ trans('blog.lastUpdated').' '.$article->local_updated_at.' '.trans('blog.by').' '.$article->user->username }}</p>			
 			</div>
 			<div class="content-container">
 				<p>

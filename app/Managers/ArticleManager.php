@@ -2,6 +2,7 @@
 
 namespace App\Managers;
 
+use Carbon\Carbon;
 use Auth;
 
 class ArticleManager 
@@ -31,4 +32,25 @@ class ArticleManager
         return $formatData;
     }
 
+     /**
+    * formatDate
+    * This function is used to 
+    * @return 
+    */
+    public static function formatDate($article, $lang)
+    {
+        if ($lang == 'en')
+        {
+            
+            $formatedDate = new Carbon($article->updated_at);
+            setlocale(LC_TIME, '');
+            return $formatedDate->formatLocalized('%B %d, %Y');
+        }   
+        if ($lang == 'fr')
+        { 
+            $formatedDate = new Carbon($article->updated_at);
+            setlocale(LC_TIME, 'fr_FR.utf8');
+            return $formatedDate->formatLocalized('%d %B %Y');
+        }
+    }
 }

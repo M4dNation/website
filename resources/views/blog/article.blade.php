@@ -11,7 +11,7 @@
 			<div class="title-container">
 				<a class="top-link" href="{{ route('blog') }}">{!! trans('blog.allArticles')!!}</a>
 				<h1>{{ $article->title }}</h1>
-				<p class="date">{{ trans('blog.lastUpdated').' '.date('F d, Y', strtotime($article->updated_at)).' '.trans('blog.by').' '.$article->user->username }}</p>			
+				<p class="date">{{ trans('blog.lastUpdated').' '.$article->local_updated_at.' '.trans('blog.by').' '.$article->user->username }}</p>			
 			</div>
 			<div class="content-container">
 				<p>

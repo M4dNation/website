@@ -9,6 +9,15 @@
 <?php
 	$langList = $articles[0]->lang;
 ?>
+
+@foreach($articles as $article)
+	@if($article == $articles[0])
+	<?php
+		$langList .= ",".$article->lang;
+	?>
+	@endif
+@endforeach
+
 <div class="container article-creation-container">
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12 title-box text-center">
@@ -23,19 +32,18 @@
 		</div>
 	
 		<div class="col-lg-12 col-md-12 col-sm-12 form-content-box">
-			{!! Form::open(['id' => 'articleEditForm', 'url' => 'dashboard/article/' . $articles[0]->id, 'method' => 'post', 'role' => 'form', 'class' => 'form-horizontal user-form center-block']) !!}
+			{!! Form::open(['id' => 'articleEditForm', 'url' => 'dashboard/article/' . $articles[0]->id, 'method' => 'post', 'role' => 'form', 'class' => ' form-horizontal user-form center-block']) !!}
 			
 			<select class="lang-selector" onchange="Application.LangManager.switchLang();"  name="lang" id="lang">
-					@foreach($articles as $article)
-						@if($article->lang == $articles[0]->lang)
-							<option value="{{ $article->lang }}" selected>{!! trans('langs.dashboard.'.$article->lang) !!}</option>
+					@foreach(Config::get('app.locales') as $lang => $languages)
+						@if($lang == "en")
+							<option value="{{$lang}}" selected>{!! trans('langs.dashboard.'.$lang) !!}</option>
 						@else
-							<option value="{{ $article->lang }}">{!! trans('langs.dashboard.'.$article->lang) !!}</option>
-							<?php
-								$langList .= ",".$article->lang;
-							?>
+							<option value="{{$lang}}">{!! trans('langs.dashboard.'.$lang) !!}</option>
 						@endif
+						
 					@endforeach
+
 			</select>
 			<div class="form-group">				
 					<input name="number_label" type="hidden" value="{{ $articles[0]->number_label }}"/>
@@ -44,58 +52,59 @@
 					<input name="current_fileManager" class="current_fileManager" type="hidden" value="{{ $articles[0]->lang }}"/>
 			</div>
 			
-
-			@foreach($articles as $article)
-			<div class="{{ $article->lang }}">
-				<div class="form-group">				
-						<input name="id-{{$article->lang}}" type="hidden" value="{{ $article->id }}"/>
-				</div>
-				<div class="form-group">
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-						<label for="title" class="pull-right">{{ trans('dashboard.blog.title') }}</label>
+			<div class="form">
+				@foreach($articles as $article)
+				<div class="{{ $article->lang }}">
+					<div class="form-group">				
+							<input class="id" name="id-{{$article->lang}}" type="hidden" value="{{ $article->id }}"/>
 					</div>
-					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-						<input type="text" name="title-{{ $article->lang }}" placeholder="{{ $article->title }}" value="{{ $article->title }}" required="" class="form-control" />
-						{!! $errors->first('title-en', '<small class="help-block">:message</small>') !!}
-					</div>
-				</div>
-
-				<div class="form-group">
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-						<label for="content" class="pull-right">{{ trans('dashboard.blog.content') }}</label>
-					</div>
-					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-						<div id="{{$article->lang}}" class="redactor">
-							{!! $article->content !!}
+					<div class="form-group">
+						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+							<label for="title" class="pull-right">{{ trans('dashboard.blog.title') }}</label>
 						</div>
-						{!! $errors->first('content-en', '<small class="help-block">:message</small>') !!}
+						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+							<input type="text" name="title-{{ $article->lang }}" placeholder="{{ $article->title }}" value="{{ $article->title }}" required="" class="form-control" />
+							{!! $errors->first('title-en', '<small class="help-block">:message</small>') !!}
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group mrg-t-20">
-					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+					<div class="form-group">
+						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+							<label for="content" class="pull-right">{{ trans('dashboard.blog.content') }}</label>
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+							<div id="{{$article->lang}}" class="redactor">
+								{!! $article->content !!}
+							</div>
+							{!! $errors->first('content-en', '<small class="help-block">:message</small>') !!}
+						</div>
 					</div>
-					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-						<div class="row">
-							<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails">
-								<?php $compteur = 0; ?>
-								@foreach($article->images as $image)
-								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-									<img src="{{ asset($image->path . $image->name) }}" alt="">
-									<input class="selectedImage {{$article->lang}}" name="image{{ $compteur }}" type="hidden" value="{{ $image->name }}">
+
+					<div class="form-group mrg-t-20">
+						<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+							<div class="row">
+								<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 thumbnails">
+									<?php $compteur = 0; ?>
+									@foreach($article->images as $image)
+									<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<img src="{{ asset($image->path . $image->name) }}" alt="">
+										<input class="selectedImage {{$article->lang}}" name="image{{ $compteur }}" type="hidden" value="{{ $image->name }}">
+									</div>
+									<?php $compteur++; ?>
+									@endforeach
+								</div> 
+								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+									<a onclick="Application.FileManager.launch('articleEditForm');" class="btn btn-default btn-lg center-block btn-submit mrg-b-10">{{ trans('dashboard.blog.addImage') }}</a>
 								</div>
-								<?php $compteur++; ?>
-								@endforeach
-							</div> 
-							<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-								<a onclick="Application.FileManager.launch('articleEditForm');" class="btn btn-default btn-lg center-block btn-submit mrg-b-10">{{ trans('dashboard.blog.addImage') }}</a>
 							</div>
 						</div>
 					</div>
 				</div>
+				
+				@endforeach
 			</div>
-			
-			@endforeach
 			<div class="form-group mrg-t-50">
 				<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
 				</div>

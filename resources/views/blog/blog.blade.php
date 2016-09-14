@@ -14,7 +14,7 @@
 				<a href="{{ route('blog.article', $article->number_label) }}" class="article-link">
 					<h1>{{ $article->title }}</h1>
 				</a>
-				<p class="date">{{ trans('blog.lastUpdated').' '.date('F d, Y', strtotime($article->updated_at)).' '.trans('blog.by').' '.$article->user->username }}</p>				
+				<p class="date">{{ trans('blog.lastUpdated').' '.$article->local_updated_at.' '.trans('blog.by').' '.$article->user->username }}</p>				
 			</div>
 			<div class="content-container">
 				<p>

@@ -20,7 +20,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-sm-12 user-box">
 							<p>
-								{{ $article->title . " - " . date('F d, Y', strtotime($article->updated_at)) }}
+								{{ $article->title . " - " . $article->local_updated_at }}
 								<a class="pull-right action-link" href="{{ route('dashboard.edit.article', $article->number_label) }}"><i class="fa fa-pencil-square-o"></i></a>
 								<a target="_blank" class="pull-right action-link" href="{{ route('dashboard.preview.article', $article->number_label) }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
 								@if($article->state == 1)

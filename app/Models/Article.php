@@ -172,7 +172,7 @@ class Article extends Model
     */
     public function previousArticleLocal($numberLabel, $lang)
     {
-        return Article::orderBy('number_label', 'desc')->where('number_label','<', $numberLabel)->where('lang', $lang)->first();       
+        return Article::orderBy('number_label', 'desc')->where('number_label','<', $numberLabel)->where('lang', $lang)->where('state', 1)->first();       
     } 
 
       /**
@@ -182,7 +182,7 @@ class Article extends Model
     */
     public function nextArticleLocal($numberLabel, $lang)
     {
-        return Article::orderBy('number_label', 'desc')->where('number_label','>', $numberLabel)->where('lang', $lang)->first();          
+        return Article::orderBy('number_label', 'desc')->where('number_label','>', $numberLabel)->where('lang', $lang)->where('state', 1)->first();          
     } 
 
     /**

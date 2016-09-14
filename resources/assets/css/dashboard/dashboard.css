@@ -78,6 +78,11 @@ html, body
 	display:block;
 }
 
+.header-container .lang-menu:hover .dropdown-menu li
+{
+	height:auto;
+}
+
 .header-container .lang-menu .flag
 {
 	height:15px;
