@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'legal' => 'All images, names or brands used are property of M4dNation SAS. All rights reserved.',
+    'legal' => 'All images, names or brands used are property of M4dNation SAS. All rights reserved.</br>M4dNation SAS is a registered company at RCS Brive-la-Gaillarde N°822 368 031 00016.',
     'press' => 'Press',
     'contact' => 'Contact',
 

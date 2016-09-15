@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'legal' => 'L\'ensemble des images, noms et marques utilisés sont la propriété de M4dNation SAS. Tous droits réservés.',
+    'legal' => 'L\'ensemble des images, noms et marques utilisés sont la propriété de M4dNation SAS. Tous droits réservés.</br>M4dNation SAS est une société française enregistré au RCS de Brive-la-Gaillarde sous le numéro 822 368 031 00016.',
     'press' => 'Presse',
     'contact' => 'Contact',
 
