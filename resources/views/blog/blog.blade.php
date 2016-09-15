@@ -10,11 +10,11 @@
 		@foreach ($articles as $article)
 		<div class="row">
 			<div class="title-container">
-				<a class="top-link" href="#">Back to top</a>
-				<a href="{{ route('blog.article', $article->id) }}" class="article-link">
+				<a class="top-link" href="#">{!! trans('blog.backToTop')!!}</a>
+				<a href="{{ route('blog.article', $article->number_label) }}" class="article-link">
 					<h1>{{ $article->title }}</h1>
 				</a>
-				<p class="date">Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</p>				
+				<p class="date">{{ trans('blog.lastUpdated').' '.$article->local_updated_at.' '.trans('blog.by').' '.$article->user->username }}</p>				
 			</div>
 			<div class="content-container">
 				<p>
@@ -47,10 +47,10 @@
 		@endforeach
 		<div class="navigation-link">
 			@if($articles->currentPage()!=1)
-				<a class="previous" href="{{ $articles->previousPageUrl() }}">Previous page</a>
+				<a class="previous" href="{{ $articles->previousPageUrl() }}">{!! trans('blog.previousPage')!!}</a>
 			@endif
 			@if($articles->hasMorePages())
-				<a class="next" href="{{ $articles->nextPageUrl() }}">Next page</a>
+				<a class="next" href="{{ $articles->nextPageUrl() }}">{!! trans('blog.nextPage')!!}</a>
 			@endif
 		</div>
 	</div>

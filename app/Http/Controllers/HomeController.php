@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-
+use Lang;
+use App\Managers\ArticleManager;
 
 use App\Repositories\ArticleRepository;
 
@@ -24,8 +25,13 @@ class HomeController extends Controller
     */
     public function index()
     {
-        $articles = $this->articleRepository->takePublished(3);
-
+        $lang = Lang::getLocale();
+        $articles = $this->articleRepository->takePublishedLocal(3, $lang);
+        foreach ($articles as $article)
+        {
+            $article['local_updated_at'] = ArticleManager::formatDate($article, $lang);
+        }
+        
     	return view('website/website', compact('articles'));
     }
 }

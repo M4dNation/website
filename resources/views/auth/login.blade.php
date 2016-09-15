@@ -31,7 +31,7 @@
 						<div class="col-lg-4 col-md-4">
 						</div>
 						<div class="col-lg-4">
-	      					<input type="email" name="email" id="email" required="" class="form-control login-input" placeholder="EMAIL" />
+	      					<input type="email" name="email" id="email" required="" class="form-control login-input" placeholder="{{ trans('auth.email') }}" />
 	    				</div>
 	    				<div class="col-lg-4 col-md-4">
 						</div>
@@ -41,7 +41,7 @@
 						<div class="col-lg-4 col-md-4">
 						</div>
 						<div class="col-lg-4">
-	      					<input type="password" name="password" id="password" required="" class="form-control login-input" placeholder="PASSWORD" />
+	      					<input type="password" name="password" id="password" required="" class="form-control login-input" placeholder="{{ trans('auth.password') }}" />
 	    				</div>
 	    				<div class="col-lg-4 col-md-4">
 						</div>
@@ -53,7 +53,7 @@
 						<div class="col-lg-4">
 							<div class="checkbox">
 								<label class="center_block">
-									<input type="checkbox" name="remember" id="remember" /> <span class="remember-me">REMEMBER ME</span>
+									<input type="checkbox" name="remember" id="remember" /> <span class="remember-me">{{ trans('auth.rememberme') }}</span>
 								</label>
 							</div>
 						</div>
@@ -65,7 +65,7 @@
 						<div class="col-lg-4 col-md-4">
 						</div>
 	    				<div class="col-lg-4">
-	      					<input type="submit" class="btn btn-default btn-lg login-input center-block" value="Login" />
+	      					<input type="submit" class="btn btn-default btn-lg login-input center-block" value="{{ trans('auth.login') }}" />
 	    				</div>
 	    				<div class="col-lg-4 col-md-4">
 						</div>

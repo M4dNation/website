@@ -1,3 +1,7 @@
+<?php
+use App\Managers\ArticleManager;
+?>
+
 <span id="blog" class="anchor"></span>
 <section class="section">
 	<div class="container">
@@ -18,9 +22,8 @@
 							<div class="col-lg-9 col-md-9 content-article">
 								<div class="header-article">
 									<h2>{{ $article->title }}</h2>
-									<h3>Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</h3>
+									<h3>{{ trans('blog.lastUpdated').' '.$article->local_updated_at.' '.trans('blog.by').' '.$article->user->username }}</h3>
 								</div>
-								
 								<div class="text-center hidden-lg hidden-md">
 									@if ($article->images->isEmpty())
 										<img src="{{ asset('images/common/defaultBlog.png') }}" alt="default image">
@@ -37,7 +40,7 @@
 				@endforeach
 				<div class="text-center">
 					<a class="btn btn-lg btn-default btn-blog" href="{{ route('blog') }}">
-						Read all
+						{!! trans('website.blogLink') !!}
 					</a>
 				</div>
 			</div>

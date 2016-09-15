@@ -62,6 +62,32 @@ html, body
 	color: #679F5A;
 }
 
+.header-container .lang-menu, .header-container .lang-menu .dropdown-menu
+{
+	width:50px;
+	min-width: 50px;
+}
+
+.header-container .lang-menu .dropdown-menu li a
+{
+	padding:5px 0px;
+}
+
+.header-container .lang-menu:hover .dropdown-menu
+{
+	display:block;
+}
+
+.header-container .lang-menu:hover .dropdown-menu li
+{
+	height:auto;
+}
+
+.header-container .lang-menu .flag
+{
+	height:15px;
+}
+
 
 .logout:hover, .logout:focus, .logout:active
 {

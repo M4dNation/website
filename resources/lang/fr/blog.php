@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Language Lines
+    | Header Language Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are used during authentication for various
@@ -12,12 +12,16 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
-    'failed'   => 'Ces identifiants ne correspondent pas à nos enregistrements',
-    'throttle' => 'Trop de tentatives de connexion. Veuillez essayer de nouveau dans :seconds secondes.',
-    'email' => 'COURRIEL',
-    'password' => 'MOT DE PASSE',
-    'rememberme' => 'SE SOUVENIR DE MOI',
-    'login' => 'S\'authentifier',
-
+    'backToTop' => 'Revenir en haut',   
+    'previousPage' => 'Page précédente',
+    'nextPage' => 'Page suivante',
+    'lastUpdated' => 'Edité le',
+    'by' => 'par',
+    'allArticles' => 'Tous les articles',
+    'previousArticle' => 'Article précédent',
+    'nextArticle' => 'Article suivant',
+    'previous' => 'Précédent',
+    'next' =>'Suivant',
+    'gallery' => 'Gallerie',
+   
 ];

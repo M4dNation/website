@@ -9,9 +9,9 @@
 	<div class="container article-container">
 		<div class="row">
 			<div class="title-container">
-				<a class="top-link" href="{{ route('blog') }}">All articles</a>
+				<a class="top-link" href="{{ route('blog') }}">{!! trans('blog.allArticles')!!}</a>
 				<h1>{{ $article->title }}</h1>
-				<p class="date">Last updated on {{ date('F d, Y', strtotime($article->updated_at)) }} by {{ $article->user->username }}</p>			
+				<p class="date">{{ trans('blog.lastUpdated').' '.$article->local_updated_at.' '.trans('blog.by').' '.$article->user->username }}</p>			
 			</div>
 			<div class="content-container">
 				<p>
@@ -42,11 +42,11 @@
 			</div>
 		</div>
 		<div class="navigation-link">
-			@if ( ($article->id - 1) > 0)
-				<a class="previous" href="{{ route('blog.article',($article->id-1)) }}">Previous article</a>
+			@if ($previous)
+				<a class="previous" href="{{ route('blog.article',($previous)) }}">{!! trans('blog.previousArticle')!!}</a>
 			@endif
-			@if ( ($article->id) < $total)
-				<a class="next" href="{{ route('blog.article',($article->id+1)) }}">Next article</a>
+			@if ($next)
+				<a class="next" href="{{ route('blog.article',($next)) }}">{!! trans('blog.nextArticle')!!}</a>
 			@endif
 		</div>
 	</div>

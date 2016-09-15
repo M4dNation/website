@@ -8,17 +8,16 @@
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<p>
-					<strong>M4dNation</strong> is a team gathered around a simple idea, crowdsourcing.
+					{!!trans('website.company1')!!}
 				</p>
 				<p>
-					Created in 2012 by passionate people, <strong>M4dNation</strong> studies games both in a programming and a creative way. <br>
-					Inspired by strong knowledge about video games, <strong>M4dNation</strong> wants to make the relationship between players and studios easier in order to create better games : yours !
+					{!!trans('website.company2')!!}
 				</p>
 				<p>
-					In 2014, <strong>Axel Vaindal and Gabin Raffoux</strong>, co-founders of the studio, imagined a crowdsourcing platform for video games players and developpers : <strong>Yggdrasill</strong>.
+					{!!trans('website.company3')!!}
 				</p>
 				<p>
-					Driven by your ideas and studios' creativity, game crowdsourcing is now <strong>a reality !</strong>
+					{!!trans('website.company4')!!}
 				</p>
 			</div>
 		</div>

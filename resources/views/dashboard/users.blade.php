@@ -1,7 +1,7 @@
 @extends('dashboard.template')
 
 @section('title')
-	User Management
+	{{ trans('dashboard.user.usersTitle') }}
 @stop
 
 @section('content')
@@ -11,8 +11,8 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 user-list">
 				<div class="row">
 					<div class="col-lg-12 text-center title-box">
-						<h1>Users</h1>
-						<a class="btn btn-lg btn-primary" href="{{ route('dashboard.user') }}">New</a>
+						<h1>{{ trans('dashboard.user.usersTitle') }}</h1>
+						<a class="btn btn-lg btn-primary" href="{{ route('dashboard.user') }}">{{ trans('dashboard.user.newAccount') }}</a>
 					</div>
 				</div>
 				@foreach ($users as $u)

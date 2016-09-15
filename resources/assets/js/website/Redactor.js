@@ -20,40 +20,45 @@ Application.Redactor = (function(Redactor)
 	*/
 	Redactor.init = function()
 	{
-		var content = $(".redactor").html();
-		//$(".redactor").html('');
-		var redactorHtml = "<div class=\"redactorMenu\">";
-		redactorHtml +=  "<select onchange=\"Application.Redactor.toggleView()\" id=\"redactorView\">";
-		redactorHtml +=  	"<option value=\"preview\" selected>Preview</option> ";
-		redactorHtml +=  	"<option value=\"source\">Source</option>";
-		redactorHtml +=  "</select>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('bold');\" ><i class=\"fa fa-bold\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('italic');\" ><i class=\"fa fa-italic\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('underline');\" ><i class=\"fa fa-underline\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('strikeThrough');\" ><i class=\"fa fa-strikethrough\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('insertunorderedlist');\" ><i class=\"fa fa-list-ul\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('insertorderedlist');\" ><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('createLink');\" ><i class=\"fa fa-link\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('iframe', '');\" ><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('formatBlock', '<h2>');\" >h1</button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('formatBlock', '<h3>');\" >h2</button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('formatBlock', '<h4>');\" >h3</button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('formatBlock', '<h5>');\" >h4</button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('justifyCenter');\" ><i class=\"fa fa-align-center\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('justifyLeft');\" ><i class=\"fa fa-align-left\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('justifyRight');\" ><i class=\"fa fa-align-right\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('justifyFull');\" ><i class=\"fa fa-align-justify\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('superscript');\" ><i class=\"fa fa-superscript\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('subscript');\" ><i class=\"fa fa-subscript\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<input type=\"color\" value=\"#000000\" onChange=\"Application.Redactor.write('forecolor',this.value);\"/>";
-		redactorHtml +=  "<input type=\"color\" value=\"#ffffff\" onChange=\"Application.Redactor.write('backColor',this.value);\"/>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('undo');\" ><i class=\"fa fa-undo\" aria-hidden=\"true\"></i></button>";
-		redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('redo');\" ><i class=\"fa fa-repeat\" aria-hidden=\"true\"></i></button>";	
-		redactorHtml +=  "</div>";
-		redactorHtml +=  "<div contenteditable=\"true\" onKeyUp=\"Application.Redactor.read();\" onChange=\"Application.Redactor.read();\"   required=\"\" class=\"form-control redactorContainer\">" + content + "</div>";
-		redactorHtml +=  "<textarea class=\"hidden\" name=\"content\" id=\"redactorInput\" cols=\"30\" rows=\"10\"></textarea>";
-		$(".redactor").html(redactorHtml);	
-		$("#redactorInput").val($(".redactorContainer").html());
+		$(".redactor").each(function()
+		{
+			let lang = $(this).attr("id");
+			let content = $(this).html();
+
+			let redactorHtml = "<div class=\"redactorMenu\">";
+			redactorHtml +=  "<select onchange=\"Application.Redactor.toggleView()\" class=\"redactorView\">";
+			redactorHtml +=  	"<option value=\"preview\" selected>Preview</option> ";
+			redactorHtml +=  	"<option value=\"source\">Source</option>";
+			redactorHtml +=  "</select>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('bold');\" ><i class=\"fa fa-bold\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('italic');\" ><i class=\"fa fa-italic\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('underline');\" ><i class=\"fa fa-underline\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('strikeThrough');\" ><i class=\"fa fa-strikethrough\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('insertunorderedlist');\" ><i class=\"fa fa-list-ul\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('insertorderedlist');\" ><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('createLink');\" ><i class=\"fa fa-link\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('iframe', '');\" ><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('formatBlock', '<h2>');\" >h1</button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('formatBlock', '<h3>');\" >h2</button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('formatBlock', '<h4>');\" >h3</button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('formatBlock', '<h5>');\" >h4</button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('justifyCenter');\" ><i class=\"fa fa-align-center\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('justifyLeft');\" ><i class=\"fa fa-align-left\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('justifyRight');\" ><i class=\"fa fa-align-right\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('justifyFull');\" ><i class=\"fa fa-align-justify\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('superscript');\" ><i class=\"fa fa-superscript\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('subscript');\" ><i class=\"fa fa-subscript\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<input type=\"color\" value=\"#000000\" onChange=\"Application.Redactor.write('forecolor',this.value);\"/>";
+			redactorHtml +=  "<input type=\"color\" value=\"#ffffff\" onChange=\"Application.Redactor.write('backColor',this.value);\"/>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('undo');\" ><i class=\"fa fa-undo\" aria-hidden=\"true\"></i></button>";
+			redactorHtml +=  "<button type=\"button\" onclick=\"Application.Redactor.write('redo');\" ><i class=\"fa fa-repeat\" aria-hidden=\"true\"></i></button>";	
+			redactorHtml +=  "</div>";
+			redactorHtml +=  "<div contenteditable=\"true\" onKeyUp=\"Application.Redactor.read();\" onChange=\"Application.Redactor.read();\"   required=\"\" class=\"form-control redactorContainer\">" + content + "</div>";
+			$(this).html(redactorHtml);	
+			$(this).append("<textarea class=\"hidden redactorInput\" name=\"content-" + lang  + "\" cols=\"30\" rows=\"10\">" + $("." + lang + " .redactorContainer").html()  + "</textarea>");		
+			
+		});
+		
 	}
 
 	/**
@@ -64,18 +69,19 @@ Application.Redactor = (function(Redactor)
 
 	Redactor.toggleView = function()
 	{
-		if (($("#redactorView").val())==="preview")
+		var currentRedactor = $(".current_redactor").val();
+		if (($(".redactor#" + currentRedactor + " .redactorView").val())==="preview")
 		{
-			$(".redactorContainer").html($(".redactorContainer").text());
-			$(".redactorMenu button").removeClass("disabled");
-			$(".redactorMenu input").removeClass("disabled");
-			$("#redactorInput").val($(".redactorContainer").html());
+			$(".redactor#" + currentRedactor + " .redactorContainer").html($(".redactor#" + currentRedactor + " .redactorContainer").text());
+			$(".redactor#" + currentRedactor + " .redactorMenu button").removeClass("disabled");
+			$(".redactor#" + currentRedactor + " .redactorMenu input").removeClass("disabled");
+			$(".redactor#" + currentRedactor + " .redactorInput").val($(".redactor#" + currentRedactor + " .redactorContainer").html());
 		}
-		else if(($("#redactorView").val())==="source")
+		else if(($(".redactor#" + currentRedactor + " .redactorView").val())==="source")
 		{
-			$(".redactorContainer").text($(".redactorContainer").html());
-			$(".redactorMenu button").addClass("disabled");
-			$(".redactorMenu input").addClass("disabled");
+			$(".redactor#" + currentRedactor + " .redactorContainer").text($(".redactor#" + currentRedactor + " .redactorContainer").html());
+			$(".redactor#" + currentRedactor + " .redactorMenu button").addClass("disabled");
+			$(".redactor#" + currentRedactor + " .redactorMenu input").addClass("disabled");
 		}
 	};
 
@@ -86,13 +92,14 @@ Application.Redactor = (function(Redactor)
 	*/
 	Redactor.read= function() 
 	{
-		if (($("#redactorView").val())==="preview")
-		{
-			$("#redactorInput").val($(".redactorContainer").html());
+		var currentRedactor = $(".current_redactor").val();
+		if (($(".redactor#" + currentRedactor + " .redactorView").val())==="preview")
+		{ 
+			$(".redactor#" + currentRedactor + " .redactorInput").val($(".redactor#" + currentRedactor + " .redactorContainer").html());
 		}
-		else  if (($("#redactorView").val())==="source")
+		else  if (($(".redactor#" + currentRedactor + " .redactorView").val())==="source")
 		{
-			$("#redactorInput").val($(".redactorContainer").text());
+			$(".redactor#" + currentRedactor + " .redactorInput").val($(".redactor#" + currentRedactor + " .redactorContainer").text());
 		}
 	};
 
@@ -104,7 +111,8 @@ Application.Redactor = (function(Redactor)
 	*/
 	Redactor.write = function(command, argument)
 	{		
-		if (($("#redactorView").val())==="preview")
+		var currentRedactor = $(".current_redactor").val();
+		if (($(".redactor#" + currentRedactor + " .redactorView").val())==="preview")
 		{
 			if (typeof argument === 'undefined')
 			{

@@ -23,8 +23,8 @@ class ArticleRequest extends Request
 	public function rules()
 	{
 		return [
-			'title' => 'required|max:255',
-			'content' => 'required',
+			'title-en' => 'required|max:255',
+			'content-en' => 'required',
 		];
 	}
 

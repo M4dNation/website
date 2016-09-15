@@ -8,12 +8,12 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/axel.jpg') }}" />
-							<h4>CEO</h4>
+							<h4>{!! trans('website.team.ceo') !!}</h4>
 						</div>	
 						<h3>Axel Vaindal</h3>
 					</div>
 					<div class="back">
-						<p>Model Property Tree inventor, Martial Arts and Video Games addict. <br>I guess that's enough for now on.</p>			
+						<p>{!! trans('website.team.avaindal') !!}</p>			
 					</div>
 				</a>
 			</div>
@@ -22,12 +22,12 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/gabin.jpg') }}" />
-							<h4>COO</h4>
+							<h4>{!! trans('website.team.coo') !!}</h4>
 						</div>			
 						<h3>Gabin Raffoux</h3>
 					</div>
 					<div class="back">	
-						<p>Also known as M4dPanda. <br> The M4dPanda is one hell of a kind, playing all day long video games of all sorts.</p>
+						<p>{!! trans('website.team.graffoux') !!}</p>
 					</div>
 				</a>
 			</div>
@@ -36,12 +36,12 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/max.jpg') }}" />	
-							<h4>Lead Game Designer</h4>						
+							<h4>{!! trans('website.team.leadGameDesigner') !!}</h4>						
 						</div>
 						<h3>Maxime Breuil</h3>
 					</div>
 					<div class="back">
-						<p>I used to design games for fun.<br>Almost doing the same now, for a living. <br>Good video games are my religion.</p>
+						<p>{!! trans('website.team.mbreuil') !!}</p>
 					</div>	
 				</a>
 			</div>
@@ -50,12 +50,12 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/remi.jpg') }}" />
-							<h4>Lead Developper</h4>
+							<h4>{!! trans('website.team.leadDevelopper') !!}</h4>
 						</div>
 						<h3>Rémi Hau</h3>
 					</div>
 					<div class="back">
-						<p>Coming from Java to Javascript. <br>Interested in new tech, video games, politics and economy.</p>
+						<p>{!! trans('website.team.rhau') !!}</p>
 					</div>	
 				</a>
 			</div>
@@ -64,12 +64,12 @@
 					<div class="front">
 						<div class="team-picture">
 							<img src="{{ asset('images/homepage/nico.jpg') }}" />
-							<h4>SysAdmin</h4>
+							<h4>{!! trans('website.team.sysAdmin') !!}</h4>
 						</div>
 						<h3>Nicolas Valck</h3>
 					</div>
 					<div class="back">
-						<p>Cisco is my best friend: true story. <br>Airsoft, video games and open software are my things.</p>
+						<p>{!! trans('website.team.nvalck') !!}</p>
 					</div>	
 				</a>
 			</div>
