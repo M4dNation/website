@@ -15,10 +15,17 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse menuHeader">
 			<ul class="nav navbar-nav navbar-left">
+		        
 		        <li class="nav-item"><a href="{{ route('home') }}">{{ trans('header.home')}}</a></li>
 		        <li class="nav-item"><a href="{{ route('project') }}">{{ trans('header.yggdrasill')}}</a></li>
 		        <li class="nav-item"><a href="{{ route('blog') }}">{{ trans('header.blog')}}</a></li>
-      			<li class="nav-item dropdown lang-menu">
+      			
+      		</ul>
+      		<ul class="nav navbar-nav navbar-right">
+      			
+      			<li class="nav-item"><a href="{{ route('dashboard') }}">{{ trans('header.dashboard') }}</a></li>
+      			<li class="nav-item"><a href="{{ route('logout') }}">{{trans('header.logout')}}</a></li>
+            	<li class="nav-item dropdown lang-menu">
 		            <a href="#">
 		                {!! trans('langs.'.Config::get('app.locales')[App::getLocale()]) !!}
 		            </a>
@@ -32,11 +39,6 @@
 		                @endforeach
 		            </ul>
 		        </li>
-      		</ul>
-      		<ul class="nav navbar-nav navbar-right">
-      			
-      			<li class="nav-item"><a href="{{ route('dashboard') }}">{{ trans('header.dashboard') }}</a></li>
-      			<li class="nav-item"><a href="{{ route('logout') }}">{{trans('header.logout')}}</a></li>
             </ul>
 		</div>
 		

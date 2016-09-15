@@ -49,8 +49,8 @@ class Article extends Model
     }
 
      /**
-    * byNumberLabelLocal
-    * This function is used in order to get all the articles published.
+    * byNumberLabel
+    * This function is used in order to get all the articles with the given numberLabel.
     * @return {Article}
     */
     public function byNumberLabel($numberLabel)
@@ -61,7 +61,7 @@ class Article extends Model
 
     /**
     * byNumberLabelLocal
-    * This function is used in order to get all the articles published.
+    * This function is used in order to get the article in the current language with the given numberLabel.
     * @return {Article}
     */
     public function byNumberLabelLocal($numberLabel, $lang)
@@ -90,8 +90,8 @@ class Article extends Model
     }
 
      /**
-    * takePublished
-    * This function is used in order to get the n latest article published. 
+    * takePublishedLocal
+    * This function is used in order to get the n latest article published in the given language. 
     * @return {Article}
     */
     public static function takePublishedLocal($n, $lang)
@@ -130,7 +130,7 @@ class Article extends Model
     }
 
      /**
-    * allPublished
+    * allPublishedLocal
     * This function is used in order to get all the articles published in your current language. 
     * @return {Article}
     */
@@ -156,9 +156,9 @@ class Article extends Model
     }
 
      /**
-    * lastArticleNumber
-    * This function is used to know the last article number. 
-    * @return boolean
+    * lastNumberLabel
+    * This function is used to know the last number label
+    * @return integer
     */
     public function lastNumberLabel()
     {
@@ -167,8 +167,8 @@ class Article extends Model
 
     /**
     * previousArticleLocal
-    * This function is used to know the last article number. 
-    * @return boolean
+    * This function is used the previous article in the current langage of the given number label
+    * @return {Article}
     */
     public function previousArticleLocal($numberLabel, $lang)
     {
@@ -177,8 +177,8 @@ class Article extends Model
 
       /**
     * nextArticleLocal
-    * This function is used to know the last article number. 
-    * @return boolean
+    * This function is used the following article in the current langage of the given number label
+    * @return {Article}
     */
     public function nextArticleLocal($numberLabel, $lang)
     {
@@ -187,7 +187,7 @@ class Article extends Model
 
     /**
     * publish
-    * This function is used to know the last article number. 
+    * This function is used to publish an article
     * @return boolean
     */
     public function publish($numberLabel)
@@ -196,8 +196,8 @@ class Article extends Model
     } 
 
     /**
-    * publish
-    * This function is used to know the last article number. 
+    * draft
+    * This function is used to draft an article 
     * @return boolean
     */
     public function draft($numberLabel)

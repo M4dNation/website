@@ -191,10 +191,6 @@ a
 	min-width: 50px;
 }
 
-.header-container .lang-menu .dropdown-menu
-{
-	margin-top:-2px;
-}
 .header-container .lang-menu .dropdown-menu li a
 {
 	padding:5px 0px;
@@ -512,16 +508,14 @@ footer a:hover
 
 	.header-container .logo img
 	{
-		height:50px;
-		margin-top: 15px;
+		height:45px;
+		margin-top: 20px;
 	}
 	
 	.header-container .nav li
 	{
 		margin: auto;
 	}
-	
-
 
 	#team .row
 	{

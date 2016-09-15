@@ -16,7 +16,7 @@ class ArticleManager
 
      /**
     * format
-    * This function is used to 
+    * This function is used to format the content of an article
     * @return 
     */
     public function format($data, $lang)
@@ -34,7 +34,7 @@ class ArticleManager
 
      /**
     * formatDate
-    * This function is used to 
+    * This function is used to format the date according to the location.
     * @return 
     */
     public static function formatDate($article, $lang)
