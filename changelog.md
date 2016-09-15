@@ -1,5 +1,18 @@
 # CHANGE LOG
 
+## [v.1.2.0](https://github.com/M4dNation/website/tree/v1.2.0)
+[Full Changelog](https://github.com/M4dNation/website/compare/v1.1.2.1...v1.2.0)
+
+**Implemented enhancements:**
+
+- Add translation system
+- Add French version
+
+**Closed Issues:**
+
+- Page de maintenance [\#6](https://github.com/M4dNation/website/issues/6)
+- Lien Instagram [\#4](https://github.com/M4dNation/website/issues/4)
+
 ## [v.1.1.2.1](https://github.com/M4dNation/website/tree/v1.1.2.1)
 [Full Changelog](https://github.com/M4dNation/website/compare/v1.1.2...v1.1.2.1)
 
