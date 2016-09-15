@@ -22,6 +22,7 @@ elixir(function(mix)
         'lib/font-awesome.min.css',
         'lib/sweetalert.css',
         'lib/dropzone.min.css',
+        'lib/fonts.css',
     ], 'public/css/lib/libraries.css');
 
     // Auth CSS
