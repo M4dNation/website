@@ -47,6 +47,7 @@
 			</select>
 			<div class="form-group">				
 					<input name="number_label" type="hidden" value="{{ $articles[0]->number_label }}"/>
+					<input name="created_at" type="hidden" value="{{ $articles[0]->created_at }}"/>
 					<input name="lang_list" class="lang_list" type="hidden" value="{{ $langList }}"/>		
 					<input name="current_redactor" class="current_redactor" type="hidden" value="{{ $articles[0]->lang }}"/>
 					<input name="current_fileManager" class="current_fileManager" type="hidden" value="{{ $articles[0]->lang }}"/>
@@ -90,7 +91,7 @@
 									@foreach($article->images as $image)
 									<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 										<img src="{{ asset($image->path . $image->name) }}" alt="">
-										<input class="selectedImage {{$article->lang}}" name="image{{ $compteur }}" type="hidden" value="{{ $image->name }}">
+										<input class="selectedImage {{$article->lang}}" name="image{{ $article->lang.$compteur }}" type="hidden" value="{{ $image->name }}">
 									</div>
 									<?php $compteur++; ?>
 									@endforeach
