@@ -90,7 +90,7 @@
 									@foreach($article->images as $image)
 									<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 										<img src="{{ asset($image->path . $image->name) }}" alt="">
-										<input class="selectedImage {{$article->lang}}" name="image{{ $compteur }}" type="hidden" value="{{ $image->name }}">
+										<input class="selectedImage {{$article->lang}}" name="image{{ $article->lang.$compteur }}" type="hidden" value="{{ $image->name }}">
 									</div>
 									<?php $compteur++; ?>
 									@endforeach
