@@ -11,7 +11,7 @@
 ?>
 
 @foreach($articles as $article)
-	@if($article == $articles[0])
+	@if($article != $articles[0])
 	<?php
 		$langList .= ",".$article->lang;
 	?>
