@@ -1,5 +1,13 @@
 # CHANGE LOG
 
+## [v.1.2.0.1](https://github.com/M4dNation/website/tree/v1.2.0.1)
+[Full Changelog](https://github.com/M4dNation/website/compare/v1.2.0...v1.2.0.1)
+
+**Implemented enhancements:**
+
+- Fix 'gulp --production' issue
+- Fix header in preview page
+
 ## [v.1.2.0](https://github.com/M4dNation/website/tree/v1.2.0)
 [Full Changelog](https://github.com/M4dNation/website/compare/v1.1.2.1...v1.2.0)
 

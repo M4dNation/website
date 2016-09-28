@@ -129,6 +129,12 @@ html, body
 	height: 15px;
 }
 
+.header-container .dashboard-header .logo img
+{
+	height: 45px !important;
+	margin-top: 20px !important;
+}
+
 /*Blog css*/
 
 .article-container
@@ -377,7 +383,7 @@ html, body
 	text-align: center;
 }
 
-@media (max-width: 995px)
+@media (max-width: 1000px)
 {
 	.modal-dialog
 	{
@@ -386,10 +392,9 @@ html, body
 
 	.header-container .logo img
 	{
-		height: 60px;
-		margin-top: 10px;
+		height:45px;
+		margin-top: 20px;
 	}
-
 	.header-container .nav li
 	{
 		margin: auto;

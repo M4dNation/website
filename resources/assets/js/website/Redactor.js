@@ -22,10 +22,10 @@ Application.Redactor = (function(Redactor)
 	{
 		$(".redactor").each(function()
 		{
-			let lang = $(this).attr("id");
-			let content = $(this).html();
+			var lang = $(this).attr("id");
+			var content = $(this).html();
 
-			let redactorHtml = "<div class=\"redactorMenu\">";
+			var redactorHtml = "<div class=\"redactorMenu\">";
 			redactorHtml +=  "<select onchange=\"Application.Redactor.toggleView()\" class=\"redactorView\">";
 			redactorHtml +=  	"<option value=\"preview\" selected>Preview</option> ";
 			redactorHtml +=  	"<option value=\"source\">Source</option>";
@@ -57,8 +57,7 @@ Application.Redactor = (function(Redactor)
 			$(this).html(redactorHtml);	
 			$(this).append("<textarea class=\"hidden redactorInput\" name=\"content-" + lang  + "\" cols=\"30\" rows=\"10\">" + $("." + lang + " .redactorContainer").html()  + "</textarea>");		
 			
-		});
-		
+		});	
 	}
 
 	/**

@@ -30,7 +30,7 @@ Application.LangManager = (function(LangManager)
 			$("." + currentLang + " .id").val("undefined");
 			$("." + currentLang + " input, ." + currentLang + " textarea").map(function()
 			{	
-   				let currentName = $(this).attr("name");
+   				var currentName = $(this).attr("name");
    				if(currentName != undefined)
    				{
    					currentName = currentName.replace("-" + previousLang, "-" + currentLang);
@@ -40,7 +40,7 @@ Application.LangManager = (function(LangManager)
 		}
 		$("." + currentLang).show();
 				
-	}
+	};
 
 	LangManager.initLangEditing = function()
 	{		
@@ -50,10 +50,11 @@ Application.LangManager = (function(LangManager)
 			$("." + langList[i]).hide();			
 		}
 		$(".en").show();
-	}
+	};
 	
 	return LangManager;
 
 })(Application.LangManager || {});
 
 Application.LangManager.initLangEditing();
+

@@ -45,7 +45,7 @@ class Article extends Model
     */
     public static function last()
     {
-    	return Article::orderBy('created_at', 'desc')->first();
+    	return Article::orderBy('number_label', 'desc')->first();
     }
 
      /**
@@ -76,7 +76,7 @@ class Article extends Model
     */ 
     public static function take($n)
     {
-        return Article::orderBy('created_at', 'desc')->take($n)->get();
+        return Article::orderBy('number_label', 'desc')->take($n)->get();
     }
 
      /**
@@ -86,7 +86,7 @@ class Article extends Model
     */
     public static function takePublished($n)
     {
-        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->take($n)->get();
+        return Article::orderBy('number_label', 'desc')->where('state', self::PUBLISHED)->take($n)->get();
     }
 
      /**
@@ -96,7 +96,7 @@ class Article extends Model
     */
     public static function takePublishedLocal($n, $lang)
     {
-        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->take($n)->get();
+        return Article::orderBy('number_label', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->take($n)->get();
     }
 
     /**
@@ -106,7 +106,7 @@ class Article extends Model
     */
     public static function published($n)
     {
-        return (Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->paginate($n));
+        return (Article::orderBy('number_label', 'desc')->where('state', self::PUBLISHED)->paginate($n));
     }
 
      /**
@@ -116,7 +116,7 @@ class Article extends Model
     */
     public static function publishedLocal($n, $lang)
     {
-        return (Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->paginate($n));
+        return (Article::orderBy('number_label', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->paginate($n));
     }
 
      /**
@@ -126,7 +126,7 @@ class Article extends Model
     */
     public static function allPublished()
     {
-        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->get();
+        return Article::orderBy('number_label', 'desc')->where('state', self::PUBLISHED)->get();
     }
 
      /**
@@ -136,7 +136,7 @@ class Article extends Model
     */
     public static function allPublishedLocal($lang)
     {
-        return Article::orderBy('created_at', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->get();
+        return Article::orderBy('number_label', 'desc')->where('state', self::PUBLISHED)->where('lang', $lang)->get();
     }
 
 

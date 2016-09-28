@@ -252,6 +252,7 @@ class DashboardController extends Controller
             }
             else
             {
+                $articleData["created_at"] = $data["created_at"];
                 $id = $this->articleRepository->store($articleData)["id"];
             }
 
