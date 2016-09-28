@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'yggdrasill1' => '<b>Bonjour</b> à tous, et bienvenue sur la page Kickstarter de notre projet.',
+    'yggdrasill1' => '<b>Bonjour</b> à tous, et bienvenue sur la page de présentation de notre projet.',
     'yggdrasill2' => '<b>Yggdrasill est une plateforme de crowdsourcing à destination des joueurs et des studios de jeux vidéos. </b>',
     'yggdrasill3' => 'Le but est de vous permettre de décrire vos jeux tels que vous les rêvez, et de leur donner vie grâce aux talents de nombreux <b>studios professionnels</b> répartis aux quatre coins du monde.',
     'whyTitle' => 'Pourquoi ?',
